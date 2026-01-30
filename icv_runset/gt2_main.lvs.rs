@@ -307,13 +307,13 @@ netlist_cdb = text_net(
 dev_matrix = init_device_matrix(connect_sequence = netlist_cdb);
 
 
-//nmos(bulk_relationship = INTERACT, device_name= "nmos", recognition_layer = ( NGATE1 interacting gPSUB ), drain = N_src_drn, gate=NGATE1, source = N_src_drn, optional_pins = { }, properties = {{"wgaa", DOUBLE, MICRO}, {"l", DOUBLE, MICRO}}, property_function = dev_properties, matrix = dev_matrix );
+nmos(bulk_relationship = INTERACT, device_name= "nmos", recognition_layer = ( NGATE1 interacting gPSUB ), drain = N_src_drn, gate=NGATE1, source = N_src_drn, optional_pins = { }, properties = {{"wgaa", DOUBLE, MICRO}, {"l", DOUBLE, MICRO}}, property_function = dev_properties, matrix = dev_matrix );
 
-//pmos(bulk_relationship = INTERACT, device_name= "pmos", recognition_layer = ( PGATE1 interacting gNWELL ), drain = P_src_drn, gate=PGATE1, source = P_src_drn, optional_pins = { }, properties = {{"wgaa", DOUBLE, MICRO}, {"l", DOUBLE, MICRO}}, property_function = dev_properties, matrix = dev_matrix );
+pmos(bulk_relationship = INTERACT, device_name= "pmos", recognition_layer = ( PGATE1 interacting gNWELL ), drain = P_src_drn, gate=PGATE1, source = P_src_drn, optional_pins = { }, properties = {{"wgaa", DOUBLE, MICRO}, {"l", DOUBLE, MICRO}}, property_function = dev_properties, matrix = dev_matrix );
 
-nmos(bulk_relationship = INTERACT, device_name= "nmos_rvt", recognition_layer = ( NGATE1 interacting gPSUB ), drain = N_src_drn, gate=NGATE1, source = N_src_drn, optional_pins = { }, properties = {{"wgaa", DOUBLE, MICRO}, {"l", DOUBLE, MICRO}}, property_function = dev_properties, matrix = dev_matrix );
+//nmos(bulk_relationship = INTERACT, device_name= "nmos_svt", recognition_layer = ( NGATE1 interacting gPSUB ), drain = N_src_drn, gate=NGATE1, source = N_src_drn, optional_pins = { }, properties = {{"wgaa", DOUBLE, MICRO}, {"l", DOUBLE, MICRO}}, property_function = dev_properties, matrix = dev_matrix );
 
-pmos(bulk_relationship = INTERACT, device_name= "pmos_rvt", recognition_layer = ( PGATE1 interacting gNWELL ), drain = P_src_drn, gate=PGATE1, source = P_src_drn, optional_pins = { }, properties = {{"wgaa", DOUBLE, MICRO}, {"l", DOUBLE, MICRO}}, property_function = dev_properties, matrix = dev_matrix );
+//pmos(bulk_relationship = INTERACT, device_name= "pmos_svt", recognition_layer = ( PGATE1 interacting gNWELL ), drain = P_src_drn, gate=PGATE1, source = P_src_drn, optional_pins = { }, properties = {{"wgaa", DOUBLE, MICRO}, {"l", DOUBLE, MICRO}}, property_function = dev_properties, matrix = dev_matrix );
 
 device_db = extract_devices(dev_matrix);
 
