@@ -1,6 +1,6 @@
 # GT2N PDK
 
-This is the initial release for GT2N PDK with 71 standard cells. It is based on 2nm GAAFET with BSPDN.
+This is the initial release for the GT2N PDK with 71 standard cells. It is based on 2nm GAAFET with BSPDN.
 
 If you use this PDK for publishing your work, we would appreciate citation of the following paper:
 
