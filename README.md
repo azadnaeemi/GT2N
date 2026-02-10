@@ -10,7 +10,7 @@ Quick setup guide for Custom Compiler:
 
 Create a folder (e.g. gt2_techlib) and copy GT2N/techlib/nmos_lvt and GT2N/techlib/pmos_lvt inside that folder.
 Inside the folder from where custom_compiler is run, add the following to the lib.defs file:
-gt2_official <path to techlib folder>/gt2_techlib
+gt2_official <path_to_techlib_directory>/gt2_techlib
 
 You can specify any name for the library instead of using gt2_offical. The current standard cell schematics are linked with the devices using this name. In case any other library name is used, the device references might need to be updated in the schematics.
 
@@ -19,7 +19,7 @@ GT2N/techlib/gt2_techfile.tf
 
 To import all the standard cells, either custom_compiler .oa format or .gds files can be used.
 Create a folder for the standard cell library (e.g. gt2_std_cells) and add it to the lib.defs file:
-gt2_std_cells <path to gt2_std_cells folder>/gt2_std_cells
+gt2_std_cells <path_to_std_cells_directory>/gt2_std_cells
 
 In the "Technology Manager", the associated technology needs to be changed to gt2_official (or the lib name used in the previous stage). Alternatively, the .tf file can also be imported and applied to gt2_std_cells. This is necessary, otherwise layers would not be identified. Any new library created needs to follow the same process. To assign colors to the layer, load "GT2N/techlib/gt2_layer_colors.tcl" using the "Display Resource Manager".
 
