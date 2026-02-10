@@ -29,6 +29,8 @@ Standard cell layouts can also be imported using the .gds file: GT2N/gds/gt2_6t_
 
 LVS and DRC rulesets for icvalidator are present in "GT2N/icv_runset".
 
+Libraries are composed of 3 process corners, 2 nanosheet width (W) flavors, and 5 threshold voltage (VT) flavors. (In the order of decreasing VT, HVT > SVT > LVT > ULVT > ELVT)
+
 The collaterals required for synthesis and PnR are (depending on the process corner and W/VT flavor):
 
 LIB: GT2N/lib/tt/gt2_6t_w31_lvt_tt_0p7v25c.lib
@@ -48,3 +50,5 @@ NXTGRD: GT2N/nxtgrd/GT2.nxtgrd
 The GAAFET model card is (depending on the process corner and W/VT flavor):
 
 GT2N/device/tt/gt2_w31_lvt.sp
+
+BSPDN support for Cadence Innovus implementation flow is under development.
