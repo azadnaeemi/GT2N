@@ -29,7 +29,7 @@ Standard cell layouts can also be imported using the .gds file: GT2N/gds/gt2_6t_
 
 LVS and DRC rulesets for icvalidator are present in "GT2N/icv_runset".
 
-Libraries are composed of 3 process corners, 2 nanosheet width (W) flavors, and 5 threshold voltage (VT) flavors. (In the order of decreasing VT, HVT > SVT > LVT > ULVT > ELVT)
+Libraries are composed of 3 process corners (under development), 2 nanosheet width (W) flavors, and 5 threshold voltage (VT) flavors. (In the order of decreasing VT, HVT > SVT > LVT > ULVT > ELVT)
 
 The collaterals required for synthesis and PnR are (depending on the process corner and W/VT flavor):
 
