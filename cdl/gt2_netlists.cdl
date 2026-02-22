@@ -351,12 +351,12 @@ MM1 Y C net13 nmos_lvt WGAA=0.021u L=0.014u M=1
 
 .subckt gt2_6t_dffasync_x1 CLK D Q RESETN SETN vdd vss
 *.PININFO CLK:I D:I Q:O RESETN:I SETN:I vdd:B vss:B
-XI5 net13 Q RESETN net21 vdd vss gt2_6t_nand3_x1_lvt
-XI4 net5 SETN net21 Q vdd vss gt2_6t_nand3_x1_lvt
-XI3 CLK net9 net5 net13 vdd vss gt2_6t_nand3_x1_lvt
-XI2 net13 D RESETN net9 vdd vss gt2_6t_nand3_x1_lvt
-XI1 RESETN net7 CLK net5 vdd vss gt2_6t_nand3_x1_lvt
-XI0 SETN net9 net5 net7 vdd vss gt2_6t_nand3_x1_lvt
+XI5 net13 Q RESETN net21 vdd vss gt2_6t_nand3_x1
+XI4 net5 SETN net21 Q vdd vss gt2_6t_nand3_x1
+XI3 CLK net9 net5 net13 vdd vss gt2_6t_nand3_x1
+XI2 net13 D RESETN net9 vdd vss gt2_6t_nand3_x1
+XI1 RESETN net7 CLK net5 vdd vss gt2_6t_nand3_x1
+XI0 SETN net9 net5 net7 vdd vss gt2_6t_nand3_x1
 .ends gt2_6t_dffasync_x1
 
 
