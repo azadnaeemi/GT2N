@@ -164,6 +164,9 @@ SVT         pin         96      251
 HVT         drawing     97      0
 HVT         label       97      20
 HVT         pin         97      251
+SRAMVT      drawing     98      0
+SRAMVT      label       98      20
+SRAMVT      pin         98      251
 BV0         drawing     910     0
 BV0         label       910     20
 BV0         pin         910     251
