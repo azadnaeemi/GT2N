@@ -168,20 +168,20 @@ gate_forming_layer	FALSE
 }
 
 conductor M12 {
-min_spacing	0.36
-min_width	0.36
+min_spacing	0.360
+min_width	0.360
 height	1.53
 thickness	0.112
-resistivity	0.100
+resistivity	0.230
 gate_forming_layer	FALSE
 }
 
 conductor M13 {
-min_spacing	0.36
-min_width	0.36
+min_spacing	0.360
+min_width	0.360
 height	1.754
 thickness	0.112
-resistivity	0.100
+resistivity	0.230
 gate_forming_layer	FALSE
 }
 
