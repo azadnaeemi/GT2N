@@ -38,6 +38,7 @@ MM8 Y net20 vss nmos_svt W=0.013u L=0.014u M=1
 MM1 net20 A net13 nmos_svt W=0.013u L=0.014u M=1
 .ends gt2_6t_and2_x1_w13_svt
 
+
 .subckt gt2_6t_and2_x2_w13_svt A B Y vdd vss
 *.PININFO A:I B:I Y:O vdd:B vss:B
 MM7 Y net20 vdd pmos_svt W=0.013u L=0.014u M=2
@@ -48,6 +49,7 @@ MM8 Y net20 vss nmos_svt W=0.013u L=0.014u M=2
 MM1 net20 A net13 nmos_svt W=0.013u L=0.014u M=1
 .ends gt2_6t_and2_x2_w13_svt
 
+
 .subckt gt2_6t_and2_x3_w13_svt A B Y vdd vss
 *.PININFO A:I B:I Y:O vdd:B vss:B
 MM7 Y net20 vdd pmos_svt W=0.013u L=0.014u M=3
@@ -57,6 +59,7 @@ MM8 Y net20 vss nmos_svt W=0.013u L=0.014u M=3
 MM3 net13 B vss nmos_svt W=0.013u L=0.014u M=1
 MM1 net20 A net13 nmos_svt W=0.013u L=0.014u M=1
 .ends gt2_6t_and2_x3_w13_svt
+
 
 .subckt gt2_6t_and2_x4_w13_svt A B Y vdd vss
 *.PININFO A:I B:I Y:O vdd:B vss:B
@@ -854,3 +857,16 @@ MM15 net33 A vdd pmos_svt W=0.013u L=0.014u M=1
 MM14 net33 B vdd pmos_svt W=0.013u L=0.014u M=1
 MM10 net23 B vdd pmos_svt W=0.013u L=0.014u M=1
 .ends gt2_6t_xor2_x1_w13_svt
+
+
+.subckt gt2_6t_filler_w13_svt vdd vss
+.ends gt2_6t_filler_w13_svt
+
+
+.subckt gt2_6t_tapfspdn_w13_svt vdd vss
+.ends gt2_6t_tapfspdn_w13_svt
+
+
+.subckt gt2_6t_tapbspdn_w13_svt vdd vss
+.ends gt2_6t_tapbspdn_w13_svt
+
