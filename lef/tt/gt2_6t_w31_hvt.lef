@@ -4549,12 +4549,12 @@ MACRO gt2_6t_or3_x1_w31_hvt
   END
 END gt2_6t_or3_x1_w31_hvt
 
-MACRO gt2_6t_tap_w31_hvt
+MACRO gt2_6t_tapfspdn_w31_hvt
   CLASS CORE  ;
   ORIGIN 0 0 ;
   SYMMETRY X Y ;
   SITE gt2_6t ;
-    FOREIGN gt2_6t_tap_w31_hvt 0 0 ;
+    FOREIGN gt2_6t_tapfspdn_w31_hvt 0 0 ;
   SIZE 0.084 BY 0.144 ;
   PIN vdd
     DIRECTION INOUT ;
@@ -4562,6 +4562,8 @@ MACRO gt2_6t_tap_w31_hvt
     PORT
       LAYER M1 ;
         RECT 0.014 0.015 0.028 0.129 ;
+      LAYER BPR ;
+        RECT 0 0.128 0.084 0.16 ;
     END
   END vdd
   PIN vss
@@ -4570,17 +4572,41 @@ MACRO gt2_6t_tap_w31_hvt
     PORT
       LAYER M1 ;
         RECT 0.056 0.015 0.07 0.129 ;
+      LAYER BPR ;
+        RECT 0 -0.016 0.084 0.016 ;
     END
   END vss
   OBS
     LAYER M0 ;
       RECT 0.01 0.042 0.0755 0.054 ;
       RECT 0.01 0.09 0.034 0.102 ;
-    LAYER BPR ;
-      RECT 0 -0.016 0.084 0.016 ;
-      RECT 0 0.128 0.084 0.16 ;
   END
-END gt2_6t_tap_w31_hvt
+END gt2_6t_tapfspdn_w31_hvt
+
+MACRO gt2_6t_tapbspdn_w31_hvt
+  CLASS CORE  ;
+  ORIGIN 0 0 ;
+  SYMMETRY X Y ;
+  SITE gt2_6t ;
+    FOREIGN gt2_6t_tapbspdn_w31_hvt 0 0 ;
+  SIZE 0.042 BY 0.144 ;
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER BPR ;
+        RECT 0 0.128 0.042 0.16 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER BPR ;
+        RECT 0 -0.016 0.042 0.016 ;
+    END
+  END vss
+END gt2_6t_tapbspdn_w31_hvt
 
 MACRO gt2_6t_tiehigh_w31_hvt
   CLASS CORE  ;
