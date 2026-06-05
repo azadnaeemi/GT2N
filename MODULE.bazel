@@ -1,0 +1,157 @@
+"""GT2N PDK as a Bazel module.
+
+Downstream projects can depend on this module to get GT2N OpenROAD support:
+add it as a `bazel_dep` and reference the `//orfs:gt2n` `orfs_pdk` target in
+their own `orfs_flow(...)`.
+
+Only `bazel-orfs` (which provides the `orfs_pdk`/`orfs_flow` rules) is a normal
+dependency. Everything needed solely to *test* GT2N here — the OpenROAD/ORFS
+toolchain, the gcd/ASAP7 demo flows, the A/B updater — is a `dev_dependency`,
+so consumers don't inherit those heavy pins. This mirrors ORFS's own
+MODULE.bazel: the dev deps are honoured only when this module is the root.
+
+The dev pins (commits/integrity) track bazel-orfs; re-bump with
+`bazelisk run @bazel-orfs//:bump`.
+"""
+
+module(
+    name = "gt2n",
+    version = "0.0.1",
+)
+
+# --- Normal dependency: the rules that expose the GT2N PDK ------------------
+bazel_dep(name = "bazel-orfs")
+
+BAZEL_ORFS_COMMIT = "553c1c3a44f0e0e857b1abb0b1b8035a77076456"
+
+BAZEL_ORFS_REMOTE = "https://github.com/The-OpenROAD-Project/bazel-orfs.git"
+
+git_override(
+    module_name = "bazel-orfs",
+    commit = BAZEL_ORFS_COMMIT,
+    remote = BAZEL_ORFS_REMOTE,
+)
+
+# --- Dev dependencies: only honoured when GT2N is the root module ----------
+# These build the OpenROAD/ORFS toolchain and run the gcd/ASAP7 demo flows.
+# A downstream consumer of //orfs:gt2n brings (or omits) its own copies.
+
+bazel_dep(name = "bazel-orfs-verilog", dev_dependency = True)
+git_override(
+    module_name = "bazel-orfs-verilog",
+    commit = BAZEL_ORFS_COMMIT,
+    remote = BAZEL_ORFS_REMOTE,
+    strip_prefix = "verilog",
+)
+
+# ORFS: @orfs//flow Makefile, scripts and bundled PDKs (asap7 = B side of A/B).
+bazel_dep(name = "orfs", dev_dependency = True)
+archive_override(
+    module_name = "orfs",
+    integrity = "sha256-mAqlLynBNOx/poiXu+BLa7s1cJcpDR21u5leDEUF3JY=",
+    patch_strip = 1,
+    patches = [
+        "//patches:0036-fix-bazel-orfs-bazel_dep-non-dev-for-load-visibility.patch",
+        # Make the generic macro constraints.sdc platform-independent: move it
+        # to platforms/common/ with no hardcoded PDK time (the design sets
+        # in2reg/reg2out/in2out_max in its PDK's units); asap7 keeps a thin
+        # wrapper. Lets GT2N designs reuse the set_max_delay (no hold cells)
+        # macro pattern. Upstreamable to ORFS.
+        "//patches:0100-platform-independent-constraints-sdc.patch",
+    ],
+    strip_prefix = "OpenROAD-flow-scripts-d90873f47b79f343c6be15210ce398e1383c08d2",
+    urls = ["https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/archive/d90873f47b79f343c6be15210ce398e1383c08d2.tar.gz"],
+)
+
+# OpenROAD, built from source. Pinned to the most recent master (dab0efb,
+# 2026-06-05) — newer than bazel-orfs's pin so it includes PR #10547
+# "Add LEF58_BACKSIDE support for backside-power PDKs" (merged 2026-06-04),
+# which is what lets GT2N's backside stack route through detailed route.
+# GitHub /archive tarballs omit submodules, so vendor src/sta, third-party/abc
+# and third-party/slang-elab from their auto-archives, then point slang-elab at
+# @sv-lang.
+bazel_dep(name = "openroad", dev_dependency = True)
+archive_override(
+    module_name = "openroad",
+    integrity = "sha256-nyZ6v/pizcesggDaDXOvDevMuww65RdMcaSuzYIbYmA=",
+    patch_cmds = [
+        "curl -sSfL --retry 5 --retry-all-errors --retry-delay 5 -o .openroad-submodule-src-sta-14751996b19830a77edf744840e66944a00944d6.tar.gz https://github.com/The-OpenROAD-Project/OpenSTA/archive/14751996b19830a77edf744840e66944a00944d6.tar.gz && echo 'f8e509b63fc8f1f1694039fb15c427cd692b8e5db315892ac22774bfe9d1dd21  .openroad-submodule-src-sta-14751996b19830a77edf744840e66944a00944d6.tar.gz' | sha256sum -c - && tar xzf .openroad-submodule-src-sta-14751996b19830a77edf744840e66944a00944d6.tar.gz --strip-components=1 -C src/sta && rm .openroad-submodule-src-sta-14751996b19830a77edf744840e66944a00944d6.tar.gz",
+        "curl -sSfL --retry 5 --retry-all-errors --retry-delay 5 -o .openroad-submodule-third-party-abc-983a9af07d9c302c9e65db75b4347604d7f4f2a8.tar.gz https://github.com/The-OpenROAD-Project/abc/archive/983a9af07d9c302c9e65db75b4347604d7f4f2a8.tar.gz && echo '3fe6f1684aa4617124fe9d2b206a9acf8163d16363949bfe84a263617d4b259e  .openroad-submodule-third-party-abc-983a9af07d9c302c9e65db75b4347604d7f4f2a8.tar.gz' | sha256sum -c - && tar xzf .openroad-submodule-third-party-abc-983a9af07d9c302c9e65db75b4347604d7f4f2a8.tar.gz --strip-components=1 -C third-party/abc && rm .openroad-submodule-third-party-abc-983a9af07d9c302c9e65db75b4347604d7f4f2a8.tar.gz",
+        "curl -sSfL --retry 5 --retry-all-errors --retry-delay 5 -o .openroad-submodule-third-party-slang-elab-82effc8d9541be69e1ed3ec44759a4449f5d9247.tar.gz https://github.com/povik/yosys-slang/archive/82effc8d9541be69e1ed3ec44759a4449f5d9247.tar.gz && echo 'd319a1f49116fb9f30341bf06324e40e0ceadfe05d0fa7b00aed4dc0dc6723f1  .openroad-submodule-third-party-slang-elab-82effc8d9541be69e1ed3ec44759a4449f5d9247.tar.gz' | sha256sum -c - && tar xzf .openroad-submodule-third-party-slang-elab-82effc8d9541be69e1ed3ec44759a4449f5d9247.tar.gz --strip-components=1 -C third-party/slang-elab && rm .openroad-submodule-third-party-slang-elab-82effc8d9541be69e1ed3ec44759a4449f5d9247.tar.gz",
+        "sed -i 's|\"@slang\"|\"@sv-lang//:libsvlang\"|' third-party/slang-elab/src/BUILD",
+    ],
+    strip_prefix = "OpenROAD-dab0efb4dbdbf6f329d56cc963d801fc36de9984",
+    urls = ["https://github.com/The-OpenROAD-Project/OpenROAD/archive/dab0efb4dbdbf6f329d56cc963d801fc36de9984.tar.gz"],
+)
+
+bazel_dep(name = "qt-bazel", dev_dependency = True)
+git_override(
+    module_name = "qt-bazel",
+    commit = "886104974c2fd72439f2c33b5deebf0fe4649df7",
+    remote = "https://github.com/The-OpenROAD-Project/qt_bazel_prebuilts",
+)
+
+# Root-only version pins bazel-orfs applies to OpenROAD's transitive deps;
+# single_version_override is honoured only in the root module, so repeat them
+# here (verbatim from bazel-orfs) or OpenROAD's deps fail to resolve/compile.
+single_version_override(
+    module_name = "sv-lang",
+    version = "10.0.1-20260316-f04e8156",
+)
+
+single_version_override(
+    module_name = "scip",
+    version = "9.2.3.bcr.1",
+)
+
+single_version_override(
+    module_name = "sed",
+    patch_cmds = [
+        "sed -i 's|^#ifdef _LIBC$|#if 1|' lib/memchr.c",
+    ],
+    version = "4.9.bcr.5",
+)
+
+bazel_dep(name = "rules_pycross", version = "0.8.1", dev_dependency = True)
+
+pycross = use_extension(
+    "@rules_pycross//pycross/extensions:pycross.bzl",
+    "pycross",
+    dev_dependency = True,
+)
+pycross.configure_environments(python_versions = ["3.13"])
+
+# Hermetic C/C++ toolchain for the from-source OpenROAD build (mirrors ORFS).
+bazel_dep(name = "toolchains_llvm", version = "1.5.0", dev_dependency = True)
+
+llvm = use_extension(
+    "@toolchains_llvm//toolchain/extensions:llvm.bzl",
+    "llvm",
+    dev_dependency = True,
+)
+llvm.toolchain(llvm_version = "20.1.8")
+use_repo(llvm, "llvm_toolchain")
+
+register_toolchains("@llvm_toolchain//:all", dev_dependency = True)
+
+# Hermetic Python: ORFS flow scripts, and the //tools A/B updater + its test.
+bazel_dep(name = "rules_python", version = "1.9.0", dev_dependency = True)
+
+python = use_extension(
+    "@rules_python//python/extensions:python.bzl",
+    "python",
+    dev_dependency = True,
+)
+python.toolchain(
+    ignore_root_user_error = True,
+    python_version = "3.13",
+)
+
+# bazel-orfs repositories extension (default tools; mock klayout unless overridden).
+orfs = use_extension(
+    "@bazel-orfs//:extension.bzl",
+    "orfs_repositories",
+    dev_dependency = True,
+)
+orfs.default()
+use_repo(orfs, "gnumake")

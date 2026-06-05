@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description>GT2N LVS deck translated from icv_runset/gt2_main.lvs.rs for ORFS/KLayout.</description>
+ <version/>
+ <category>lvs</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>false</autorun>
+ <autorun-early>false</autorun-early>
+ <shortcut/>
+ <show-in-menu>true</show-in-menu>
+ <group-name>lvs_scripts</group-name>
+ <menu-path>tools_menu.lvs.end</menu-path>
+ <interpreter>dsl</interpreter>
+ <dsl-interpreter-name>lvs-dsl-xml</dsl-interpreter-name>
+ <text><![CDATA[
+# GT2N LVS deck for OpenROAD-flow-scripts
+# Source intent: platforms/gt2n/icv_runset/gt2_main.lvs.rs
+#
+# This deck uses original ICV symbol names where possible (aM1, tM1, gPSUB, ...)
+# to make line-by-line audits against gt2_main.lvs.rs straightforward.
+
+# -----------------------------------------------------------------------------
+# Inputs / outputs
+# -----------------------------------------------------------------------------
+def spice_pg_name?(name)
+  ["vdd", "vdd!", "vss", "vss!", "gnd!", "gnd"].include?(name.to_s.downcase)
+end
+
+def spice_records(path)
+  records = []
+  current = []
+
+  File.open(path, "rb") do |file|
+    file.each_line do |raw_line|
+      # Some concatenated CDL comments can carry non-ASCII bytes.  The LVS
+      # prefilter only needs ASCII SPICE syntax, so normalize safely here.
+      line = raw_line.encode("UTF-8", invalid: :replace, undef: :replace, replace: "")
+      if line =~ /^\s*\+/
+        current << line
+      else
+        records << current unless current.empty?
+        current = [line]
+      end
+    end
+  end
+  records << current unless current.empty?
+  records
+end
+
+def spice_record_text(lines)
+  first = lines.first.to_s.chomp
+  rest = lines[1..-1] || []
+  rest.each do |line|
+    first += " " + line.sub(/^\s*\+\s*/, "").strip
+  end
+  first
+end
+
+def write_spice_tokens(out, tokens, width = 160)
+  return if tokens.empty?
+  line = tokens.shift.dup
+  tokens.each do |tok|
+    if line.length + tok.length + 1 > width
+      out.puts(line)
+      line = "+ #{tok}"
+    else
+      line += " #{tok}"
+    end
+  end
+  out.puts(line)
+end
+
+def signal_only_cdl_path(cdl_path)
+  records = spice_records(cdl_path)
+  gt2_keep_indices = {}
+  @gt2n_signal_only_top_ports = nil
+
+  records.each do |lines|
+    text = spice_record_text(lines).strip
+    next unless text =~ /^\.subckt\s+/i
+
+    tokens = text.split
+    model = tokens[1]
+    formals = tokens[2..-1] || []
+    if model && !model.downcase.start_with?("gt2_6t_") && @gt2n_signal_only_top_ports.nil?
+      @gt2n_signal_only_top_ports = formals.reject { |pin| spice_pg_name?(pin) }
+    end
+    next unless model && model.downcase.start_with?("gt2_6t_")
+
+    keep = []
+    formals.each_with_index do |pin, idx|
+      keep << idx unless spice_pg_name?(pin)
+    end
+    gt2_keep_indices[model.downcase] = keep
+  end
+
+  tmp_root = ENV["TMPDIR"] || "/tmp"
+  filtered = File.join(tmp_root, "gt2n_signal_only_#{Process.pid}_#{File.basename(cdl_path)}")
+  File.open(filtered, "w") do |out|
+    records.each do |lines|
+      text = spice_record_text(lines)
+      stripped = text.strip
+
+      if stripped =~ /^\.subckt\s+/i
+        tokens = stripped.split
+        model = tokens[1]
+        keep = gt2_keep_indices[model.to_s.downcase]
+        if keep
+          formals = tokens[2..-1] || []
+          write_spice_tokens(out, [tokens[0], model] + keep.map { |idx| formals[idx] })
+          next
+        elsif model && !model.downcase.start_with?("gt2_6t_")
+          formals = tokens[2..-1] || []
+          write_spice_tokens(out, [tokens[0], model] + formals.reject { |pin| spice_pg_name?(pin) })
+          next
+        end
+      elsif stripped =~ /^x/i
+        tokens = stripped.split
+        model = tokens[-1]
+        if model.to_s.downcase.start_with?("gt2_6t_filler")
+          next
+        end
+        keep = gt2_keep_indices[model.to_s.downcase]
+        if keep
+          actuals = tokens[1...-1] || []
+          write_spice_tokens(out, [tokens[0]] + keep.map { |idx| actuals[idx] } + [model])
+          next
+        end
+      end
+
+      lines.each { |line| out.print(line) }
+    end
+  end
+
+  puts "INFO : GT2N signal-only LVS filtered CDL #{cdl_path} -> #{filtered}; stdcell_models=#{gt2_keep_indices.size}"
+  filtered
+end
+
+if $in_gds
+  source($in_gds)
+elsif $input
+  source($input)
+else
+  raise "Missing -rd in_gds=<layout.gds> (or -rd input=<layout.gds>)"
+end
+
+if $report_file
+  report_lvs($report_file)
+elsif $output
+  report_lvs($output)
+else
+  report_lvs("lvs_report.lvsdb")
+end
+
+signal_only_lvs_requested = ($signal_only_lvs || ENV["KLAYOUT_LVS_SIGNAL_ONLY"] == "1")
+
+if $cdl_file
+  ref_cdl_file = signal_only_lvs_requested ? signal_only_cdl_path($cdl_file) : $cdl_file
+  schematic(ref_cdl_file)
+elsif $schematic
+  ref_cdl_file = signal_only_lvs_requested ? signal_only_cdl_path($schematic) : $schematic
+  schematic(ref_cdl_file)
+else
+  raise "Missing -rd cdl_file=<reference.cdl> (or -rd schematic=<reference.cdl>)"
+end
+
+spice_with_net_names = true
+spice_with_comments = false
+
+lvs_mode = ($lvs_mode || ENV["KLAYOUT_LVS_MODE"] || "abstract").to_s.downcase
+unless ["abstract", "transistor"].include?(lvs_mode)
+  raise "Unsupported LVS mode '#{lvs_mode}'. Use -rd lvs_mode=abstract or -rd lvs_mode=transistor."
+end
+
+if $target_netlist
+  target_netlist($target_netlist, write_spice(spice_with_net_names, spice_with_comments),
+                 "Extracted by KLayout GT2N LVS on #{Time.now.strftime("%Y-%m-%d %H:%M")}")
+end
+
+deep
+thread_count = ($threads || ENV["KLAYOUT_LVS_THREADS"] || ENV["NUM_CORES"] || "8").to_i
+thread_count = 1 if thread_count < 1
+threads(thread_count)
+verbose(true)
+puts "INFO : GT2N LVS mode = #{lvs_mode}"
+puts "INFO : GT2N LVS threads = #{thread_count}"
+
+if lvs_mode == "abstract"
+  # Physical-only filler cells dominate the final CDL/GDS instance count and do
+  # not contribute logical connectivity.  Keep them out of abstract full-chip
+  # LVS; transistor mode still sees the unfiltered layout.
+  select("-gt2_6t_filler*")
+  puts "INFO : GT2N abstract LVS source filter = -gt2_6t_filler*"
+end
+
+# -----------------------------------------------------------------------------
+# ICV header traceability (gt2_main.lvs.rs lines 32-37)
+# -----------------------------------------------------------------------------
+# #define ICV_ENABLE_LVS_SEN_EXCLUDE_TOLERANCE
+# #include <icv.rh>
+# #ifdef OVERRIDE_FILE
+# #include "override_file.rs"
+# #endif
+
+vLVS_POWER_NAMES  = ["VDD", "vdd", "vdd!", "VDD!"]
+vLVS_GROUND_NAMES = ["VSS", "GND!", "gnd!", "vss", "vss!", "VSS!", "Vss!"]
+
+# -----------------------------------------------------------------------------
+# Layer name mapping (ICV assign/assign_text)
+# -----------------------------------------------------------------------------
+if lvs_mode == "transistor"
+  aNWELL  = polygons(1, 0)
+  aACT    = polygons(2, 0)
+  aGATE   = polygons(3, 0)
+  aDUMMY  = polygons(4, 0)
+  aGCUT   = polygons(5, 0)
+  aNSEL   = polygons(6, 0)
+  aPSEL   = polygons(7, 0)
+end
+
+aBPR    = polygons(8, 0)
+tBPR    = labels("8/*")
+aVBPR   = polygons(9, 0)
+aSDCON  = polygons(10, 0)
+tSDCON  = labels("10/*")
+aVSD    = polygons(11, 0)
+if lvs_mode == "transistor"
+  aVG     = polygons(12, 0)
+end
+
+aM0     = polygons(20, 0)
+tM0     = labels("20/*")
+aV0     = polygons(22, 0)
+aM1     = polygons(25, 0)
+tM1     = labels("25/*")
+aV1     = polygons(27, 0)
+aM2     = polygons(30, 0)
+tM2     = labels("30/*")
+aV2     = polygons(32, 0)
+aM3     = polygons(35, 0)
+tM3     = labels("35/*")
+aV3     = polygons(37, 0)
+aM4     = polygons(40, 0)
+tM4     = labels("40/*")
+aV4     = polygons(42, 0)
+aM5     = polygons(45, 0)
+tM5     = labels("45/*")
+aV5     = polygons(47, 0)
+aM6     = polygons(50, 0)
+tM6     = labels("50/*")
+aV6     = polygons(52, 0)
+aM7     = polygons(55, 0)
+tM7     = labels("55/*")
+aV7     = polygons(57, 0)
+aM8     = polygons(60, 0)
+tM8     = labels("60/*")
+aV8     = polygons(62, 0)
+aM9     = polygons(65, 0)
+tM9     = labels("65/*")
+aV9     = polygons(67, 0)
+aM10    = polygons(70, 0)
+tM10    = labels("70/*")
+aV10    = polygons(72, 0)
+aM11    = polygons(75, 0)
+tM11    = labels("75/*")
+aV11    = polygons(77, 0)
+aM12    = polygons(80, 0)
+tM12    = labels("80/*")
+aV12    = polygons(82, 0)
+aM13    = polygons(85, 0)
+tM13    = labels("85/*")
+aV13    = polygons(87, 0)
+aRDL    = polygons(90, 0)
+tRDL    = labels("90/*")
+
+if lvs_mode == "transistor"
+  aELVT   = polygons(94, 0)
+  aULVT   = polygons(95, 0)
+  aSVT    = polygons(96, 0)
+  aHVT    = polygons(97, 0)
+  aSRAMVT = polygons(98, 0)
+end
+
+aBV0    = polygons(910, 0)
+aBM1    = polygons(920, 0)
+tBM1    = labels("920/*")
+aBV1    = polygons(930, 0)
+aBM2    = polygons(940, 0)
+tBM2    = labels("940/*")
+aBV2    = polygons(950, 0)
+aBM3    = polygons(960, 0)
+tBM3    = labels("960/*")
+aBV3    = polygons(970, 0)
+aBM4    = polygons(980, 0)
+tBM4    = labels("980/*")
+aBV4    = polygons(990, 0)
+aBRDL   = polygons(1000, 0)
+tBRDL   = labels("1000/*")
+
+# -----------------------------------------------------------------------------
+# Derived FEOL layers (ICV lines 180-200)
+#
+# Only transistor LVS needs these expensive active/gate booleans.  Full-chip
+# abstract LVS checks routed cell-level connectivity through metal/via/text
+# layers and deliberately skips MOS recognition inside standard cells.
+# -----------------------------------------------------------------------------
+if lvs_mode == "transistor"
+  # ICV uses gBULK = cell_extent(...); for KLayout LVS extraction this deck uses
+  # active-domain substrate/well partitions.
+  gPSUB = aACT - aNWELL
+  gNWELL = aNWELL
+
+  gPOLY = aGATE - aGCUT - aDUMMY
+
+  gN_ACTIVE_AREA = gPSUB & aACT
+  gN_NS_AREA = gN_ACTIVE_AREA & aNSEL
+  NGATE1 = gN_NS_AREA & gPOLY
+  N_src_drn = gN_NS_AREA - NGATE1 - aDUMMY
+  gN_GATE_cont = gPOLY - NGATE1
+
+  gP_ACTIVE_AREA = gNWELL & aACT
+  gP_NS_AREA = gP_ACTIVE_AREA & aPSEL
+  PGATE1 = gP_NS_AREA & gPOLY
+  P_src_drn = gP_NS_AREA - PGATE1 - aDUMMY
+  gP_GATE_cont = gPOLY - PGATE1
+
+  gVPW1 = aPSEL & aACT
+  gVPW = gVPW1 & gPSUB
+  gVNW1 = aNSEL & aSDCON
+  gVNW = gVNW1 & gNWELL
+end
+
+# -----------------------------------------------------------------------------
+# Connectivity (ICV incremental_connect block lines 203-237)
+# -----------------------------------------------------------------------------
+if lvs_mode == "transistor"
+  connect(gPOLY, aVG)
+  connect(aVG, aM0)
+end
+
+connect(aBRDL, aBV4)
+connect(aBV4, aBM4)
+connect(aBM4, aBV3)
+connect(aBV3, aBM3)
+connect(aBM3, aBV2)
+connect(aBV2, aBM2)
+connect(aBM2, aBV1)
+connect(aBV1, aBM1)
+connect(aBM1, aBV0)
+connect(aBV0, aBPR)
+connect(aBPR, aVBPR)
+connect(aVBPR, aSDCON)
+connect(aSDCON, aVSD)
+connect(aVSD, aM0)
+
+connect(aM0, aV0)
+connect(aV0, aM1)
+connect(aM1, aV1)
+connect(aV1, aM2)
+connect(aM2, aV2)
+connect(aV2, aM3)
+connect(aM3, aV3)
+connect(aV3, aM4)
+connect(aM4, aV4)
+connect(aV4, aM5)
+connect(aM5, aV5)
+connect(aV5, aM6)
+connect(aM6, aV6)
+connect(aV6, aM7)
+connect(aM7, aV7)
+connect(aV7, aM8)
+connect(aM8, aV8)
+connect(aV8, aM9)
+connect(aM9, aV9)
+connect(aV9, aM10)
+connect(aM10, aV10)
+connect(aV10, aM11)
+connect(aM11, aV11)
+connect(aV11, aM12)
+connect(aM12, aV12)
+connect(aV12, aM13)
+connect(aM13, aV13)
+connect(aV13, aRDL)
+
+if lvs_mode == "transistor"
+  connect(aSDCON, N_src_drn)
+  connect(aSDCON, P_src_drn)
+  connect(aSDCON, gVPW)
+  connect(aSDCON, gVNW)
+
+  connect(gN_GATE_cont, NGATE1)
+  connect(gN_GATE_cont, aVG)
+  connect(gP_GATE_cont, PGATE1)
+  connect(gP_GATE_cont, aVG)
+  connect(PGATE1, gN_GATE_cont)
+  connect(NGATE1, gP_GATE_cont)
+end
+
+# -----------------------------------------------------------------------------
+# Text attachment / ports
+# ICV uses text_origin + create_ports + text_net (lines 239-348). KLayout LVS
+# has no direct equivalent API surface for those exact calls; map text labels by
+# direct connectivity to conductive layers.
+# -----------------------------------------------------------------------------
+connect(aBRDL, tBRDL)
+connect(aBM4, tBM4)
+connect(aBM3, tBM3)
+connect(aBM2, tBM2)
+connect(aBM1, tBM1)
+connect(aBPR, tBPR)
+connect(aM0, tM0)
+connect(aM1, tM1)
+connect(aM2, tM2)
+connect(aM3, tM3)
+connect(aM4, tM4)
+connect(aM5, tM5)
+connect(aM6, tM6)
+connect(aM7, tM7)
+connect(aM8, tM8)
+connect(aM9, tM9)
+connect(aM10, tM10)
+connect(aM11, tM11)
+connect(aM12, tM12)
+connect(aM13, tM13)
+connect(aRDL, tRDL)
+
+# -----------------------------------------------------------------------------
+# Global power/ground naming
+# -----------------------------------------------------------------------------
+if lvs_mode == "abstract"
+  # Some GT2N multi-row cells expose more than one BPR rail with the same PG
+  # label, e.g. top and bottom "vss" rails in mux/flop cells.  The CDL models
+  # those rail fragments as a single logical PG pin.  KLayout's connect_implicit
+  # and connect_explicit primitives match that intent, but they scale poorly on
+  # full-chip GT2N layouts.  Keep a generated library-wide list here and collapse
+  # duplicate PG pins after extraction as a cheap netlist-normalization step.
+  split_vss_rail_cells = [
+    "gt2_6t_dffasync_x1_w13_elvt",
+    "gt2_6t_dffasync_x1_w13_hvt",
+    "gt2_6t_dffasync_x1_w13_lvt",
+    "gt2_6t_dffasync_x1_w13_svt",
+    "gt2_6t_dffasync_x1_w13_ulvt",
+    "gt2_6t_dffasync_x1_w31_elvt",
+    "gt2_6t_dffasync_x1_w31_hvt",
+    "gt2_6t_dffasync_x1_w31_lvt",
+    "gt2_6t_dffasync_x1_w31_svt",
+    "gt2_6t_dffasync_x1_w31_ulvt",
+    "gt2_6t_dffasync_x2_w13_elvt",
+    "gt2_6t_dffasync_x2_w13_hvt",
+    "gt2_6t_dffasync_x2_w13_lvt",
+    "gt2_6t_dffasync_x2_w13_svt",
+    "gt2_6t_dffasync_x2_w13_ulvt",
+    "gt2_6t_dffasync_x2_w31_elvt",
+    "gt2_6t_dffasync_x2_w31_hvt",
+    "gt2_6t_dffasync_x2_w31_lvt",
+    "gt2_6t_dffasync_x2_w31_svt",
+    "gt2_6t_dffasync_x2_w31_ulvt",
+    "gt2_6t_dffasync_x4_w13_elvt",
+    "gt2_6t_dffasync_x4_w13_hvt",
+    "gt2_6t_dffasync_x4_w13_lvt",
+    "gt2_6t_dffasync_x4_w13_svt",
+    "gt2_6t_dffasync_x4_w13_ulvt",
+    "gt2_6t_dffasync_x4_w31_elvt",
+    "gt2_6t_dffasync_x4_w31_hvt",
+    "gt2_6t_dffasync_x4_w31_lvt",
+    "gt2_6t_dffasync_x4_w31_svt",
+    "gt2_6t_dffasync_x4_w31_ulvt",
+    "gt2_6t_mux2_x1_w13_elvt",
+    "gt2_6t_mux2_x1_w13_hvt",
+    "gt2_6t_mux2_x1_w13_lvt",
+    "gt2_6t_mux2_x1_w13_svt",
+    "gt2_6t_mux2_x1_w13_ulvt",
+    "gt2_6t_mux2_x1_w31_elvt",
+    "gt2_6t_mux2_x1_w31_hvt",
+    "gt2_6t_mux2_x1_w31_lvt",
+    "gt2_6t_mux2_x1_w31_svt",
+    "gt2_6t_mux2_x1_w31_ulvt"
+  ]
+end
+
+def normalize_split_pg_rail_pins(layout_netlist, cell_names, pg_names)
+  removed_pins = 0
+
+  cell_names.each do |cell_name|
+    [cell_name, cell_name.upcase].uniq.each do |candidate_name|
+      circuit = layout_netlist.circuit_by_name(candidate_name)
+      next if circuit.nil?
+
+      pg_names.each do |pg_name|
+        pins = []
+        circuit.each_pin do |pin|
+          pins << pin if pin.name == pg_name
+        end
+        next if pins.size < 2
+
+        pins.sort_by!(&:id)
+        keep_pin = pins.first
+        drop_pins = pins[1..-1] || []
+
+        layout_netlist.each_circuit do |parent|
+          parent.each_subcircuit do |subckt|
+            next unless subckt.circuit == circuit
+
+            keep_net = subckt.net_for_pin(keep_pin.id)
+            drop_pins.each do |pin|
+              drop_net = subckt.net_for_pin(pin.id)
+              if keep_net && drop_net && keep_net != drop_net
+                parent.join_nets(keep_net, drop_net)
+              elsif keep_net.nil? && drop_net
+                subckt.connect_pin(keep_pin.id, drop_net)
+                keep_net = drop_net
+              end
+              subckt.disconnect_pin(pin.id)
+            end
+          end
+        end
+
+        keep_net = circuit.net_for_pin(keep_pin.id)
+        drop_pins.each do |pin|
+          drop_net = circuit.net_for_pin(pin.id)
+          if keep_net && drop_net && keep_net != drop_net
+            circuit.join_nets(keep_net, drop_net)
+          elsif keep_net.nil? && drop_net
+            circuit.connect_pin(keep_pin.id, drop_net)
+            keep_net = drop_net
+          end
+          circuit.disconnect_pin(pin.id)
+          circuit.remove_pin(pin.id)
+          removed_pins += 1
+        end
+      end
+    end
+  end
+
+  puts "INFO : GT2N normalized #{removed_pins} split PG abstract pins"
+end
+
+if lvs_mode == "transistor"
+  vLVS_GROUND_NAMES.each do |gnd_name|
+    connect_global(gPSUB, gnd_name)
+  end
+  vLVS_POWER_NAMES.each do |pwr_name|
+    connect_global(gNWELL, pwr_name)
+  end
+end
+
+# -----------------------------------------------------------------------------
+# VT split and extraction (ICV lines 353-405)
+#
+# transistor mode follows the ICV MOS extraction intent and compares standard
+# cell internals.  On large ORFS designs this can be expensive.
+#
+# abstract mode is the default full-chip mode: it keeps the same layer/text
+# connectivity graph but blanks gt2_6t_* standard-cell circuits on both layout
+# and schematic sides.  This verifies routed top-level connectivity against the
+# gate-level netlist while relying on separately validated standard-cell CDL/GDS.
+# -----------------------------------------------------------------------------
+if lvs_mode == "transistor"
+  N_base = NGATE1 & gPSUB
+  P_base = PGATE1 & gNWELL
+
+  N_ELVT = N_base & aELVT
+  N_ULVT = N_base & aULVT
+  N_SVT = N_base & aSVT
+  N_HVT = N_base & aHVT
+  N_SRAMVT = N_base & aSRAMVT
+  N_LVT = N_base - aELVT - aULVT - aSVT - aHVT - aSRAMVT
+
+  P_ELVT = P_base & aELVT
+  P_ULVT = P_base & aULVT
+  P_SVT = P_base & aSVT
+  P_HVT = P_base & aHVT
+  P_SRAMVT = P_base & aSRAMVT
+  P_LVT = P_base - aELVT - aULVT - aSVT - aHVT - aSRAMVT
+
+  # Device dimensions in microns to match CDL W/L units
+  device_scaling(1000000)
+
+  extract_devices(mos4("nmos_elvt"),   { "SD" => N_src_drn, "G" => N_ELVT,   "tS" => N_src_drn, "tD" => N_src_drn, "tG" => gPOLY, "W" => gPSUB })
+  extract_devices(mos4("nmos_ulvt"),   { "SD" => N_src_drn, "G" => N_ULVT,   "tS" => N_src_drn, "tD" => N_src_drn, "tG" => gPOLY, "W" => gPSUB })
+  extract_devices(mos4("nmos_svt"),    { "SD" => N_src_drn, "G" => N_SVT,    "tS" => N_src_drn, "tD" => N_src_drn, "tG" => gPOLY, "W" => gPSUB })
+  extract_devices(mos4("nmos_hvt"),    { "SD" => N_src_drn, "G" => N_HVT,    "tS" => N_src_drn, "tD" => N_src_drn, "tG" => gPOLY, "W" => gPSUB })
+  extract_devices(mos4("nmos_sramvt"), { "SD" => N_src_drn, "G" => N_SRAMVT, "tS" => N_src_drn, "tD" => N_src_drn, "tG" => gPOLY, "W" => gPSUB })
+  extract_devices(mos4("nmos_lvt"),    { "SD" => N_src_drn, "G" => N_LVT,    "tS" => N_src_drn, "tD" => N_src_drn, "tG" => gPOLY, "W" => gPSUB })
+
+  extract_devices(mos4("pmos_elvt"),   { "SD" => P_src_drn, "G" => P_ELVT,   "tS" => P_src_drn, "tD" => P_src_drn, "tG" => gPOLY, "W" => gNWELL })
+  extract_devices(mos4("pmos_ulvt"),   { "SD" => P_src_drn, "G" => P_ULVT,   "tS" => P_src_drn, "tD" => P_src_drn, "tG" => gPOLY, "W" => gNWELL })
+  extract_devices(mos4("pmos_svt"),    { "SD" => P_src_drn, "G" => P_SVT,    "tS" => P_src_drn, "tD" => P_src_drn, "tG" => gPOLY, "W" => gNWELL })
+  extract_devices(mos4("pmos_hvt"),    { "SD" => P_src_drn, "G" => P_HVT,    "tS" => P_src_drn, "tD" => P_src_drn, "tG" => gPOLY, "W" => gNWELL })
+  extract_devices(mos4("pmos_sramvt"), { "SD" => P_src_drn, "G" => P_SRAMVT, "tS" => P_src_drn, "tD" => P_src_drn, "tG" => gPOLY, "W" => gNWELL })
+  extract_devices(mos4("pmos_lvt"),    { "SD" => P_src_drn, "G" => P_LVT,    "tS" => P_src_drn, "tD" => P_src_drn, "tG" => gPOLY, "W" => gNWELL })
+end
+
+if lvs_mode == "abstract"
+  # Declare standard cells as abstract before extraction so KLayout can avoid
+  # spending time deriving their transistor-level internals.
+  #
+  # KLayout's SPICE reader normalizes CDL subcircuit names to upper case in the
+  # reference netlist, while GDS cell names remain lower case.  Blank both forms
+  # so full-chip LVS compares standard-cell pins/top-level routing rather than
+  # trying to match transistor internals for one side of the comparison.
+  blank_circuit("gt2_6t_*")
+  blank_circuit("GT2_6T_*")
+end
+
+def normalize_def_inst_name(name)
+  # DEF/CDL escape bus brackets with backslashes, but KLayout's SPICE reader
+  # stores the logical names without those escapes.
+  name.gsub("\\[", "[").gsub("\\]", "]")
+end
+
+def def_mirror_flag(orient)
+  # OpenROAD standard-cell rows use N and FS in this GT2N flow.  Include common
+  # mirrored DEF orientations for completeness.
+  ["FN", "FS", "W", "FE"].include?(orient)
+end
+
+def load_gds_master_place_heights(gds_file, def_units)
+  heights = {}
+  return heights unless gds_file && File.exist?(gds_file)
+
+  # DEF records the lower-left placement point.  Mirrored GDS instances use a
+  # transformed origin shifted upward by the cell placement height.  For these
+  # GT2N cells the placement height is bbox.top + bbox.bottom because the GDS
+  # standard-cell geometries intentionally overhang the abstract site by the
+  # same amount above and below.
+  layout = RBA::Layout::new
+  layout.read(gds_file)
+  scale = layout.dbu * def_units
+  top = layout.top_cell
+  top.each_inst do |inst|
+    master = layout.cell(inst.cell_index).name.downcase
+    next unless master.start_with?("gt2_6t_")
+    next if heights.key?(master)
+    bbox = layout.cell(inst.cell_index).bbox
+    heights[master] = ((bbox.top + bbox.bottom) * scale).round
+  end
+  heights
+end
+
+def load_def_instance_name_map(def_file, def_units_box, place_heights)
+  name_map = Hash.new { |h, k| h[k] = [] }
+  in_components = false
+  pending = nil
+
+  File.foreach(def_file) do |raw|
+    line = raw.strip
+    if line.start_with?("UNITS DISTANCE MICRONS")
+      toks = line.split
+      def_units_box.replace(toks[3]) if toks.size >= 4
+    end
+    if line.start_with?("COMPONENTS ")
+      in_components = true
+      next
+    end
+    break if in_components && line == "END COMPONENTS"
+    next unless in_components
+
+    if line.start_with?("- ")
+      pending = line
+    elsif pending
+      pending += " " + line
+    else
+      next
+    end
+
+    next unless pending.include?(";")
+    rec = pending
+    pending = nil
+
+    m = rec.match(/^[-]\s+(\S+)\s+(\S+)\s+.*\+\s+(?:PLACED|FIXED)\s+\(\s+(\d+)\s+(\d+)\s+\)\s+(\S+)/)
+    next unless m
+    inst = normalize_def_inst_name(m[1])
+    master = m[2].downcase
+    next unless master.start_with?("gt2_6t_")
+    x = m[3].to_i
+    y = m[4].to_i
+    mirror = def_mirror_flag(m[5])
+    gds_y = mirror ? y + place_heights.fetch(master, 0) : y
+    name_map[[master, x, gds_y, mirror]] << inst
+  end
+  name_map
+end
+
+def load_def_inst_pin_net_map(def_file)
+  pin_nets = {}
+  in_nets = false
+  pending = nil
+
+  File.foreach(def_file) do |raw|
+    line = raw.strip
+    if line.start_with?("NETS ")
+      in_nets = true
+      next
+    end
+    break if in_nets && line == "END NETS"
+    next unless in_nets
+
+    if line.start_with?("- ")
+      pending = line
+    elsif pending
+      pending += " " + line
+    else
+      next
+    end
+
+    next unless pending.include?(";")
+    rec = pending
+    pending = nil
+
+    m = rec.match(/^[-]\s+(\S+)/)
+    next unless m
+    net = normalize_def_inst_name(m[1]).upcase
+    rec.scan(/\(\s+(\S+)\s+(\S+)\s+\)/) do |inst, pin|
+      next if inst == "PIN"
+      pin_nets[[normalize_def_inst_name(inst), pin]] = net
+    end
+  end
+
+  pin_nets
+end
+
+def def_pin_net_for(pin_nets, inst, pin)
+  [pin, pin.upcase, pin.downcase].uniq.each do |candidate|
+    net = pin_nets[[inst, candidate]]
+    return net if net
+  end
+  nil
+end
+
+def apply_def_net_names(layout_netlist, pin_nets, allowed_net_names = nil)
+  top = layout_netlist.top_circuit
+  renamed = 0
+  missing = 0
+  conflicts = 0
+  skipped_internal = 0
+  allowed = nil
+  if allowed_net_names && !allowed_net_names.empty?
+    allowed = {}
+    allowed_net_names.each { |name| allowed[name.to_s.upcase] = true }
+  end
+
+  top.each_subcircuit do |subckt|
+    cref = subckt.circuit_ref
+    next if cref.nil?
+    master = cref.name.downcase
+    next unless master.start_with?("gt2_6t_")
+    next if master.start_with?("gt2_6t_filler")
+
+    (0...cref.pin_count).each do |i|
+      pin = cref.pin_by_id(i)
+      next unless pin
+      def_net = def_pin_net_for(pin_nets, subckt.name, pin.name)
+      if !def_net && pin.name.downcase == "vdd"
+        def_net = "VDD"
+      elsif !def_net && pin.name.downcase == "vss"
+        def_net = "VSS"
+      end
+      if def_net
+        if allowed && !allowed[def_net.upcase]
+          skipped_internal += 1
+          next
+        end
+        net = subckt.net_for_pin(i) rescue nil
+        next unless net
+        if net.name && !net.name.empty? && !net.name.start_with?("$") && net.name.upcase != def_net.upcase
+          conflicts += 1
+        else
+          net.name = def_net
+          renamed += 1
+        end
+      elsif pin.name.downcase != "vdd" && pin.name.downcase != "vss"
+        missing += 1
+      end
+    end
+  end
+
+  puts "INFO : GT2N DEF net-name recovery renamed_pins=#{renamed} missing_signal_pins=#{missing} conflicts=#{conflicts} skipped_internal=#{skipped_internal}"
+end
+
+def remove_signal_lvs_pg_interface_pins(layout_netlist)
+  # Signal-only abstract LVS deliberately ignores PG interface pins because
+  # GT2N's BPR/PG routing is the known unresolved issue.  This keeps all signal
+  # pins in KLayout's extracted GDS order, but removes vdd/vss pins from the
+  # top circuit and all standard-cell abstract circuits so the comparison is not
+  # dominated by fragmented physical VDD/VSS shapes.
+  top = layout_netlist.top_circuit
+  removed = Hash.new(0)
+  subckts_by_master = Hash.new { |h, k| h[k] = [] }
+
+  layout_netlist.each_circuit do |circuit|
+    circuit.each_subcircuit do |subckt|
+      begin
+        cref = subckt.circuit_ref
+      rescue
+        begin
+          cref = subckt.circuit
+        rescue
+          cref = nil
+        end
+      end
+      next unless cref
+      subckts_by_master[cref.name.to_s.downcase] << subckt
+    end
+  end
+
+  layout_netlist.each_circuit do |circuit|
+    name = circuit.name.to_s.downcase
+    next unless circuit == top || name.start_with?("gt2_6t_")
+    pg_pins = []
+    circuit.each_pin do |pin|
+      pg_pins << pin if ["vdd", "vss"].include?(pin.name.to_s.downcase)
+    end
+    next if pg_pins.empty?
+
+    pg_pins.sort_by { |pin| -pin.id }.each do |pin|
+      subckts_by_master[name].each do |subckt|
+        begin
+          subckt.disconnect_pin(pin.id)
+        rescue
+        end
+      end
+
+      begin
+        circuit.disconnect_pin(pin.id)
+      rescue
+      end
+      begin
+        circuit.remove_pin(pin.id)
+        removed[name] += 1
+      rescue
+      end
+    end
+  end
+
+  total = removed.values.inject(0, :+)
+  puts "INFO : GT2N signal-only LVS removed PG interface pins total=#{total} circuits=#{removed.size}"
+end
+
+def keep_only_signal_lvs_top_pins(layout_netlist, reference_top_ports)
+  return if reference_top_ports.nil? || reference_top_ports.empty?
+
+  top = layout_netlist.top_circuit
+  keep = {}
+  reference_top_ports.each { |port| keep[port.to_s.upcase] = port.to_s }
+  kept = 0
+  removed = 0
+  renamed = 0
+  pins = []
+  top.each_pin { |pin| pins << pin }
+
+  pins.sort_by { |pin| -pin.id }.each do |pin|
+    key = pin.name.to_s.upcase
+    canonical = keep[key]
+    if canonical
+      begin
+        if pin.name.to_s != canonical
+          pin.name = canonical
+          renamed += 1
+        end
+      rescue
+      end
+      kept += 1
+      next
+    end
+
+    begin
+      top.disconnect_pin(pin.id)
+    rescue
+    end
+    begin
+      top.remove_pin(pin.id)
+      removed += 1
+    rescue
+    end
+  end
+
+  puts "INFO : GT2N signal-only LVS top pins kept=#{kept} removed_internal=#{removed} renamed=#{renamed} reference_ports=#{reference_top_ports.size}"
+end
+
+def apply_def_instance_names(layout_netlist, def_file, gds_file)
+  def_units_box = "2000"
+  place_heights = load_gds_master_place_heights(gds_file, def_units_box.to_i)
+  name_map = load_def_instance_name_map(def_file, def_units_box, place_heights)
+  def_units = def_units_box.to_i
+  top = layout_netlist.top_circuit
+  renamed = 0
+  missed = 0
+  duplicate_keys = 0
+
+  top.each_subcircuit do |subckt|
+    cref = subckt.circuit_ref
+    next if cref.nil?
+    master = cref.name.downcase
+    next unless master.start_with?("gt2_6t_")
+    next if master.start_with?("gt2_6t_filler")
+    tr = subckt.trans
+    key = [master, (tr.disp.x * def_units).round, (tr.disp.y * def_units).round, tr.is_mirror?]
+    names = name_map[key]
+    if names && !names.empty?
+      duplicate_keys += 1 if names.size > 1
+      subckt.name = names.shift
+      renamed += 1
+    else
+      missed += 1
+    end
+  end
+
+  puts "INFO : GT2N DEF instance-name recovery renamed=#{renamed} missed=#{missed} duplicate_keys=#{duplicate_keys} def_units=#{def_units} height_masters=#{place_heights.size}"
+end
+
+netlist
+if lvs_mode == "abstract" && $def_file
+  apply_def_instance_names(netlist, $def_file, ($in_gds || $input))
+  signal_only_lvs_active = ($signal_only_lvs || ENV["KLAYOUT_LVS_SIGNAL_ONLY"] == "1")
+  allowed_top_nets = signal_only_lvs_active ? @gt2n_signal_only_top_ports : nil
+  apply_def_net_names(netlist, load_def_inst_pin_net_map($def_file), allowed_top_nets)
+  if signal_only_lvs_active
+    keep_only_signal_lvs_top_pins(netlist, @gt2n_signal_only_top_ports)
+    remove_signal_lvs_pg_interface_pins(netlist)
+  end
+end
+align
+netlist.simplify
+
+# Tolerances (ICV checks W/L with 0.1% + 1nm)
+if lvs_mode == "transistor"
+  tolerance("nmos_elvt", "W", :absolute => 1.nm, :relative => 0.001)
+  tolerance("nmos_elvt", "L", :absolute => 1.nm, :relative => 0.001)
+  tolerance("nmos_ulvt", "W", :absolute => 1.nm, :relative => 0.001)
+  tolerance("nmos_ulvt", "L", :absolute => 1.nm, :relative => 0.001)
+  tolerance("nmos_svt", "W", :absolute => 1.nm, :relative => 0.001)
+  tolerance("nmos_svt", "L", :absolute => 1.nm, :relative => 0.001)
+  tolerance("nmos_hvt", "W", :absolute => 1.nm, :relative => 0.001)
+  tolerance("nmos_hvt", "L", :absolute => 1.nm, :relative => 0.001)
+  tolerance("nmos_sramvt", "W", :absolute => 1.nm, :relative => 0.001)
+  tolerance("nmos_sramvt", "L", :absolute => 1.nm, :relative => 0.001)
+  tolerance("nmos_lvt", "W", :absolute => 1.nm, :relative => 0.001)
+  tolerance("nmos_lvt", "L", :absolute => 1.nm, :relative => 0.001)
+
+  tolerance("pmos_elvt", "W", :absolute => 1.nm, :relative => 0.001)
+  tolerance("pmos_elvt", "L", :absolute => 1.nm, :relative => 0.001)
+  tolerance("pmos_ulvt", "W", :absolute => 1.nm, :relative => 0.001)
+  tolerance("pmos_ulvt", "L", :absolute => 1.nm, :relative => 0.001)
+  tolerance("pmos_svt", "W", :absolute => 1.nm, :relative => 0.001)
+  tolerance("pmos_svt", "L", :absolute => 1.nm, :relative => 0.001)
+  tolerance("pmos_hvt", "W", :absolute => 1.nm, :relative => 0.001)
+  tolerance("pmos_hvt", "L", :absolute => 1.nm, :relative => 0.001)
+  tolerance("pmos_sramvt", "W", :absolute => 1.nm, :relative => 0.001)
+  tolerance("pmos_sramvt", "L", :absolute => 1.nm, :relative => 0.001)
+  tolerance("pmos_lvt", "W", :absolute => 1.nm, :relative => 0.001)
+  tolerance("pmos_lvt", "L", :absolute => 1.nm, :relative => 0.001)
+end
+
+if !compare
+  puts "ERROR : Netlists don't match"
+else
+  puts "INFO : Congratulations! Netlists match."
+end
+
+# -----------------------------------------------------------------------------
+# ICV-only constructs preserved as traceability notes (not executable in KLayout
+# LVS DSL with identical API names):
+#   - dev_properties : function ... dev_polygon_perim/dev_touch_length
+#       dev_recognition_layer(...)
+#       dev_pin(...)
+#       dev_save_double_properties(...)
+#   - library(...), text_options(...), net_options(...)
+#   - CONNECT_DB : connect_database = NULL_CONNECT_DATABASE
+#   - text_origin(...), create_ports(...), text_net(...)
+#   - init_device_matrix(...), device_db = extract_devices(dev_matrix)
+#   - init_compare_matrix(), merge_parallel(), check_property(), match(...)
+#   - full PEX block:
+#       init_pex_layer_matrix(...)
+#       pex_conducting_layer_map(...)
+#       pex_via_layer_map(...)
+#       pex_library_layer_map_file(...)
+#       pex_cell_extents_file(...)
+#       pex_cell_port_file(...)
+#       gds_library(...)
+#       spice_netlist_file(...)
+#       pex_process_map_file(...)
+#       pex_runset_report_file(...)
+#       pex_generate_database(...)
+# For exact API behavior of those calls, keep using the original ICV runset:
+# platforms/gt2n/icv_runset/gt2_main.lvs.rs
+]]></text>
+</klayout-macro>

@@ -1,0 +1,129 @@
+"""GT2N ORFS platform (as an out-of-repo bazel-orfs PDK) and the gcd A/B demo.
+
+This repo is the source of truth for the GT2N PDK. The platform collateral the
+flow consumes (tech LEF, cell LEF/LIB/GDS) are symlinks under platforms/gt2n/
+pointing at the canonical files at the repo root (techlib/, lef/, lib/, gds/),
+so there is a single copy of every byte. Plain ORFS can consume the same
+platforms/gt2n/ and designs/gt2n/ directories directly.
+
+A/B example: the same AES-128 RTL is taken through two PDKs — GT2N (gt2n) and
+the ASAP7 predictive PDK bundled with ORFS — so they can be compared head to
+head (gcd is just a fast pipe-cleaner). Run `bazelisk run //:update-a-b` to
+refresh the comparison table and plot in README.md.
+"""
+
+load("@bazel-orfs//:openroad.bzl", "orfs_flow", "orfs_pdk")
+
+package(default_visibility = ["//visibility:public"])
+
+# --- GT2N PDK -------------------------------------------------------------
+# Mirrors the orfs_pdk() pattern used by ORFS's own flow/BUILD: config.mk plus
+# every platform file as srcs, and the .lib files as libs. The glob matches the
+# symlinked lef/lib/gds files (glob stats individual symlinks).
+orfs_pdk(
+    name = "gt2n",
+    config = ":platforms/gt2n/config.mk",
+    srcs = glob(
+        ["platforms/gt2n/**/*"],
+        exclude = [
+            "platforms/gt2n/**/BUILD",
+            "platforms/gt2n/**/BUILD.bazel",
+        ],
+    ),
+    libs = glob(["platforms/gt2n/lib/*.lib"]),
+)
+
+# --- Pipe-cleaner: gcd -----------------------------------------------------
+# gcd is tiny; it just flushes the whole flow quickly. The A/B comparison uses
+# AES below (a realistic design). Arguments from PR #4277's gcd config.mk.
+orfs_flow(
+    name = "gcd",
+    pdk = ":gt2n",
+    arguments = {
+        "CORE_UTILIZATION": "25",
+        "CORE_MARGIN": "0.5",
+        "PLACE_DENSITY": "0.35",
+        "TNS_END_PERCENT": "100",
+        # Skip static IR analysis at finish. GT2N power is delivered on the
+        # backside (BPR/BM*); without the real backside PG mesh (the example
+        # paints it in KLayout post-GDS) PSM sees the std cells as unconnected
+        # on vdd and fails its connectivity check. Empty net voltages disable
+        # that analysis so the routed design still streams out to a final GDS.
+        "PWR_NETS_VOLTAGES": "",
+        "GND_NETS_VOLTAGES": "",
+    },
+    sources = {
+        "SDC_FILE": ["designs/gt2n/gcd/constraint.sdc"],
+    },
+    top = "gcd",
+    verilog_files = ["designs/src/gcd/gcd.v"],
+)
+
+# --- B side: same gcd on ASAP7 -------------------------------------------
+# ASAP7 collateral + constraints from ORFS's own asap7/gcd smoketest design.
+orfs_flow(
+    name = "gcd_asap7",
+    pdk = "@orfs//flow:asap7",
+    arguments = {
+        "CORE_UTILIZATION": "65",
+        "CORE_ASPECT_RATIO": "1",
+        "CORE_MARGIN": "0.5",
+        "PLACE_DENSITY": "0.35",
+        "SKIP_LAST_GASP": "1",
+    },
+    sources = {
+        "SDC_FILE": ["designs/asap7/gcd/constraint.sdc"],
+    },
+    top = "gcd",
+    verilog_files = ["designs/src/gcd/gcd.v"],
+)
+
+# --- A/B comparison: AES-128, the same RTL through GT2N and ASAP7 ----------
+# AES is a realistic block (not a smoke test). Same RTL + same SDC both sides;
+# the A/B table (//:update-a-b) compares these two.
+AES_SDC = {"SDC_FILE": ["designs/aes/constraint.sdc"]}
+
+AES_VERILOG = glob(["designs/src/aes/*.v"])
+
+orfs_flow(
+    name = "aes",
+    pdk = ":gt2n",
+    arguments = {
+        # Give a real design more than the platform-default M2-M5 signal stack
+        # (the platform makes MAX_ROUTING_LAYER overridable). 40% on M2-M10
+        # routes comfortably — a good routing, not the squeezed-out max. See
+        # orfs/README.md "Core utilization".
+        "MAX_ROUTING_LAYER": "M10",
+        "CORE_UTILIZATION": "40",
+        "CORE_MARGIN": "1",
+        "PLACE_DENSITY": "0.58",
+        # Backside power: skip static IR (see gcd above for why).
+        "PWR_NETS_VOLTAGES": "",
+        "GND_NETS_VOLTAGES": "",
+        # Global route is clean at 40%/M10; it's post-route timing repair that
+        # bloats the design (chasing wire delay under the placeholder RC) and
+        # re-congests. Skip that repair to land a clean route — these numbers
+        # are a routing demo, not optimized timing (see README RC note).
+        "SKIP_CTS_REPAIR_TIMING": "1",
+        "SKIP_INCREMENTAL_REPAIR": "1",
+    },
+    sources = AES_SDC,
+    top = "aes_cipher_top",
+    verilog_files = AES_VERILOG,
+)
+
+orfs_flow(
+    name = "aes_asap7",
+    pdk = "@orfs//flow:asap7",
+    arguments = {
+        "CORE_UTILIZATION": "40",
+        "CORE_MARGIN": "1",
+        "PLACE_DENSITY": "0.58",
+        "SKIP_LAST_GASP": "1",
+        "SKIP_CTS_REPAIR_TIMING": "1",
+        "SKIP_INCREMENTAL_REPAIR": "1",
+    },
+    sources = AES_SDC,
+    top = "aes_cipher_top",
+    verilog_files = AES_VERILOG,
+)

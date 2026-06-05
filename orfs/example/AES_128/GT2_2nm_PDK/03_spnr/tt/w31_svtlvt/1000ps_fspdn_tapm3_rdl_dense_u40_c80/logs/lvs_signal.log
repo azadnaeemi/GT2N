@@ -1,0 +1,270 @@
+OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD
+KLayout 0.30.7
+"polygons" in: gt2n_defnames.lylvs:89
+    Polygons (raw): 352564 (flat)  201 (hierarchical)
+    Elapsed: 0.610s  Memory: 1855.00M
+"labels" in: gt2n_defnames.lylvs:90
+    Texts: 349168 (flat)  199 (hierarchical)
+    Elapsed: 0.390s  Memory: 1856.00M
+"polygons" in: gt2n_defnames.lylvs:91
+    Polygons (raw): 634126 (flat)  404 (hierarchical)
+    Elapsed: 0.470s  Memory: 1856.00M
+"polygons" in: gt2n_defnames.lylvs:92
+    Polygons (raw): 1505948 (flat)  966 (hierarchical)
+    Elapsed: 0.450s  Memory: 1856.00M
+"labels" in: gt2n_defnames.lylvs:93
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.450s  Memory: 1856.00M
+"polygons" in: gt2n_defnames.lylvs:94
+    Polygons (raw): 853661 (flat)  562 (hierarchical)
+    Elapsed: 0.460s  Memory: 1856.00M
+"polygons" in: gt2n_defnames.lylvs:99
+    Polygons (raw): 1282421 (flat)  758 (hierarchical)
+    Elapsed: 0.470s  Memory: 1856.00M
+"labels" in: gt2n_defnames.lylvs:100
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.460s  Memory: 1856.00M
+"polygons" in: gt2n_defnames.lylvs:101
+    Polygons (raw): 1342355 (flat)  732 (hierarchical)
+    Elapsed: 0.460s  Memory: 1856.00M
+"polygons" in: gt2n_defnames.lylvs:102
+    Polygons (raw): 2051111 (flat)  264517 (hierarchical)
+    Elapsed: 0.600s  Memory: 1856.00M
+"labels" in: gt2n_defnames.lylvs:103
+    Texts: 610904 (flat)  400 (hierarchical)
+    Elapsed: 0.450s  Memory: 1856.00M
+"polygons" in: gt2n_defnames.lylvs:104
+    Polygons (raw): 903176 (flat)  1 (hierarchical)
+    Elapsed: 0.420s  Memory: 1856.00M
+"polygons" in: gt2n_defnames.lylvs:105
+    Polygons (raw): 2031459 (flat)  666527 (hierarchical)
+    Elapsed: 0.840s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:106
+    Texts: 140 (flat)  140 (hierarchical)
+    Elapsed: 0.400s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:107
+    Polygons (raw): 461759 (flat)  2 (hierarchical)
+    Elapsed: 0.430s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:108
+    Polygons (raw): 754297 (flat)  259277 (hierarchical)
+    Elapsed: 0.610s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:109
+    Texts: 251 (flat)  251 (hierarchical)
+    Elapsed: 0.460s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:110
+    Polygons (raw): 33265 (flat)  2 (hierarchical)
+    Elapsed: 0.480s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:111
+    Polygons (raw): 60195 (flat)  19049 (hierarchical)
+    Elapsed: 0.480s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:112
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.470s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:113
+    Polygons (raw): 7885 (flat)  2 (hierarchical)
+    Elapsed: 0.450s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:114
+    Polygons (raw): 14964 (flat)  4767 (hierarchical)
+    Elapsed: 0.470s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:115
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.460s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:116
+    Polygons (raw): 2316 (flat)  2 (hierarchical)
+    Elapsed: 0.450s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:117
+    Polygons (raw): 5352 (flat)  1651 (hierarchical)
+    Elapsed: 0.460s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:118
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.470s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:119
+    Polygons (raw): 1389 (flat)  2 (hierarchical)
+    Elapsed: 0.480s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:120
+    Polygons (raw): 3571 (flat)  1076 (hierarchical)
+    Elapsed: 0.460s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:121
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.480s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:122
+    Polygons (raw): 1110 (flat)  2 (hierarchical)
+    Elapsed: 0.450s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:123
+    Polygons (raw): 2408 (flat)  689 (hierarchical)
+    Elapsed: 0.450s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:124
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.490s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:125
+    Polygons (raw): 613 (flat)  2 (hierarchical)
+    Elapsed: 0.460s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:126
+    Polygons (raw): 1140 (flat)  230 (hierarchical)
+    Elapsed: 0.470s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:127
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.480s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:128
+    Polygons (raw): 600 (flat)  2 (hierarchical)
+    Elapsed: 0.490s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:129
+    Polygons (raw): 780 (flat)  32 (hierarchical)
+    Elapsed: 0.480s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:130
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.470s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:131
+    Polygons (raw): 1800 (flat)  4 (hierarchical)
+    Elapsed: 0.470s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:132
+    Polygons (raw): 780 (flat)  32 (hierarchical)
+    Elapsed: 0.470s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:133
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.450s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:134
+    Polygons (raw): 600 (flat)  2 (hierarchical)
+    Elapsed: 0.460s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:135
+    Polygons (raw): 520 (flat)  22 (hierarchical)
+    Elapsed: 0.440s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:136
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.440s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:137
+    Polygons (raw): 200 (flat)  1 (hierarchical)
+    Elapsed: 0.450s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:138
+    Polygons (raw): 410 (flat)  22 (hierarchical)
+    Elapsed: 0.470s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:139
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.440s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:140
+    Polygons (raw): 190 (flat)  1 (hierarchical)
+    Elapsed: 0.450s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:141
+    Polygons (raw): 266 (flat)  77 (hierarchical)
+    Elapsed: 0.490s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:142
+    Texts: 2 (flat)  2 (hierarchical)
+    Elapsed: 0.460s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:152
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.010s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:153
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:154
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:155
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:156
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:157
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:158
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.010s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:159
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:160
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.010s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:161
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:162
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:163
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:164
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 1870.00M
+"polygons" in: gt2n_defnames.lylvs:165
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 1870.00M
+"labels" in: gt2n_defnames.lylvs:166
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 1870.00M
+"netlist" in: gt2n_defnames.lylvs:759
+    Elapsed: 72.130s  Memory: 3463.00M
+Flatten layout cell (no schematic): VIA_V8_0
+Flatten layout cell (no schematic): VIA_V7_0
+Flatten layout cell (no schematic): VIA_V6_0
+Flatten layout cell (no schematic): VIA_V5_0
+Flatten layout cell (no schematic): VIA_via3_4_28_24_1_1_52_48
+Flatten layout cell (no schematic): VIA_via4_5_28_56_1_1_56_70
+Flatten layout cell (no schematic): VIA_via5_6_56_56_1_1_84_84
+Flatten layout cell (no schematic): VIA_via6_7_56_152_1_1_84_118
+Flatten layout cell (no schematic): VIA_via7_8_152_152_1_1_152_152
+Flatten layout cell (no schematic): VIA_via8_9_152_152_1_1_152_152
+Flatten layout cell (no schematic): VIA_via9_10_152_152_1_1_152_152
+Flatten layout cell (no schematic): VIA_via10_11_152_448_2_1_152_188
+Flatten layout cell (no schematic): VIA_via11_12_448_448_2_2_224_224
+Flatten layout cell (no schematic): VIA_via12_13_448_1440_1_2_224_832
+Flatten layout cell (no schematic): VIA_via13_14_1440_1440_1_1_832_832
+Flatten layout cell (no schematic): VIA_via14_15_1440_3200_1_1_832_3312
+Flatten layout cell (no schematic): VIA_V4_0
+Flatten layout cell (no schematic): VIA_V3_0
+Flatten layout cell (no schematic): VIA_V1_0
+Flatten layout cell (no schematic): VIA_V2_0
+Flatten schematic circuit (no layout): GT2_6T_AND2_X3_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_AND2_X3_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_AND2_X4_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_AND2_X4_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_BUF_X10_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_BUF_X12_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_BUF_X12_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_BUF_X3_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_BUF_X6_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_BUF_X8_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_DECAPCC_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_DECAPCC_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_DFFASYNC_X1_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_DFFASYNC_X2_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_DFFASYNC_X2_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_DFFASYNC_X4_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_DFFASYNC_X4_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_FILLER_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_INV_X10_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_INV_X10_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_INV_X12_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_INV_X12_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_INV_X3_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_INV_X6_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_INV_X8_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_INV_X8_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_NAND2_X3_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_NAND2_X3_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_NAND2_X4_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_NAND2_X4_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_NOR2_X3_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_NOR2_X3_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_NOR2_X4_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_NOR2_X4_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_OR2_X3_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_OR2_X3_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_OR2_X4_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_OR2_X4_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_TIEHIGH_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_TIELOW_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_TIELOW_W31_SVT
+Writing netlist: /work/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/6_extracted_layout_signalonly.spice ..
+Writing LVS database: /work/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/6_lvs_signalonly.lvsdb ..
+Total elapsed: 223.650s  Memory: 4145.00M
+INFO : GT2N LVS mode = abstract
+INFO : GT2N LVS threads = 8
+INFO : GT2N abstract LVS source filter = -gt2_6t_filler*
+INFO : GT2N DEF instance-name recovery renamed=170835 missed=0 duplicate_keys=0 def_units=2000 height_masters=100
+INFO : GT2N DEF net-name recovery renamed_pins=935535 missing_signal_pins=742 conflicts=23633
+INFO : GT2N signal-only LVS removed PG interface pins total=201 circuits=99
+INFO : Congratulations! Netlists match.

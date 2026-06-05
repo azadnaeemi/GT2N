@@ -1,0 +1,82 @@
++ container_cli=docker
++ DEFAULT_IMAGE=openroad/orfs:latest
++ FLOW_DIR=/OpenROAD-flow-scripts/flow
++ USE_USER=false
++ DRY_RUN=false
++ PORTS=()
++ IMAGE=
++ CMD_ARGS=()
++ [[ 1 -gt 0 ]]
++ case "$1" in
++ CMD_ARGS=("$@")
++ break
++ IMAGE=docker.io/openroad/orfs:26Q2
++ get_container_engine
++ command -v docker
+++ docker --version
++ local 'DOCKER_VERSION_STRING=Docker version 29.4.2, build 055a478'
++ [[ Docker version 29.4.2, build 055a478 == *\D\o\c\k\e\r* ]]
++ container_engine=docker
++ container_cli=docker
++ return
+++ pwd
++ WORKSPACE=/home/naeemi3/djang62/Openroad
++ YOSYS_EXE=/OpenROAD-flow-scripts/tools/install/yosys/bin/yosys
++ OPENROAD_EXE=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad
++ KLAYOUT_CMD=/usr/bin/klayout
++ XSOCK=/tmp/.X11-unix
++ XAUTH=/tmp/.docker.xauth
++ false
++ touch /tmp/.docker.xauth
++ chmod 600 /tmp/.docker.xauth
++ command -v xauth
++ xauth nlist :102
++ sed -e 's/^..../ffff/'
++ xauth -f /tmp/.docker.xauth nmerge -
++ test -t 0
++ DOCKER_INTERACTIVE=
++ false
++ [[ docker == \p\o\d\m\a\n ]]
+++ id -u djang62
+++ id -g djang62
++ user_args='-u 3177436:2626'
++ user_env=
++ PORT_ARGS=()
++ CMD_STR=
++ [[ 1 -gt 0 ]]
++ CMD_STR='make -f /OpenROAD-flow-scripts/flow/Makefile DESIGN_CONFIG=/work/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/config.mk WORK_HOME=/work/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work finish NUM_CORES=80'
++ ENV_SH_CMD='if [ -f ../env.sh ]; then . ../env.sh; fi;'
++ DOCKER_CMD=("$container_cli" run --rm -i $DOCKER_INTERACTIVE $user_env $user_args -e LIBGL_ALWAYS_SOFTWARE=1 -e QT_X11_NO_MITSHM=1 -e XDG_RUNTIME_DIR=/tmp/xdg-run -e "DISPLAY=${DISPLAY:-:0}" -e QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb -v "$XSOCK:$XSOCK" -v "$XAUTH:$XAUTH" -e "XAUTHORITY=$XAUTH" -e FLOW_HOME=/OpenROAD-flow-scripts/flow/ -e WORK_HOME=/work -e "YOSYS_EXE=$YOSYS_EXE" -e "OPENROAD_EXE=$OPENROAD_EXE" -e "KLAYOUT_CMD=$KLAYOUT_CMD" -v "$WORKSPACE:/work:Z" --network host "${PORT_ARGS[@]}" "$IMAGE" bash -c "set -ex; mkdir /tmp/xdg-run; cd ${FLOW_DIR}; ${ENV_SH_CMD}$CMD_STR")
++ false
++ exec docker run --rm -i -u 3177436:2626 -e LIBGL_ALWAYS_SOFTWARE=1 -e QT_X11_NO_MITSHM=1 -e XDG_RUNTIME_DIR=/tmp/xdg-run -e DISPLAY=:102 -e QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb -v /tmp/.X11-unix:/tmp/.X11-unix -v /tmp/.docker.xauth:/tmp/.docker.xauth -e XAUTHORITY=/tmp/.docker.xauth -e FLOW_HOME=/OpenROAD-flow-scripts/flow/ -e WORK_HOME=/work -e YOSYS_EXE=/OpenROAD-flow-scripts/tools/install/yosys/bin/yosys -e OPENROAD_EXE=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad -e KLAYOUT_CMD=/usr/bin/klayout -v /home/naeemi3/djang62/Openroad:/work:Z --network host docker.io/openroad/orfs:26Q2 bash -c 'set -ex; mkdir /tmp/xdg-run; cd /OpenROAD-flow-scripts/flow; if [ -f ../env.sh ]; then . ../env.sh; fi;make -f /OpenROAD-flow-scripts/flow/Makefile DESIGN_CONFIG=/work/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/config.mk WORK_HOME=/work/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work finish NUM_CORES=80'
++ mkdir /tmp/xdg-run
++ cd /OpenROAD-flow-scripts/flow
++ '[' -f ../env.sh ']'
++ . ../env.sh
+++ __setpaths
+++ [[ linux-gnu == \d\a\r\w\i\n* ]]
+++++ readlink -f ../env.sh
++++ dirname /OpenROAD-flow-scripts/env.sh
+++ DIR=/OpenROAD-flow-scripts
+++ export OPENROAD=/OpenROAD-flow-scripts/tools/OpenROAD
+++ OPENROAD=/OpenROAD-flow-scripts/tools/OpenROAD
+++ echo 'OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD'
+OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD
+++ export PATH=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export PATH=/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export PATH=/OpenROAD-flow-scripts/tools/install/kepler-formal/bin:/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/OpenROAD-flow-scripts/tools/install/kepler-formal/bin:/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ [[ linux-gnu == \d\a\r\w\i\n* ]]
+++ export FLOW_HOME=/OpenROAD-flow-scripts/flow
+++ FLOW_HOME=/OpenROAD-flow-scripts/flow
+++ unset -f __setpaths
++ make -f /OpenROAD-flow-scripts/flow/Makefile DESIGN_CONFIG=/work/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/config.mk WORK_HOME=/work/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work finish NUM_CORES=80
+/work/OpenROAD-flow-scripts/flow/scripts/flow.sh 6_1_fill density_fill
+Running density_fill.tcl, stage 6_1_fill
+read_liberty /work/OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 61, default_fanout_load is 0.0.
+read_liberty /work/OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 61, default_fanout_load is 0.0.
+read_db /work/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/5_route.odb

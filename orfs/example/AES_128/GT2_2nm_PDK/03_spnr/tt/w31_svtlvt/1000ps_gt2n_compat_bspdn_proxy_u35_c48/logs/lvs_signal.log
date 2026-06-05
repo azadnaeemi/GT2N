@@ -1,0 +1,263 @@
+OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD
+OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD
+KLayout 0.30.7
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:207
+    Polygons (raw): 353422 (flat)  1112 (hierarchical)
+    Elapsed: 1.200s  Memory: 2773.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:208
+    Texts: 352574 (flat)  264 (hierarchical)
+    Elapsed: 0.450s  Memory: 2773.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:209
+    Polygons (raw): 632292 (flat)  446 (hierarchical)
+    Elapsed: 0.510s  Memory: 2774.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:210
+    Polygons (raw): 1502517 (flat)  1050 (hierarchical)
+    Elapsed: 0.510s  Memory: 2774.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:211
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.500s  Memory: 2774.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:212
+    Polygons (raw): 848666 (flat)  600 (hierarchical)
+    Elapsed: 0.490s  Memory: 2774.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:217
+    Polygons (raw): 1277885 (flat)  794 (hierarchical)
+    Elapsed: 0.490s  Memory: 2774.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:218
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.490s  Memory: 2774.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:219
+    Polygons (raw): 1337761 (flat)  781 (hierarchical)
+    Elapsed: 0.490s  Memory: 2774.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:220
+    Polygons (raw): 2063881 (flat)  271866 (hierarchical)
+    Elapsed: 0.650s  Memory: 2774.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:221
+    Texts: 607228 (flat)  403 (hierarchical)
+    Elapsed: 0.460s  Memory: 2774.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:222
+    Polygons (raw): 912554 (flat)  1 (hierarchical)
+    Elapsed: 0.450s  Memory: 2774.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:223
+    Polygons (raw): 1991652 (flat)  652692 (hierarchical)
+    Elapsed: 0.870s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:224
+    Texts: 164 (flat)  164 (hierarchical)
+    Elapsed: 0.440s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:225
+    Polygons (raw): 426408 (flat)  1 (hierarchical)
+    Elapsed: 0.470s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:226
+    Polygons (raw): 689725 (flat)  239055 (hierarchical)
+    Elapsed: 0.620s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:227
+    Texts: 225 (flat)  225 (hierarchical)
+    Elapsed: 0.470s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:228
+    Polygons (raw): 24264 (flat)  1 (hierarchical)
+    Elapsed: 0.530s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:229
+    Polygons (raw): 42790 (flat)  13708 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:230
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:231
+    Polygons (raw): 4820 (flat)  1 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:232
+    Polygons (raw): 8151 (flat)  2720 (hierarchical)
+    Elapsed: 0.500s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:233
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:234
+    Polygons (raw): 613 (flat)  1 (hierarchical)
+    Elapsed: 0.500s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:235
+    Polygons (raw): 1317 (flat)  445 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:236
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.500s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:237
+    Polygons (raw): 261 (flat)  1 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:238
+    Polygons (raw): 653 (flat)  222 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:239
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:240
+    Polygons (raw): 172 (flat)  1 (hierarchical)
+    Elapsed: 0.500s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:241
+    Polygons (raw): 290 (flat)  100 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:242
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:243
+    Polygons (raw): 20 (flat)  1 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:244
+    Polygons (raw): 30 (flat)  11 (hierarchical)
+    Elapsed: 0.510s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:245
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:246
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.010s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:247
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:248
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:249
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:250
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:251
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.010s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:252
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:253
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:254
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:255
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:256
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:257
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:258
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:259
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:260
+    Texts: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:270
+    Polygons (raw): 88335 (flat)  88335 (hierarchical)
+    Elapsed: 0.500s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:271
+    Polygons (raw): 195 (flat)  195 (hierarchical)
+    Elapsed: 0.480s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:272
+    Texts: 7 (flat)  7 (hierarchical)
+    Elapsed: 0.480s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:273
+    Polygons (raw): 19013 (flat)  19013 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:274
+    Polygons (raw): 195 (flat)  195 (hierarchical)
+    Elapsed: 0.470s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:275
+    Texts: 7 (flat)  7 (hierarchical)
+    Elapsed: 0.470s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:276
+    Polygons (raw): 2243 (flat)  2243 (hierarchical)
+    Elapsed: 0.480s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:277
+    Polygons (raw): 23 (flat)  23 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:278
+    Texts: 3 (flat)  3 (hierarchical)
+    Elapsed: 0.470s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:279
+    Polygons (raw): 265 (flat)  265 (hierarchical)
+    Elapsed: 0.480s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:280
+    Polygons (raw): 23 (flat)  23 (hierarchical)
+    Elapsed: 0.480s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:281
+    Texts: 3 (flat)  3 (hierarchical)
+    Elapsed: 0.480s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:282
+    Polygons (raw): 127 (flat)  127 (hierarchical)
+    Elapsed: 0.490s  Memory: 2782.00M
+"polygons" in: gt2n_compat_bspdn_proxy.lylvs:283
+    Polygons (raw): 11 (flat)  11 (hierarchical)
+    Elapsed: 0.460s  Memory: 2782.00M
+"labels" in: gt2n_compat_bspdn_proxy.lylvs:284
+    Texts: 11 (flat)  11 (hierarchical)
+    Elapsed: 0.480s  Memory: 2782.00M
+"netlist" in: gt2n_compat_bspdn_proxy.lylvs:900
+    Elapsed: 90.220s  Memory: 3651.00M
+Flatten layout cell (no schematic): VIA_V8_0
+Flatten layout cell (no schematic): VIA_V7_0
+Flatten layout cell (no schematic): VIA_V6_0
+Flatten layout cell (no schematic): VIA_V5_0
+Flatten layout cell (no schematic): VIA_V4_0
+Flatten layout cell (no schematic): VIA_V3_0
+Flatten layout cell (no schematic): VIA_V2_0
+Flatten layout cell (no schematic): VIA_V1_0
+Flatten schematic circuit (no layout): GT2_6T_AND2_X2_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_AND2_X3_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_AND2_X3_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_AND2_X4_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_AND2_X4_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_BUF_X10_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_BUF_X12_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_BUF_X12_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_BUF_X3_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_BUF_X6_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_BUF_X8_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_DECAPCC_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_DECAPCC_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_DFFASYNC_X1_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_DFFASYNC_X2_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_DFFASYNC_X4_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_DFFASYNC_X4_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_FILLER_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_FILLER_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_INV_X10_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_INV_X12_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_INV_X12_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_INV_X3_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_INV_X8_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_NAND2_X3_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_NAND2_X3_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_NAND2_X4_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_NAND2_X4_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_NOR2_X3_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_NOR2_X3_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_NOR2_X4_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_NOR2_X4_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_OR2_X2_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_OR2_X3_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_OR2_X3_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_OR2_X4_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_OR2_X4_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_TAPBSPDN_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_TAPFSPDN_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_TAPFSPDN_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_TIEHIGH_W31_SVT
+Flatten schematic circuit (no layout): GT2_6T_TIELOW_W31_LVT
+Flatten schematic circuit (no layout): GT2_6T_TIELOW_W31_SVT
+Writing LVS database: /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_lvs_bspdn_physical_signalonly.lvsdb ..
+Total elapsed: 244.070s  Memory: 4370.00M
+INFO : GT2N signal-only LVS filtered CDL /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/objects/gt2n_compat_bspdn_proxy/aes_128/base/6_final_concat.cdl -> /tmp/gt2n_signal_only_12_6_final_concat.cdl; stdcell_models=144
+INFO : GT2N LVS mode = abstract
+INFO : GT2N LVS threads = 8
+INFO : GT2N abstract LVS source filter = -gt2_6t_filler*
+INFO : GT2N DEF instance-name recovery renamed=170811 missed=0 duplicate_keys=0 def_units=2000 height_masters=102
+INFO : GT2N DEF net-name recovery renamed_pins=942614 missing_signal_pins=585 conflicts=16305 skipped_internal=0
+INFO : GT2N signal-only LVS top pins kept=0 removed_internal=0 renamed=0 reference_ports=389
+INFO : GT2N signal-only LVS removed PG interface pins total=206 circuits=101
+INFO : Congratulations! Netlists match.
+Wrote signalonly LVS database: /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_lvs_bspdn_physical_signalonly.lvsdb

@@ -1,0 +1,7 @@
+# The A/B table generator lives in //tools; expose it at the repo root so the
+# documented command is `bazelisk run //:update-a-b`.
+alias(
+    name = "update-a-b",
+    actual = "//tools:update-a-b",
+    visibility = ["//visibility:public"],
+)

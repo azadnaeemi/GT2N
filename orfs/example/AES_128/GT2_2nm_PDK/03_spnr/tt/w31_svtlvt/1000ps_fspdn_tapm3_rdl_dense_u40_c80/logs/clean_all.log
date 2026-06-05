@@ -1,0 +1,51 @@
++ mkdir /tmp/xdg-run
++ cd /OpenROAD-flow-scripts/flow
++ '[' -f ../env.sh ']'
++ . ../env.sh
+++ __setpaths
+++ [[ linux-gnu == \d\a\r\w\i\n* ]]
+++++ readlink -f ../env.sh
++++ dirname /OpenROAD-flow-scripts/env.sh
+++ DIR=/OpenROAD-flow-scripts
+++ export OPENROAD=/OpenROAD-flow-scripts/tools/OpenROAD
+++ OPENROAD=/OpenROAD-flow-scripts/tools/OpenROAD
+++ echo 'OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD'
+OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD
+++ export PATH=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export PATH=/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export PATH=/OpenROAD-flow-scripts/tools/install/kepler-formal/bin:/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/OpenROAD-flow-scripts/tools/install/kepler-formal/bin:/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ [[ linux-gnu == \d\a\r\w\i\n* ]]
+++ export FLOW_HOME=/OpenROAD-flow-scripts/flow
+++ FLOW_HOME=/OpenROAD-flow-scripts/flow
+++ unset -f __setpaths
++ make -f /OpenROAD-flow-scripts/flow/Makefile DESIGN_CONFIG=/work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/config.mk WORK_HOME=/work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work CONTAINER_PROJ=/work/djang62/Openroad/handoff/gt2n_openroad_run clean_all
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/1_* /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/mem*.json
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/reports/gt2n/aes_128/base/synth_*
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/logs/gt2n/aes_128/base/1_*
+rm -f 
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/clock_period.txt
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/2_*floorplan*.odb /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/2_floorplan.sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/2_*.v /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/2_*.def
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/reports/gt2n/aes_128/base/2_*
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/logs/gt2n/aes_128/base/2_*
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/3_*place*.odb
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/3_place.sdc
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/3_*.def /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/3_*.v
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/reports/gt2n/aes_128/base/3_*
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/logs/gt2n/aes_128/base/3_*
+rm -rf /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/4_*cts*.odb /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/4_cts.sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/4_*.v /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/4_*.def
+rm -f  /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/reports/gt2n/aes_128/base/4_*
+rm -rf /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/logs/gt2n/aes_128/base/4_*
+rm -rf /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/route.guide /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/output_guide.mod /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/updated_clks.sdc
+rm -rf /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/5_*.odb /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/5_route.sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/5_*.def /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/5_*.v
+rm -f  /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/reports/gt2n/aes_128/base/5_*
+rm -f  /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/logs/gt2n/aes_128/base/5_*
+rm -rf /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/6_*.gds /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/6_*.oas /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/6_*.odb /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/6_*.v /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/6_*.def /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/6_*.sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/6_*.spef
+rm -rf /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/reports/gt2n/aes_128/base/6_*.rpt
+rm -f  /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/logs/gt2n/aes_128/base/6_*
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/reports/gt2n/aes_128/base/design-dir.txt
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/reports/gt2n/aes_128/base/metadata*.*
+rm -f /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/aes.lib /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/results/gt2n/aes_128/base/aes.lef
+rm -rf /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_fspdn_tapm3_rdl_dense_u40_c80/work/objects/gt2n/aes_128/base

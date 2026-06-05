@@ -1,0 +1,3282 @@
++ mkdir /tmp/xdg-run
++ cd /OpenROAD-flow-scripts/flow
++ '[' -f ../env.sh ']'
++ . ../env.sh
+++ __setpaths
+++ [[ linux-gnu == \d\a\r\w\i\n* ]]
+++++ readlink -f ../env.sh
++++ dirname /OpenROAD-flow-scripts/env.sh
+++ DIR=/OpenROAD-flow-scripts
+++ export OPENROAD=/OpenROAD-flow-scripts/tools/OpenROAD
+++ OPENROAD=/OpenROAD-flow-scripts/tools/OpenROAD
+++ echo 'OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD'
+OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD
+++ export PATH=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export PATH=/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export PATH=/OpenROAD-flow-scripts/tools/install/kepler-formal/bin:/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/OpenROAD-flow-scripts/tools/install/kepler-formal/bin:/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ [[ linux-gnu == \d\a\r\w\i\n* ]]
+++ export FLOW_HOME=/OpenROAD-flow-scripts/flow
+++ FLOW_HOME=/OpenROAD-flow-scripts/flow
+++ unset -f __setpaths
++ make -f /OpenROAD-flow-scripts/flow/Makefile DESIGN_CONFIG=/work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/config.mk WORK_HOME=/work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work CONTAINER_PROJ=/work/djang62/Openroad/handoff/gt2n_openroad_run finish NUM_CORES=48
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_3_floorplan_tapcell tapcell
+Running tapcell.tcl, stage 2_3_floorplan_tapcell
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/2_2_floorplan_macro.odb
+read_sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/2_1_floorplan.sdc
+source /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/setRC_fspdn.tcl
+[INFO TAP-0005] Inserted 1814 tapcells.
+Design area 6095 um^2 36% utilization.
+write_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/2_3_floorplan_tapcell.odb
+Elapsed time: 0:01.06[h:]min:sec. CPU time: user 0.81 sys 0.16 (92%). Peak memory: 279492KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_3_floorplan_tapcell              1            272 b5364c80391634afcf29
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_4_floorplan_pdn pdn
+Running pdn.tcl, stage 2_4_floorplan_pdn
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/2_3_floorplan_tapcell.odb
+read_sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/2_1_floorplan.sdc
+source /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/setRC_fspdn.tcl
+GT2N-BSPDN-PROXY: skipping OpenROAD pdngen in pure BSPDN router view.
+Design area 6095 um^2 36% utilization.
+write_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/2_4_floorplan_pdn.odb
+Elapsed time: 0:01.60[h:]min:sec. CPU time: user 1.25 sys 0.26 (94%). Peak memory: 388576KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_4_floorplan_pdn                  1            379 d2dc1834c3412322ea85
+cp /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/2_4_floorplan_pdn.odb /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/2_floorplan.odb
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_1_place_gp_skip_io global_place_skip_io
+Running global_place_skip_io.tcl, stage 3_1_place_gp_skip_io
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/2_floorplan.odb
+read_sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/2_floorplan.sdc
+source /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/setRC_fspdn.tcl
+global_placement -skip_io -density 0.58 -pad_left 1 -pad_right 1
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 2000
+[INFO GPL-0003] SiteSize: (  0.042  0.144 ) um
+[INFO GPL-0004] CoreBBox: (  5.040  5.040 ) ( 135.450 135.360 ) um
+[INFO GPL-0036] Movable instances area:       8458.170 um^2
+[INFO GPL-0037] Total instances area:         8469.141 um^2
+[INFO GPL-0035] Pin density area adjust:      1408.976 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:            187184
+[INFO GPL-0007] Movable instances:              185370
+[INFO GPL-0008] Fixed instances:                  1814
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                 185630
+[INFO GPL-0011] Number of pins:                 639974
+[INFO GPL-0012] Die BBox:  (  0.000  0.000 ) ( 140.506 140.506 ) um
+[INFO GPL-0013] Core BBox: (  5.040  5.040 ) ( 135.450 135.360 ) um
+[INFO GPL-0016] Core area:                   16995.031 um^2
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                 16995.031 um^2
+[INFO GPL-0017] Fixed instances area:           10.971 um^2
+[INFO GPL-0018] Movable instances area:       9867.147 um^2
+[INFO GPL-0019] Utilization:                    58.097 %
+[INFO GPL-0020] Standard cells area:          9867.147 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 10769	Core center = 174601	Region center = 0
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[WARNING GPL-0302] Target density 0.5800 is too low for the available free area.
+Automatically adjusting to uniform density 0.5900.
+[INFO GPL-0023] Placement target density:       0.5900
+[INFO GPL-0024] Movable insts average area:      0.053 um^2
+[INFO GPL-0025] Ideal bin area:                  0.090 um^2
+[INFO GPL-0026] Ideal bin count:                188375
+[INFO GPL-0027] Total bin area:              16995.031 um^2
+[INFO GPL-0028] Bin count (X, Y):         256 ,    256
+[INFO GPL-0029] Bin size (W * H):       0.509 *  0.509 um
+[INFO GPL-0030] Number of bins:                  65536
+[INFO GPL-0007] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.9960 |  9.166270e+05 |   +0.00% |  4.54e-14 |      
+       10 |   0.9971 |  6.548694e+04 |  -92.86% |  7.40e-14 |      
+       20 |   0.9973 |  3.891481e+04 |  -40.58% |  1.20e-13 |      
+       30 |   0.9974 |  2.518917e+04 |  -35.27% |  1.96e-13 |      
+       40 |   0.9976 |  1.649718e+04 |  -34.51% |  3.20e-13 |      
+       50 |   0.9977 |  1.477130e+04 |  -10.46% |  5.21e-13 |      
+       60 |   0.9977 |  1.529889e+04 |   +3.57% |  8.48e-13 |      
+       70 |   0.9974 |  1.657551e+04 |   +8.34% |  1.38e-12 |      
+       80 |   0.9970 |  1.931975e+04 |  +16.56% |  2.25e-12 |      
+       90 |   0.9963 |  2.418682e+04 |  +25.19% |  3.66e-12 |      
+      100 |   0.9950 |  2.978337e+04 |  +23.14% |  5.95e-12 |      
+      110 |   0.9932 |  3.580590e+04 |  +20.22% |  9.68e-12 |      
+      120 |   0.9903 |  4.304059e+04 |  +20.21% |  1.57e-11 |      
+      130 |   0.9859 |  5.184383e+04 |  +20.45% |  2.56e-11 |      
+      140 |   0.9796 |  6.247480e+04 |  +20.51% |  4.16e-11 |      
+      150 |   0.9703 |  7.597646e+04 |  +21.61% |  6.76e-11 |      
+      160 |   0.9576 |  9.317607e+04 |  +22.64% |  1.10e-10 |      
+      170 |   0.9396 |  1.142287e+05 |  +22.59% |  1.78e-10 |      
+      180 |   0.9166 |  1.394146e+05 |  +22.05% |  2.88e-10 |      
+      190 |   0.8897 |  1.687612e+05 |  +21.05% |  4.66e-10 |      
+      200 |   0.8595 |  2.008372e+05 |  +19.01% |  7.54e-10 |      
+      210 |   0.8256 |  2.302047e+05 |  +14.62% |  1.22e-09 |      
+      220 |   0.7981 |  2.484562e+05 |   +7.93% |  1.98e-09 |      
+      230 |   0.7736 |  2.685546e+05 |   +8.09% |  3.21e-09 |      
+      240 |   0.7372 |  3.069952e+05 |  +14.31% |  5.19e-09 |      
+      250 |   0.7053 |  3.477674e+05 |  +13.28% |  8.38e-09 |      
+      260 |   0.6764 |  3.791767e+05 |   +9.03% |  1.35e-08 |      
+      270 |   0.6590 |  3.809373e+05 |   +0.46% |  2.20e-08 |      
+      280 |   0.6379 |  3.781405e+05 |   -0.73% |  3.59e-08 |      
+      290 |   0.6113 |  3.992615e+05 |   +5.59% |  5.82e-08 |      
+      300 |   0.5871 |  3.825291e+05 |   -4.19% |  9.47e-08 |      
+      310 |   0.5539 |  4.089620e+05 |   +6.91% |  1.53e-07 |      
+      320 |   0.5202 |  4.098599e+05 |   +0.22% |  2.50e-07 |      
+      330 |   0.4862 |  4.146106e+05 |   +1.16% |  4.06e-07 |      
+      340 |   0.4439 |  4.253365e+05 |   +2.59% |  6.60e-07 |      
+      350 |   0.3971 |  4.338576e+05 |   +2.00% |  1.07e-06 |      
+      360 |   0.3392 |  4.458886e+05 |   +2.77% |  1.74e-06 |      
+      370 |   0.2852 |  4.557104e+05 |   +2.20% |  2.56e-06 |      
+      380 |   0.2351 |  4.658997e+05 |   +2.24% |  3.77e-06 |      
+      390 |   0.1933 |  4.737968e+05 |   +1.70% |  5.55e-06 |      
+      400 |   0.1591 |  4.796408e+05 |   +1.23% |  8.16e-06 |      
+      410 |   0.1314 |  4.839045e+05 |   +0.89% |  1.20e-05 |      
+      420 |   0.1094 |  4.868984e+05 |   +0.62% |  1.77e-05 |      
+      426 |   0.0985 |  4.882721e+05 |          |  2.32e-05 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 426
+[INFO GPL-1002] Placed Cell Area             9867.1467
+[INFO GPL-1003] Available Free Area         16984.0601
+[INFO GPL-1004] Minimum Feasible Density        0.5900 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.6455
+[INFO GPL-1008]     - For 80% usage of free space: 0.7262
+[INFO GPL-1014] Final placement area: 9867.15 (+0.00%)
+Took 24 seconds: global_placement -skip_io -density 0.58 -pad_left 1 -pad_right 1
+Design area 6095 um^2 36% utilization.
+write_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/3_1_place_gp_skip_io.odb
+Elapsed time: 0:25.25[h:]min:sec. CPU time: user 278.38 sys 1.51 (1108%). Peak memory: 629632KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_1_place_gp_skip_io              25            614 e5774937d861ccfc7bd9
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_2_place_iop io_placement
+Running io_placement.tcl, stage 3_2_place_iop
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/3_1_place_gp_skip_io.odb
+read_sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/2_floorplan.sdc
+source /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/setRC_fspdn.tcl
+place_pins -hor_layers M2 -ver_layers M3
+Found 0 macro blocks.
+Using 2 tracks default min distance between IO pins.
+[INFO PPL-0001] Number of available slots 10808
+[INFO PPL-0002] Number of I/O             389
+[INFO PPL-0003] Number of I/O w/sink      389
+[INFO PPL-0004] Number of I/O w/o sink    0
+[INFO PPL-0005] Slots per section         200
+[INFO PPL-0008] Successfully assigned pins to sections.
+[INFO PPL-0012] I/O nets HPWL: 7661.44 um.
+Design area 6095 um^2 36% utilization.
+write_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/3_2_place_iop.odb
+Elapsed time: 0:01.18[h:]min:sec. CPU time: user 0.88 sys 0.22 (93%). Peak memory: 391224KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_2_place_iop                      1            382 095377a3de34fcbdfcfb
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_3_place_gp global_place
+Running global_place.tcl, stage 3_3_place_gp
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/3_2_place_iop.odb
+read_sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/2_floorplan.sdc
+source /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/setRC_fspdn.tcl
+[INFO RSZ-0026] Removed 28651 buffers.
+Perform port buffering...
+[INFO RSZ-0027] Inserted 259 gt2_6t_buf_x1_w31_lvt input buffers.
+[INFO RSZ-0028] Inserted 129 gt2_6t_buf_x1_w31_lvt output buffers.
+global_placement -density 0.58 -pad_left 1 -pad_right 1 -routability_driven -timing_driven -force_center_initial_place -min_phi_coef 0.95 -max_phi_coef 1.05
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 2000
+[INFO GPL-0003] SiteSize: (  0.042  0.144 ) um
+[INFO GPL-0004] CoreBBox: (  5.040  5.040 ) ( 135.450 135.360 ) um
+[INFO GPL-0036] Movable instances area:       7554.369 um^2
+[INFO GPL-0037] Total instances area:         7565.340 um^2
+[INFO GPL-0035] Pin density area adjust:      1370.296 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:            158921
+[INFO GPL-0007] Movable instances:              157107
+[INFO GPL-0008] Fixed instances:                  1814
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                 157367
+[INFO GPL-0011] Number of pins:                 583837
+[INFO GPL-0012] Die BBox:  (  0.000  0.000 ) ( 140.506 140.506 ) um
+[INFO GPL-0013] Core BBox: (  5.040  5.040 ) ( 135.450 135.360 ) um
+[INFO GPL-0016] Core area:                   16995.031 um^2
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                 16995.031 um^2
+[INFO GPL-0017] Fixed instances area:           10.971 um^2
+[INFO GPL-0018] Movable instances area:       8924.666 um^2
+[INFO GPL-0019] Utilization:                    52.547 %
+[INFO GPL-0020] Standard cells area:          8924.666 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 157107	Region center = 0
+[InitialPlace]  Iter: 1 conjugate gradient residual: 0.02225177 HPWL: 861145023
+[InitialPlace]  Iter: 2 conjugate gradient residual: 0.02764083 HPWL: 247141337
+[InitialPlace]  Iter: 3 conjugate gradient residual: 0.00250186 HPWL: 267787808
+[InitialPlace]  Iter: 4 conjugate gradient residual: 0.00215908 HPWL: 255464040
+[InitialPlace]  Iter: 5 conjugate gradient residual: 0.00085463 HPWL: 250112995
+[InitialPlace]  Iter: 6 conjugate gradient residual: 0.00099635 HPWL: 246383162
+[InitialPlace]  Iter: 7 conjugate gradient residual: 0.00050751 HPWL: 244562314
+[InitialPlace]  Iter: 8 conjugate gradient residual: 0.00045751 HPWL: 242829046
+[InitialPlace]  Iter: 9 conjugate gradient residual: 0.00036250 HPWL: 242292701
+[InitialPlace]  Iter: 10 conjugate gradient residual: 0.00035951 HPWL: 241069202
+[InitialPlace]  Iter: 11 conjugate gradient residual: 0.00024844 HPWL: 240681338
+[InitialPlace]  Iter: 12 conjugate gradient residual: 0.00024156 HPWL: 240157697
+[InitialPlace]  Iter: 13 conjugate gradient residual: 0.00016808 HPWL: 240053089
+[InitialPlace]  Iter: 14 conjugate gradient residual: 0.00014091 HPWL: 239648638
+[InitialPlace]  Iter: 15 conjugate gradient residual: 0.00014872 HPWL: 239442283
+[InitialPlace]  Iter: 16 conjugate gradient residual: 0.00013772 HPWL: 239141873
+[InitialPlace]  Iter: 17 conjugate gradient residual: 0.00010562 HPWL: 239010925
+[InitialPlace]  Iter: 18 conjugate gradient residual: 0.00009641 HPWL: 238752753
+[InitialPlace]  Iter: 19 conjugate gradient residual: 0.00007861 HPWL: 238706873
+[InitialPlace]  Iter: 20 conjugate gradient residual: 0.00008367 HPWL: 238437915
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[INFO GPL-0023] Placement target density:       0.5800
+[INFO GPL-0024] Movable insts average area:      0.057 um^2
+[INFO GPL-0025] Ideal bin area:                  0.098 um^2
+[INFO GPL-0026] Ideal bin count:                173521
+[INFO GPL-0027] Total bin area:              16995.031 um^2
+[INFO GPL-0028] Bin count (X, Y):         256 ,    256
+[INFO GPL-0029] Bin size (W * H):       0.509 *  0.509 um
+[INFO GPL-0030] Number of bins:                  65536
+[INFO GPL-0007] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.9754 |  1.281953e+05 |   +0.00% |  1.78e-13 |      
+       10 |   0.9758 |  6.547880e+04 |  -48.92% |  2.91e-13 |      
+       20 |   0.9743 |  6.017220e+04 |   -8.10% |  4.73e-13 |      
+       30 |   0.9720 |  5.947603e+04 |   -1.16% |  7.71e-13 |      
+       40 |   0.9694 |  5.930864e+04 |   -0.28% |  1.26e-12 |      
+       50 |   0.9674 |  5.911266e+04 |   -0.33% |  2.05e-12 |      
+       60 |   0.9663 |  5.927217e+04 |   +0.27% |  3.33e-12 |      
+       70 |   0.9659 |  5.949364e+04 |   +0.37% |  5.43e-12 |      
+       80 |   0.9658 |  5.966693e+04 |   +0.29% |  8.84e-12 |      
+       90 |   0.9656 |  6.004912e+04 |   +0.64% |  1.44e-11 |      
+      100 |   0.9638 |  6.087132e+04 |   +1.37% |  2.34e-11 |      
+      110 |   0.9601 |  6.243659e+04 |   +2.57% |  3.82e-11 |      
+      120 |   0.9526 |  6.538126e+04 |   +4.72% |  6.21e-11 |      
+      130 |   0.9412 |  7.091058e+04 |   +8.46% |  1.01e-10 |      
+      140 |   0.9239 |  8.056086e+04 |  +13.61% |  1.64e-10 |      
+      150 |   0.9001 |  9.598669e+04 |  +19.15% |  2.67e-10 |      
+      160 |   0.8702 |  1.191345e+05 |  +24.12% |  4.33e-10 |      
+      170 |   0.8342 |  1.504158e+05 |  +26.26% |  7.00e-10 |      
+      180 |   0.7935 |  1.859001e+05 |  +23.59% |  1.13e-09 |      
+      190 |   0.7545 |  2.151963e+05 |  +15.76% |  1.83e-09 |      
+      200 |   0.7179 |  2.426715e+05 |  +12.77% |  2.96e-09 |      
+      210 |   0.6915 |  2.654714e+05 |   +9.40% |  4.80e-09 |      
+      220 |   0.6653 |  2.852326e+05 |   +7.44% |  7.79e-09 |      
+      230 |   0.6368 |  3.122956e+05 |   +9.49% |  1.26e-08 |      
+[INFO GPL-0100] Timing-driven iteration 1/2, virtual: false.
+[INFO GPL-0101]    Iter: 232, overflow: 0.634, keep resizer changes at: 1, HPWL: 632488324
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |    157367
+    final |     +0.7% |       1 |     473 |           195 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 57 slew violations.
+[INFO RSZ-0036] Found 1 capacitance violations.
+[INFO RSZ-0037] Found 194 long wires.
+[INFO RSZ-0039] Resized 1 instances.
+[INFO RSZ-0038] Inserted 473 buffers in 195 nets.
+   Iter   |    Area   | Removed | Inserted |   Pins
+          |           | Buffers | Buffers  | Remaining
+-------------------------------------------------------
+        0 |     +0.0% |       0 |        0 |    146338
+    14600 |     +0.0% |       0 |        1 |    131738
+    29200 |     +0.0% |       0 |        1 |    117138
+    43800 |     +0.0% |       0 |        1 |    102538
+    58400 |     +0.0% |       0 |        1 |     87938
+    73000 |     -0.0% |       4 |        1 |     73338
+    87600 |     -0.0% |       4 |        1 |     58738
+   102200 |     -0.0% |       4 |        1 |     44138
+   116800 |     +0.0% |      18 |       66 |     29538
+   131400 |     +0.0% |     107 |      402 |     14938
+   146000 |     +0.1% |     354 |     1808 |       338
+    final |     +0.0% |     473 |     2087 |         0
+-------------------------------------------------------
+[INFO GPL-0106] Timing-driven: worst slack 3.7764938e-10
+[INFO GPL-0107] Timing-driven: repair_design delta area: 70.187 um^2 (+0.79%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl delta gcells: 2087 (+1.33%)
+[INFO GPL-0109] Timing-driven: repair_design, gcells created: 2560, deleted: 473
+[INFO GPL-0110] Timing-driven: new target density: 0.5841325
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      240 |   0.6329 |  3.094045e+05 |   -0.93% |  2.04e-08 |      
+      250 |   0.6092 |  3.212858e+05 |   +3.84% |  3.32e-08 |      
+[INFO GPL-0038] Routability snapshot saved at iter = 255
+      254 |   0.5978 |  3.271731e+05 |          |           |      
+      260 |   0.5871 |  3.231932e+05 |   +0.59% |  5.39e-08 |      
+      270 |   0.5671 |  3.065272e+05 |   -5.16% |  8.79e-08 |      
+      280 |   0.5312 |  3.191427e+05 |   +4.12% |  1.43e-07 |      
+      290 |   0.4953 |  3.119979e+05 |   -2.24% |  2.32e-07 |      
+      300 |   0.4556 |  3.205948e+05 |   +2.76% |  3.78e-07 |      
+      310 |   0.4108 |  3.216258e+05 |   +0.32% |  6.15e-07 |      
+      320 |   0.3595 |  3.229663e+05 |   +0.42% |  1.00e-06 |      
+      330 |   0.3104 |  3.245146e+05 |   +0.48% |  1.52e-06 |      
+[INFO GPL-0040] Routability iteration: 1
+[WARNING GRT-0281] Net clk has a large fanout of 10770 terminals.
+[INFO GPL-0041] Total routing overflow: 0.1006
+[INFO GPL-0042] Number of overflowed tiles: 2 (0.00%)
+[INFO GPL-0043] Average top 0.5% routing congestion: 0.8046
+[INFO GPL-0044] Average top 1.0% routing congestion: 0.7748
+[INFO GPL-0045] Average top 2.0% routing congestion: 0.7451
+[INFO GPL-0046] Average top 5.0% routing congestion: 0.7023
+[INFO GPL-0047] Routability iteration weighted routing congestion: 0.7897
+[INFO GPL-0050] Weighted routing congestion is lower than target routing congestion(1.0100), end routability optimization.
+[INFO GPL-0090] Routability finished. Target routing congestion achieved succesfully.
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      340 |   0.2622 |  3.263686e+05 |   +0.57% |  2.24e-06 |      
+      350 |   0.2195 |  3.285694e+05 |   +0.67% |  3.29e-06 |      
+[INFO GPL-0100] Timing-driven iteration 2/2, virtual: false.
+[INFO GPL-0101]    Iter: 358, overflow: 0.194, keep resizer changes at: 1, HPWL: 659655881
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |    159454
+    final |     +0.8% |       0 |    1092 |           892 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 2 slew violations.
+[INFO RSZ-0037] Found 892 long wires.
+[INFO RSZ-0038] Inserted 1092 buffers in 892 nets.
+   Iter   |    Area   | Removed | Inserted |   Pins
+          |           | Buffers | Buffers  | Remaining
+-------------------------------------------------------
+        0 |     +0.0% |       0 |        0 |    146338
+    14600 |     -0.0% |       2 |        0 |    131738
+    29200 |     -0.0% |       2 |        0 |    117138
+    43800 |     -0.0% |      50 |        0 |    102538
+    58400 |     -0.0% |      50 |        0 |     87938
+    73000 |     -0.1% |     133 |        0 |     73338
+    87600 |     -0.1% |     133 |        0 |     58738
+   102200 |     -0.1% |     135 |        0 |     44138
+   116800 |     -0.1% |     251 |       38 |     29538
+   131400 |     -0.3% |     848 |      126 |     14938
+   146000 |     -0.8% |    2843 |     1325 |       338
+    final |     -0.9% |    3179 |     1621 |         0
+-------------------------------------------------------
+[INFO GPL-0106] Timing-driven: worst slack 3.3348155e-10
+[INFO GPL-0107] Timing-driven: repair_design delta area: 24.615 um^2 (+0.27%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl delta gcells: -466 (-0.29%)
+[INFO GPL-0109] Timing-driven: repair_design, gcells created: 2713, deleted: 3179
+[INFO GPL-0110] Timing-driven: new target density: 0.58375853
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      360 |   0.1838 |  3.275663e+05 |   -0.31% |  4.85e-06 |      
+      370 |   0.1546 |  3.290139e+05 |   +0.44% |  7.14e-06 |      
+      380 |   0.1299 |  3.283746e+05 |   -0.19% |  1.05e-05 |      
+      390 |   0.1085 |  3.281075e+05 |   -0.08% |  1.55e-05 |      
+      395 |   0.0997 |  3.282129e+05 |          |  1.95e-05 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 395
+[INFO GPL-1003] Routability mode iteration count: 78
+[INFO GPL-1005] Routability final weighted congestion: 0.6623
+[INFO GPL-1002] Placed Cell Area             8955.6859
+[INFO GPL-1003] Available Free Area         16984.0601
+[INFO GPL-1004] Minimum Feasible Density        0.5300 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.5859
+[INFO GPL-1008]     - For 80% usage of free space: 0.6591
+[INFO GPL-1011] Original area (um^2): 8924.67
+[INFO GPL-1012] Total routability artificial inflation: 0.00 (+0.00%)
+[INFO GPL-1013] Total timing-driven delta area: 94.80 (+1.06%)
+[INFO GPL-1014] Final placement area: 8955.69 (+0.35%)
+Took 183 seconds: global_placement -density 0.58 -pad_left 1 -pad_right 1 -routability_driven -timing_driven -force_center_initial_place -min_phi_coef 0.95 -max_phi_coef 1.05
+estimate_parasitics -placement
+Took 5 seconds: estimate_parasitics -placement
+Report metrics stage 3, global place...
+
+==========================================================================
+global place report_design_area
+--------------------------------------------------------------------------
+Design area 5564 um^2 33% utilization.
+write_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/3_3_place_gp.odb
+Elapsed time: 3:32.02[h:]min:sec. CPU time: user 677.85 sys 520.07 (564%). Peak memory: 1968288KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_3_place_gp                     212           1922 9f9532917ad3437e1b77
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_4_place_resized resize
+Running resize.tcl, stage 3_4_place_resized
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/3_3_place_gp.odb
+read_sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/2_floorplan.sdc
+source /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/setRC_fspdn.tcl
+estimate_parasitics -placement
+Took 5 seconds: estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |    158988
+     1000 |     +0.0% |       0 |       0 |             0 |    157988
+     2000 |     +0.0% |       0 |       0 |             0 |    156988
+     3000 |     +0.0% |       0 |       0 |             0 |    155988
+     4000 |     +0.0% |       0 |       0 |             0 |    154988
+     5000 |     +0.0% |       0 |       0 |             0 |    153988
+     6000 |     +0.0% |       0 |       0 |             0 |    152988
+     7000 |     +0.0% |       0 |       0 |             0 |    151988
+     8000 |     +0.0% |       0 |       0 |             0 |    150988
+     9000 |     +0.0% |       0 |       0 |             0 |    149988
+    10000 |     +0.0% |       0 |       0 |             0 |    148988
+    11000 |     +0.0% |       0 |       0 |             0 |    147988
+    12000 |     +0.0% |       0 |       0 |             0 |    146988
+    13000 |     +0.0% |       0 |       0 |             0 |    145988
+    14000 |     +0.0% |       0 |       0 |             0 |    144988
+    15000 |     +0.0% |       0 |       0 |             0 |    143988
+    16000 |     +0.0% |       0 |       0 |             0 |    142988
+    17000 |     +0.0% |       0 |       0 |             0 |    141988
+    18000 |     +0.0% |       0 |       0 |             0 |    140988
+    19000 |     +0.0% |       0 |       0 |             0 |    139988
+    20000 |     +0.0% |       0 |       0 |             0 |    138988
+    21000 |     +0.0% |       0 |       0 |             0 |    137988
+    22000 |     +0.0% |       0 |       0 |             0 |    136988
+    23000 |     +0.0% |       0 |       0 |             0 |    135988
+    24000 |     +0.0% |       0 |       0 |             0 |    134988
+    25000 |     +0.0% |       0 |       0 |             0 |    133988
+    26000 |     +0.0% |       0 |       0 |             0 |    132988
+    27000 |     +0.0% |       0 |       0 |             0 |    131988
+    28000 |     +0.0% |       0 |       0 |             0 |    130988
+    29000 |     +0.0% |       0 |       0 |             0 |    129988
+    30000 |     +0.0% |       0 |       0 |             0 |    128988
+    31000 |     +0.0% |       0 |       0 |             0 |    127988
+    32000 |     +0.0% |       0 |       0 |             0 |    126988
+    33000 |     +0.0% |       0 |       0 |             0 |    125988
+    34000 |     +0.0% |       0 |       0 |             0 |    124988
+    35000 |     +0.0% |       0 |       0 |             0 |    123988
+    36000 |     +0.0% |       0 |       0 |             0 |    122988
+    37000 |     +0.0% |       0 |       0 |             0 |    121988
+    38000 |     +0.0% |       0 |       0 |             0 |    120988
+    39000 |     +0.0% |       0 |       0 |             0 |    119988
+    40000 |     +0.0% |       0 |       0 |             0 |    118988
+    41000 |     +0.0% |       0 |       0 |             0 |    117988
+    42000 |     +0.0% |       0 |       0 |             0 |    116988
+    43000 |     +0.0% |       0 |       0 |             0 |    115988
+    44000 |     +0.0% |       0 |       0 |             0 |    114988
+    45000 |     +0.0% |       0 |       0 |             0 |    113988
+    46000 |     +0.0% |       0 |       0 |             0 |    112988
+    47000 |     +0.0% |       0 |       0 |             0 |    111988
+    48000 |     +0.0% |       0 |       0 |             0 |    110988
+    49000 |     +0.0% |       0 |       0 |             0 |    109988
+    50000 |     +0.0% |       0 |       0 |             0 |    108988
+    51000 |     +0.0% |       0 |       0 |             0 |    107988
+    52000 |     +0.0% |       0 |       0 |             0 |    106988
+    53000 |     +0.0% |       0 |       0 |             0 |    105988
+    54000 |     +0.0% |       0 |       0 |             0 |    104988
+    55000 |     +0.0% |       0 |       0 |             0 |    103988
+    56000 |     +0.0% |       0 |       0 |             0 |    102988
+    57000 |     +0.0% |       0 |       0 |             0 |    101988
+    58000 |     +0.0% |       0 |       0 |             0 |    100988
+    59000 |     +0.0% |       0 |       0 |             0 |     99988
+    60000 |     +0.0% |       0 |       0 |             0 |     98988
+    61000 |     +0.0% |       0 |       0 |             0 |     97988
+    62000 |     +0.0% |       0 |       0 |             0 |     96988
+    63000 |     +0.0% |       0 |       0 |             0 |     95988
+    64000 |     +0.0% |       0 |       0 |             0 |     94988
+    65000 |     +0.0% |       0 |       0 |             0 |     93988
+    66000 |     +0.0% |       0 |       0 |             0 |     92988
+    67000 |     +0.0% |       0 |       0 |             0 |     91988
+    68000 |     +0.0% |       0 |       0 |             0 |     90988
+    69000 |     +0.0% |       0 |       0 |             0 |     89988
+    70000 |     +0.0% |       0 |       0 |             0 |     88988
+    71000 |     +0.0% |       0 |       0 |             0 |     87988
+    72000 |     +0.0% |       0 |       0 |             0 |     86988
+    73000 |     +0.0% |       0 |       0 |             0 |     85988
+    74000 |     +0.0% |       0 |       0 |             0 |     84988
+    75000 |     +0.0% |       0 |       0 |             0 |     83988
+    76000 |     +0.0% |       0 |       0 |             0 |     82988
+    77000 |     +0.0% |       0 |       0 |             0 |     81988
+    78000 |     +0.0% |       0 |       0 |             0 |     80988
+    79000 |     +0.0% |       0 |       0 |             0 |     79988
+    80000 |     +0.0% |       0 |       0 |             0 |     78988
+    81000 |     +0.0% |       0 |       0 |             0 |     77988
+    82000 |     +0.0% |       0 |       0 |             0 |     76988
+    83000 |     +0.0% |       0 |       0 |             0 |     75988
+    84000 |     +0.0% |       0 |       0 |             0 |     74988
+    85000 |     +0.0% |       0 |       0 |             0 |     73988
+    86000 |     +0.0% |       0 |       0 |             0 |     72988
+    87000 |     +0.0% |       0 |       0 |             0 |     71988
+    88000 |     +0.0% |       0 |       0 |             0 |     70988
+    89000 |     +0.0% |       0 |       0 |             0 |     69988
+    90000 |     +0.0% |       0 |       0 |             0 |     68988
+    91000 |     +0.0% |       0 |       0 |             0 |     67988
+    92000 |     +0.0% |       0 |       0 |             0 |     66988
+    93000 |     +0.0% |       0 |       0 |             0 |     65988
+    94000 |     +0.0% |       0 |       0 |             0 |     64988
+    95000 |     +0.0% |       0 |       0 |             0 |     63988
+    96000 |     +0.0% |       0 |       0 |             0 |     62988
+    97000 |     +0.0% |       0 |       0 |             0 |     61988
+    98000 |     +0.0% |       0 |       0 |             0 |     60988
+    99000 |     +0.0% |       0 |       0 |             0 |     59988
+   100000 |     +0.0% |       0 |       0 |             0 |     58988
+   101000 |     +0.0% |       0 |       0 |             0 |     57988
+   102000 |     +0.0% |       0 |       0 |             0 |     56988
+   103000 |     +0.0% |       0 |       0 |             0 |     55988
+   104000 |     +0.0% |       0 |       0 |             0 |     54988
+   105000 |     +0.0% |       0 |       0 |             0 |     53988
+   106000 |     +0.0% |       0 |       0 |             0 |     52988
+   107000 |     +0.0% |       0 |       0 |             0 |     51988
+   108000 |     +0.0% |       0 |       0 |             0 |     50988
+   109000 |     +0.0% |       0 |       0 |             0 |     49988
+   110000 |     +0.0% |       0 |       0 |             0 |     48988
+   111000 |     +0.0% |       0 |       0 |             0 |     47988
+   112000 |     +0.0% |       0 |       0 |             0 |     46988
+   113000 |     +0.0% |       0 |       0 |             0 |     45988
+   114000 |     +0.0% |       0 |       0 |             0 |     44988
+   115000 |     +0.0% |       0 |       0 |             0 |     43988
+   116000 |     +0.0% |       0 |       0 |             0 |     42988
+   117000 |     +0.0% |       0 |       0 |             0 |     41988
+   118000 |     +0.0% |       0 |       0 |             0 |     40988
+   119000 |     +0.0% |       0 |       0 |             0 |     39988
+   120000 |     +0.0% |       0 |       0 |             0 |     38988
+   121000 |     +0.0% |       0 |       0 |             0 |     37988
+   122000 |     +0.0% |       0 |       0 |             0 |     36988
+   123000 |     +0.0% |       0 |       0 |             0 |     35988
+   124000 |     +0.0% |       0 |       0 |             0 |     34988
+   125000 |     +0.0% |       0 |       0 |             0 |     33988
+   126000 |     +0.0% |       0 |       0 |             0 |     32988
+   127000 |     +0.0% |       0 |       0 |             0 |     31988
+   128000 |     +0.0% |       0 |       0 |             0 |     30988
+   129000 |     +0.0% |       0 |       0 |             0 |     29988
+   130000 |     +0.0% |       0 |       0 |             0 |     28988
+   131000 |     +0.0% |       0 |       0 |             0 |     27988
+   132000 |     +0.0% |       0 |       0 |             0 |     26988
+   133000 |     +0.0% |       0 |       0 |             0 |     25988
+   134000 |     +0.0% |       0 |       0 |             0 |     24988
+   135000 |     +0.0% |       0 |       0 |             0 |     23988
+   136000 |     +0.0% |       0 |       0 |             0 |     22988
+   137000 |     +0.0% |       0 |       0 |             0 |     21988
+   138000 |     +0.0% |       0 |       0 |             0 |     20988
+   139000 |     +0.0% |       0 |       0 |             0 |     19988
+   140000 |     +0.0% |       0 |       0 |             0 |     18988
+   141000 |     +0.0% |       0 |       0 |             0 |     17988
+   142000 |     +0.0% |       0 |       0 |             0 |     16988
+   143000 |     +0.0% |       0 |       0 |             0 |     15988
+   144000 |     +0.0% |       0 |       0 |             0 |     14988
+   145000 |     +0.0% |       0 |       0 |             0 |     13988
+   146000 |     +0.0% |       0 |       0 |             0 |     12988
+   147000 |     +0.0% |       0 |       0 |             0 |     11988
+   148000 |     +0.0% |       0 |       0 |             0 |     10988
+   149000 |     +0.0% |       0 |       0 |             0 |      9988
+   150000 |     +0.0% |       0 |       0 |             0 |      8988
+   151000 |     +0.0% |       0 |       0 |             0 |      7988
+   152000 |     +0.0% |       0 |       0 |             0 |      6988
+   153000 |     +0.0% |       0 |       0 |             0 |      5988
+   154000 |     +0.0% |       0 |       0 |             0 |      4988
+   155000 |     +0.0% |       0 |       0 |             0 |      3988
+   156000 |     +0.0% |       0 |       0 |             0 |      2988
+   157000 |     +0.0% |       0 |       0 |             0 |      1988
+   158000 |     +0.0% |       0 |       0 |             0 |       988
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+Took 13 seconds: repair_design -verbose -match_cell_footprint
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 5564 um^2 33% utilization.
+Instance count before 160542, after 160542
+Pin count before 586690, after 586690
+write_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/3_4_place_resized.odb
+Elapsed time: 0:56.99[h:]min:sec. CPU time: user 76.93 sys 124.05 (352%). Peak memory: 1037244KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_4_place_resized                 56           1012 9f9532917ad3437e1b77
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_5_place_dp detail_place
+Running detail_place.tcl, stage 3_5_place_dp
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/3_4_place_resized.odb
+read_sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/2_floorplan.sdc
+source /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/setRC_fspdn.tcl
+[INFO DPL-0005] Max displacement: +/- 1190 sites horizontally, +/- 69 rows vertically.
+Movements Summary
+---------------------------------------
+Total cells:                  158728
+Diamond Move Success:         158728 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement      14954.9 u
+average displacement        0.1 u
+max displacement            0.5 u
+original HPWL          328405.4 u
+legalized HPWL         337849.5 u
+delta HPWL                    3 %
+
+[INFO DPL-0020] Mirrored 56213 instances
+[INFO DPL-0021] HPWL before          337849.5 u
+[INFO DPL-0022] HPWL after           333351.3 u
+[INFO DPL-0023] HPWL delta               -1.3 %
+[INFO FLW-0012] Placement violations .
+estimate_parasitics -placement
+Took 6 seconds: estimate_parasitics -placement
+Report metrics stage 3, detailed place...
+
+==========================================================================
+detailed place report_design_area
+--------------------------------------------------------------------------
+Design area 5564 um^2 33% utilization.
+write_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/3_5_place_dp.odb
+Elapsed time: 0:57.01[h:]min:sec. CPU time: user 76.27 sys 129.56 (361%). Peak memory: 1278504KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_5_place_dp                      57           1248 40a123a29e726558717f
+cp /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/3_5_place_dp.odb /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/3_place.odb
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 4_1_cts cts
+Running cts.tcl, stage 4_1_cts
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/3_place.odb
+read_sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/3_place.sdc
+source /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/setRC_fspdn.tcl
+clock_tree_synthesis -sink_clustering_enable -repair_clock_nets
+[INFO CTS-0050] Root buffer is gt2_6t_buf_x2_w31_svt.
+[INFO CTS-0051] Sink buffer is gt2_6t_buf_x4_w31_lvt.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    gt2_6t_buf_x2_w31_svt
+                    gt2_6t_buf_x2_w31_lvt
+                    gt2_6t_buf_x3_w31_svt
+                    gt2_6t_buf_x3_w31_lvt
+                    gt2_6t_buf_x4_w31_svt
+[INFO CTS-0049] Characterization buffer is gt2_6t_buf_x4_w31_svt.
+[INFO CTS-0007] Net "clk" found for clock "core_clock".
+[INFO CTS-0010]  Clock net "clk" has 10769 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 5 buffer(s) types.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 10769.
+[INFO CTS-0090]  Sinks will be clustered based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 1440  dbu (0 um).
+[INFO CTS-0206] Best clustering solution was found from clustering size of 30 and clustering diameter of 50.
+[INFO CTS-0019]  Total number of sinks after clustering: 2304.
+[INFO CTS-0024]  Normalized sink region: [(8.15208, 7.74), (184.581, 186.6)].
+[INFO CTS-0025]     Width:  176.4292.
+[INFO CTS-0026]     Height: 178.8600.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 1152
+    Sub-region size: 176.4292 X 89.4300
+[INFO CTS-0034]     Segment length (rounded): 44.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 576
+    Sub-region size: 88.2146 X 89.4300
+[INFO CTS-0034]     Segment length (rounded): 44.
+ Level 3
+    Direction: Vertical
+    Sinks per sub-region: 288
+    Sub-region size: 88.2146 X 44.7150
+[INFO CTS-0034]     Segment length (rounded): 22.
+ Level 4
+    Direction: Horizontal
+    Sinks per sub-region: 144
+    Sub-region size: 44.1073 X 44.7150
+[INFO CTS-0034]     Segment length (rounded): 22.
+ Level 5
+    Direction: Vertical
+    Sinks per sub-region: 72
+    Sub-region size: 44.1073 X 22.3575
+[INFO CTS-0034]     Segment length (rounded): 12.
+ Level 6
+    Direction: Horizontal
+    Sinks per sub-region: 36
+    Sub-region size: 22.0536 X 22.3575
+[INFO CTS-0034]     Segment length (rounded): 12.
+ Level 7
+    Direction: Vertical
+    Sinks per sub-region: 18
+    Sub-region size: 22.0536 X 11.1787
+[INFO CTS-0034]     Segment length (rounded): 6.
+ Level 8
+    Direction: Horizontal
+    Sinks per sub-region: 9
+    Sub-region size: 11.0268 X 11.1787
+[INFO CTS-0034]     Segment length (rounded): 6.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 2304.
+[INFO CTS-0018]     Created 2693 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 11.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 11.
+[INFO CTS-0015]     Created 2693 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 3:92, 4:577, 5:1658, 6:38, 7:32, 8:36, 9:24, 10:29, 11:25, 12:13, 13:11, 14:9, 15:7, 16:6, 17:2, 18:1..
+[INFO CTS-0017]     Max level of the clock tree: 8.
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 11594
+[INFO CTS-0100]  Leaf buffers 2304
+[INFO CTS-0101]  Average sink wire length 251.49 um
+[INFO CTS-0102]  Path depth 10 - 11
+[INFO CTS-0207]  Dummy loads inserted 825
+[INFO RSZ-0047] Found 1 long wires.
+[INFO RSZ-0048] Inserted 4 buffers in 1 nets.
+Took 18 seconds: clock_tree_synthesis -sink_clustering_enable -repair_clock_nets
+estimate_parasitics -placement
+[INFO DPL-0005] Max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+Movements Summary
+---------------------------------------
+Total cells:                  162250
+Diamond Move Success:         162250 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement        675.6 u
+average displacement        0.0 u
+max displacement            0.5 u
+original HPWL          346233.3 u
+legalized HPWL         350936.8 u
+delta HPWL                    1 %
+
+estimate_parasitics -placement
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0046] Found 257 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% | -242.959 | -57789.301 | U0_ARK.data_out[49]$_DFFE_PN0P_/D
+       10 |       0 |      36 |            0 |    +0.0% | -239.681 | -57600.801 | U0_ARK.data_out[52]$_DFFE_PN0P_/D
+       20 |       0 |      76 |            0 |    +0.0% | -237.824 | -57350.086 | U_KEYEXP.RKGEN_U0.Key_FirstStage[99]$_DFFE_PN0P_/D
+       30 |       0 |     116 |            0 |    +0.0% | -236.255 | -57040.859 | U0_ARK.data_out[59]$_DFFE_PN0P_/D
+       40 |       0 |     156 |            0 |    +0.0% | -234.095 | -56794.312 | U0_ARK.data_out[114]$_DFFE_PN0P_/D
+       50 |       0 |     196 |            0 |    +0.1% | -233.226 | -56510.781 | U_KEYEXP.RKGEN_U0.Key_FirstStage[76]$_DFFE_PN0P_/D
+       60 |       0 |     236 |            0 |    +0.1% | -232.101 | -56198.270 | U0_ARK.data_out[55]$_DFFE_PN0P_/D
+       70 |       0 |     276 |            0 |    +0.1% | -230.943 | -55935.207 | U_KEYEXP.RKGEN_U0.Key_FirstStage[20]$_DFFE_PN0P_/D
+       80 |       0 |     316 |            0 |    +0.1% | -229.761 | -55643.961 | U_KEYEXP.RKGEN_U0.Key_FirstStage[22]$_DFFE_PN0P_/D
+       90 |       0 |     356 |            0 |    +0.1% | -228.872 | -55419.328 | U_KEYEXP.RKGEN_U0.Key_FirstStage[119]$_DFFE_PN0P_/D
+      100 |       0 |     396 |            0 |    +0.1% | -228.009 | -55181.871 | U_KEYEXP.RKGEN_U0.Key_FirstStage[87]$_DFFE_PN0P_/D
+      110 |       0 |     436 |            0 |    +0.1% | -226.888 | -54969.141 | U_KEYEXP.RKGEN_U0.Key_FirstStage[123]$_DFFE_PN0P_/D
+      120 |       0 |     476 |            0 |    +0.2% | -226.153 | -54637.164 | U0_ARK.data_out[95]$_DFFE_PN0P_/D
+      130 |       0 |     516 |            0 |    +0.2% | -225.451 | -54368.754 | U0_ARK.data_out[77]$_DFFE_PN0P_/D
+      140 |       0 |     556 |            0 |    +0.2% | -224.713 | -54070.336 | U_KEYEXP.RKGEN_U0.Key_FirstStage[6]$_DFFE_PN0P_/D
+      150 |       0 |     596 |            0 |    +0.2% | -224.664 | -53711.043 | U0_ARK.data_out[51]$_DFFE_PN0P_/D
+      160 |       0 |     636 |            0 |    +0.2% | -224.664 | -53367.098 | U0_ARK.data_out[51]$_DFFE_PN0P_/D
+      170 |       0 |     676 |            0 |    +0.2% | -224.664 | -53085.207 | U0_ARK.data_out[51]$_DFFE_PN0P_/D
+      180 |       0 |     716 |            0 |    +0.2% | -222.867 | -52800.816 | U0_ARK.data_out[54]$_DFFE_PN0P_/D
+      190 |       0 |     756 |            0 |    +0.2% | -222.867 | -52504.672 | U0_ARK.data_out[54]$_DFFE_PN0P_/D
+      200 |       0 |     796 |            0 |    +0.3% | -222.867 | -52184.918 | U0_ARK.data_out[54]$_DFFE_PN0P_/D
+      210 |       0 |     836 |            0 |    +0.3% | -222.867 | -51876.578 | U0_ARK.data_out[54]$_DFFE_PN0P_/D
+      220 |       0 |     876 |            0 |    +0.3% | -216.370 | -51519.840 | U_KEYEXP.RKGEN_U0.Key_FirstStage[56]$_DFFE_PN0P_/D
+      230 |       0 |     916 |            0 |    +0.3% | -215.707 | -51229.055 | U0_ARK.data_out[41]$_DFFE_PN0P_/D
+      240 |       0 |     956 |            0 |    +0.3% | -215.707 | -50923.074 | U0_ARK.data_out[41]$_DFFE_PN0P_/D
+      250 |       0 |     998 |            0 |    +0.3% | -214.232 | -50638.410 | U0_ARK.data_out[49]$_DFFE_PN0P_/D
+      260 |       0 |    1045 |            0 |    +0.3% | -213.462 | -50422.590 | U0_ARK.data_out[51]$_DFFE_PN0P_/D
+      270 |       0 |    1125 |            0 |    +0.4% | -210.291 | -50073.234 | U0_ARK.data_out[63]$_DFFE_PN0P_/D
+      280 |       0 |    1205 |            0 |    +0.4% | -208.003 | -49499.488 | U_KEYEXP.RKGEN_U0.Key_FirstStage[96]$_DFFE_PN0P_/D
+      290 |       0 |    1285 |            0 |    +0.4% | -206.200 | -48852.000 | U0_ARK.data_out[46]$_DFFE_PN0P_/D
+      300 |       0 |    1365 |            0 |    +0.4% | -204.715 | -48345.723 | U_KEYEXP.RKGEN_U0.Key_FirstStage[75]$_DFFE_PN0P_/D
+      310 |       0 |    1445 |            0 |    +0.5% | -203.243 | -47835.078 | U_KEYEXP.RKGEN_U0.Key_FirstStage[76]$_DFFE_PN0P_/D
+      320 |       0 |    1525 |            0 |    +0.5% | -202.088 | -47211.973 | U0_ARK.data_out[41]$_DFFE_PN0P_/D
+      330 |       0 |    1605 |            0 |    +0.5% | -201.306 | -46728.922 | U_KEYEXP.RKGEN_U0.Key_FirstStage[17]$_DFFE_PN0P_/D
+      340 |       0 |    1685 |            0 |    +0.5% | -200.535 | -46201.984 | U0_ARK.data_out[105]$_DFFE_PN0P_/D
+      350 |       0 |    1765 |            0 |    +0.6% | -199.850 | -45759.984 | U0_ARK.data_out[106]$_DFFE_PN0P_/D
+      360 |       0 |    1845 |            0 |    +0.6% | -199.085 | -45323.004 | U_KEYEXP.RKGEN_U0.Key_FirstStage[119]$_DFFE_PN0P_/D
+      370 |       0 |       0 |            0 |    +0.6% | -198.007 | -44868.551 | U0_ARK.data_out[116]$_DFFE_PN0P_/D
+      380 |       0 |      56 |            0 |    +0.6% | -196.985 | -44376.980 | U_KEYEXP.RKGEN_U0.Key_FirstStage[31]$_DFFE_PN0P_/D
+      390 |       0 |      56 |            0 |    +0.7% | -195.955 | -43821.496 | U0_ARK.data_out[120]$_DFFE_PN0P_/D
+      400 |       0 |      32 |            0 |    +0.7% | -195.277 | -43189.926 | U_KEYEXP.RKGEN_U0.Key_FirstStage[23]$_DFFE_PN0P_/D
+      410 |       0 |     112 |            0 |    +0.7% | -194.520 | -42597.430 | U0_ARK.data_out[89]$_DFFE_PN0P_/D
+      420 |       0 |       8 |            0 |    +0.7% | -193.764 | -41940.734 | U_KEYEXP.RKGEN_U0.Key_FirstStage[58]$_DFFE_PN0P_/D
+      430 |       0 |      86 |            0 |    +0.8% | -193.014 | -41291.926 | U_KEYEXP.RKGEN_U0.Key_FirstStage[43]$_DFFE_PN0P_/D
+      440 |       0 |     166 |            0 |    +0.8% | -192.511 | -40711.094 | U_KEYEXP.RKGEN_U0.Key_FirstStage[85]$_DFFE_PN0P_/D
+      450 |       0 |      64 |            0 |    +0.8% | -191.385 | -40073.828 | U_KEYEXP.RKGEN_U0.Key_FirstStage[51]$_DFFE_PN0P_/D
+      460 |       0 |       8 |            0 |    +0.8% | -190.342 | -39458.688 | U_KEYEXP.RKGEN_U0.Key_FirstStage[8]$_DFFE_PN0P_/D
+      470 |       0 |       8 |            0 |    +0.9% | -189.414 | -38797.082 | U_KEYEXP.RKGEN_U0.Key_FirstStage[59]$_DFFE_PN0P_/D
+      480 |       0 |      88 |            0 |    +0.9% | -188.242 | -38163.355 | U_KEYEXP.RKGEN_U0.Key_FirstStage[40]$_DFFE_PN0P_/D
+      490 |       0 |       0 |            0 |    +0.9% | -187.191 | -37555.324 | U0_ARK.data_out[14]$_DFFE_PN0P_/D
+      500 |       0 |      48 |            0 |    +0.9% | -185.670 | -36911.445 | U0_ARK.data_out[34]$_DFFE_PN0P_/D
+      510 |       0 |     128 |            0 |    +1.0% | -175.563 | -36341.695 | U0_ARK.data_out[85]$_DFFE_PN0P_/D
+    final |       0 |     170 |            0 |    +1.0% | -157.286 | -36046.832 | U0_ARK.data_out[49]$_DFFE_PN0P_/D
+--------------------------------------------------------------------------------------
+[WARNING RSZ-0066] Unable to repair all hold violations.
+[INFO RSZ-0032] Inserted 170 hold buffers.
+Took 7 seconds: repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -verbose
+Repair timing output passed lec test
+[INFO DPL-0005] Max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+Movements Summary
+---------------------------------------
+Total cells:                  165323
+Diamond Move Success:         165323 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement       2935.2 u
+average displacement        0.0 u
+max displacement            7.2 u
+original HPWL          351721.9 u
+legalized HPWL         352986.0 u
+delta HPWL                    0 %
+
+Report metrics stage 4, cts final...
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 5764 um^2 34% utilization.
+write_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/4_1_cts.odb
+write_sdc -no_timestamp /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/4_cts.sdc
+Elapsed time: 1:30.90[h:]min:sec. CPU time: user 146.66 sys 174.87 (353%). Peak memory: 1317204KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+4_1_cts                           90           1286 6d40cb1e1d285696d9e3
+cp /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/4_1_cts.odb /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/4_cts.odb
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 5_1_grt global_route
+Running global_route.tcl, stage 5_1_grt
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/4_cts.odb
+read_sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/4_cts.sdc
+source /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/setRC_fspdn.tcl
+pin_access
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V1
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V1
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V5
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V5
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V6
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V6
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V7
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V7
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V8
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V8
+
+Units:                2000
+Number of layers:     31
+Number of macros:     144
+Number of vias:       14
+Number of viarulegen: 14
+
+[INFO DRT-0150] Reading design.
+[WARNING DRT-0120] Large net net16427 has 103 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net16070 has 107 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net16056 has 106 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net16053 has 105 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15791 has 104 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15749 has 102 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15610 has 102 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15409 has 101 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15406 has 102 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15357 has 102 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15317 has 104 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15121 has 103 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15114 has 103 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15433 has 106 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net14860 has 106 pins which may impact routing performance. Consider optimization.
+
+Design:                   aes
+Die area:                 ( 0 0 ) ( 281013 281013 )
+Number of track patterns: 30
+Number of DEF vias:       0
+Number of components:     167137
+Number of terminals:      389
+Number of snets:          2
+Number of nets:           164758
+
+[INFO DRT-0167] List of default vias:
+  Layer V1
+    default via: V1_0
+  Layer V2
+    default via: V2_0
+  Layer V3
+    default via: V3_0
+  Layer V4
+    default via: V4_0
+  Layer V5
+    default via: V5_0
+  Layer V6
+    default via: V6_0
+  Layer V7
+    default via: V7_0
+  Layer V8
+    default via: V8_0
+  Layer V9
+    default via: V9_0
+  Layer V10
+    default via: V10_0
+  Layer V11
+    default via: V11_0
+  Layer V12
+    default via: V12_0
+  Layer V13
+    default via: V13_0
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+  Complete 100000 instances.
+[INFO DRT-0164] Number of unique instances = 382.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0018]   Complete 100000 insts.
+[INFO DRT-0024]   Complete SDCON.
+[INFO DRT-0024]   Complete VBPR.
+[INFO DRT-0024]   Complete M0.
+[INFO DRT-0024]   Complete V0.
+[INFO DRT-0024]   Complete M1.
+[INFO DRT-0024]   Complete V1.
+[INFO DRT-0024]   Complete M2.
+[INFO DRT-0024]   Complete V2.
+[INFO DRT-0024]   Complete M3.
+[INFO DRT-0024]   Complete V3.
+[INFO DRT-0024]   Complete M4.
+[INFO DRT-0024]   Complete V4.
+[INFO DRT-0024]   Complete M5.
+[INFO DRT-0024]   Complete V5.
+[INFO DRT-0024]   Complete M6.
+[INFO DRT-0024]   Complete V6.
+[INFO DRT-0024]   Complete M7.
+[INFO DRT-0024]   Complete V7.
+[INFO DRT-0024]   Complete M8.
+[INFO DRT-0024]   Complete V8.
+[INFO DRT-0024]   Complete M9.
+[INFO DRT-0024]   Complete V9.
+[INFO DRT-0024]   Complete M10.
+[INFO DRT-0024]   Complete V10.
+[INFO DRT-0024]   Complete M11.
+[INFO DRT-0024]   Complete V11.
+[INFO DRT-0024]   Complete M12.
+[INFO DRT-0024]   Complete V12.
+[INFO DRT-0024]   Complete M13.
+[INFO DRT-0024]   Complete V13.
+[INFO DRT-0024]   Complete RDL.
+[INFO DRT-0033] SDCON shape region query size = 0.
+[INFO DRT-0033] VBPR shape region query size = 0.
+[INFO DRT-0033] M0 shape region query size = 1255831.
+[INFO DRT-0033] V0 shape region query size = 0.
+[INFO DRT-0033] M1 shape region query size = 841826.
+[INFO DRT-0033] V1 shape region query size = 0.
+[INFO DRT-0033] M2 shape region query size = 164.
+[INFO DRT-0033] V2 shape region query size = 0.
+[INFO DRT-0033] M3 shape region query size = 225.
+[INFO DRT-0033] V3 shape region query size = 0.
+[INFO DRT-0033] M4 shape region query size = 0.
+[INFO DRT-0033] V4 shape region query size = 0.
+[INFO DRT-0033] M5 shape region query size = 0.
+[INFO DRT-0033] V5 shape region query size = 0.
+[INFO DRT-0033] M6 shape region query size = 0.
+[INFO DRT-0033] V6 shape region query size = 0.
+[INFO DRT-0033] M7 shape region query size = 0.
+[INFO DRT-0033] V7 shape region query size = 0.
+[INFO DRT-0033] M8 shape region query size = 0.
+[INFO DRT-0033] V8 shape region query size = 0.
+[INFO DRT-0033] M9 shape region query size = 0.
+[INFO DRT-0033] V9 shape region query size = 0.
+[INFO DRT-0033] M10 shape region query size = 0.
+[INFO DRT-0033] V10 shape region query size = 0.
+[INFO DRT-0033] M11 shape region query size = 0.
+[INFO DRT-0033] V11 shape region query size = 0.
+[INFO DRT-0033] M12 shape region query size = 0.
+[INFO DRT-0033] V12 shape region query size = 0.
+[INFO DRT-0033] M13 shape region query size = 0.
+[INFO DRT-0033] V13 shape region query size = 0.
+[INFO DRT-0033] RDL shape region query size = 0.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0076]   Complete 1000 pins.
+[INFO DRT-0076]   Complete 2000 pins.
+[INFO DRT-0078]   Complete 2300 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0079]   Complete 200 unique inst patterns.
+[INFO DRT-0079]   Complete 300 unique inst patterns.
+[INFO DRT-0081]   Complete 382 unique inst patterns.
+[INFO DRT-0082]   Complete 10000 groups.
+[INFO DRT-0082]   Complete 20000 groups.
+[INFO DRT-0082]   Complete 30000 groups.
+[INFO DRT-0082]   Complete 40000 groups.
+[INFO DRT-0082]   Complete 50000 groups.
+[INFO DRT-0082]   Complete 60000 groups.
+[INFO DRT-0082]   Complete 70000 groups.
+[INFO DRT-0082]   Complete 80000 groups.
+[INFO DRT-0082]   Complete 90000 groups.
+[INFO DRT-0082]   Complete 100000 groups.
+[INFO DRT-0084]   Complete 117302 groups.
+#scanned instances     = 167137
+#unique  instances     = 382
+#stdCellGenAp          = 14730
+#stdCellValidPlanarAp  = 5975
+#stdCellValidViaAp     = 7569
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 599055
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:24:26, elapsed time = 00:00:31, memory = 708.25 (MB), peak = 708.25 (MB)
+Took 34 seconds: pin_access
+global_route -congestion_report_file /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/reports/gt2n_compat_bspdn_proxy/aes_128/base/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+[INFO GRT-0020] Min routing layer: M1
+[INFO GRT-0021] Max routing layer: M9
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer M0      Track-Pitch = 0.0240  line-2-Via Pitch: 0.0240
+[INFO GRT-0088] Layer M1      Track-Pitch = 0.0280  line-2-Via Pitch: 0.0280
+[INFO GRT-0088] Layer M2      Track-Pitch = 0.0240  line-2-Via Pitch: 0.0240
+[INFO GRT-0088] Layer M3      Track-Pitch = 0.0280  line-2-Via Pitch: 0.0280
+[INFO GRT-0088] Layer M4      Track-Pitch = 0.0420  line-2-Via Pitch: 0.0420
+[INFO GRT-0088] Layer M5      Track-Pitch = 0.0420  line-2-Via Pitch: 0.0420
+[INFO GRT-0088] Layer M6      Track-Pitch = 0.0760  line-2-Via Pitch: 0.0760
+[INFO GRT-0088] Layer M7      Track-Pitch = 0.0760  line-2-Via Pitch: 0.0760
+[INFO GRT-0088] Layer M8      Track-Pitch = 0.0760  line-2-Via Pitch: 0.0760
+[INFO GRT-0088] Layer M9      Track-Pitch = 0.0760  line-2-Via Pitch: 0.0760
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 241946
+[INFO GRT-0019] Found 2698 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 107
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+M0         Horizontal          0             0          0.00%
+M1         Vertical      1003856        718606          28.42%
+M2         Horizontal    1949382       1392606          28.56%
+M3         Vertical      1670994       1225440          26.66%
+M4         Horizontal    1113885        779886          29.99%
+M5         Vertical      1113885        779886          29.99%
+M6         Horizontal     615717        392940          36.18%
+M7         Vertical       615717        392940          36.18%
+M8         Horizontal     615717        392940          36.18%
+M9         Vertical       615717        392940          36.18%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 581515
+[INFO GRT-0198] Via related Steiner nodes: 34435
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 764405
+[INFO GRT-0112] Final usage 3D: 3375194
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+M0                   0             0            0.00%             0 /  0 /  0
+M1              718606        221385           30.81%             0 /  0 /  0
+M2             1392606        491546           35.30%             0 /  0 /  0
+M3             1225440        244985           19.99%             0 /  0 /  0
+M4              779886        101184           12.97%             0 /  0 /  0
+M5              779886         21387            2.74%             0 /  0 /  0
+M6              392940          1492            0.38%             0 /  0 /  0
+M7              392940             0            0.00%             0 /  0 /  0
+M8              392940             0            0.00%             0 /  0 /  0
+M9              392940             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total          6468184       1081979           16.73%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 655168 um
+[INFO GRT-0014] Routed nets: 164758
+[INFO GRT-0303] Global routing runtime = 00:00:15
+Took 16 seconds: global_route -congestion_report_file /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/reports/gt2n_compat_bspdn_proxy/aes_128/base/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+estimate_parasitics -global_routing
+Took 5 seconds: estimate_parasitics -global_routing
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |    165583
+     1000 |     +0.0% |       0 |       0 |             0 |    164583
+     2000 |     +0.0% |       0 |       0 |             0 |    163583
+     3000 |     +0.0% |       0 |       0 |             0 |    162583
+     4000 |     +0.0% |       0 |       0 |             0 |    161583
+     5000 |     +0.0% |       0 |       0 |             0 |    160583
+     6000 |     +0.0% |       0 |       0 |             0 |    159583
+     7000 |     +0.0% |       0 |       0 |             0 |    158583
+     8000 |     +0.0% |       0 |       0 |             0 |    157583
+     9000 |     +0.0% |       0 |       0 |             0 |    156583
+    10000 |     +0.0% |       0 |       0 |             0 |    155583
+    11000 |     +0.0% |       0 |       0 |             0 |    154583
+    12000 |     +0.0% |       0 |       0 |             0 |    153583
+    13000 |     +0.0% |       0 |       0 |             0 |    152583
+    14000 |     +0.0% |       0 |       0 |             0 |    151583
+    15000 |     +0.0% |       0 |       0 |             0 |    150583
+    16000 |     +0.0% |       0 |       0 |             0 |    149583
+    17000 |     +0.0% |       0 |       0 |             0 |    148583
+    18000 |     +0.0% |       0 |       0 |             0 |    147583
+    19000 |     +0.0% |       0 |       0 |             0 |    146583
+    20000 |     +0.0% |       0 |       0 |             0 |    145583
+    21000 |     +0.0% |       0 |       0 |             0 |    144583
+    22000 |     +0.0% |       0 |       0 |             0 |    143583
+    23000 |     +0.0% |       0 |       0 |             0 |    142583
+    24000 |     +0.0% |       0 |       0 |             0 |    141583
+    25000 |     +0.0% |       0 |       0 |             0 |    140583
+    26000 |     +0.0% |       0 |       0 |             0 |    139583
+    27000 |     +0.0% |       0 |       0 |             0 |    138583
+    28000 |     +0.0% |       0 |       0 |             0 |    137583
+    29000 |     +0.0% |       0 |       0 |             0 |    136583
+    30000 |     +0.0% |       0 |       0 |             0 |    135583
+    31000 |     +0.0% |       0 |       0 |             0 |    134583
+    32000 |     +0.0% |       0 |       0 |             0 |    133583
+    33000 |     +0.0% |       0 |       0 |             0 |    132583
+    34000 |     +0.0% |       0 |       0 |             0 |    131583
+    35000 |     +0.0% |       0 |       0 |             0 |    130583
+    36000 |     +0.0% |       0 |       0 |             0 |    129583
+    37000 |     +0.0% |       0 |       0 |             0 |    128583
+    38000 |     +0.0% |       0 |       0 |             0 |    127583
+    39000 |     +0.0% |       0 |       0 |             0 |    126583
+    40000 |     +0.0% |       0 |       0 |             0 |    125583
+    41000 |     +0.0% |       0 |       0 |             0 |    124583
+    42000 |     +0.0% |       0 |       0 |             0 |    123583
+    43000 |     +0.0% |       0 |       0 |             0 |    122583
+    44000 |     +0.0% |       0 |       0 |             0 |    121583
+    45000 |     +0.0% |       0 |       0 |             0 |    120583
+    46000 |     +0.0% |       0 |       0 |             0 |    119583
+    47000 |     +0.0% |       0 |       0 |             0 |    118583
+    48000 |     +0.0% |       0 |       0 |             0 |    117583
+    49000 |     +0.0% |       0 |       0 |             0 |    116583
+    50000 |     +0.0% |       0 |       0 |             0 |    115583
+    51000 |     +0.0% |       0 |       0 |             0 |    114583
+    52000 |     +0.0% |       0 |       0 |             0 |    113583
+    53000 |     +0.0% |       0 |       0 |             0 |    112583
+    54000 |     +0.0% |       0 |       0 |             0 |    111583
+    55000 |     +0.0% |       0 |       0 |             0 |    110583
+    56000 |     +0.0% |       0 |       0 |             0 |    109583
+    57000 |     +0.0% |       0 |       0 |             0 |    108583
+    58000 |     +0.0% |       0 |       0 |             0 |    107583
+    59000 |     +0.0% |       0 |       0 |             0 |    106583
+    60000 |     +0.0% |       0 |       0 |             0 |    105583
+    61000 |     +0.0% |       0 |       0 |             0 |    104583
+    62000 |     +0.0% |       0 |       0 |             0 |    103583
+    63000 |     +0.0% |       0 |       0 |             0 |    102583
+    64000 |     +0.0% |       0 |       0 |             0 |    101583
+    65000 |     +0.0% |       0 |       0 |             0 |    100583
+    66000 |     +0.0% |       0 |       0 |             0 |     99583
+    67000 |     +0.0% |       0 |       0 |             0 |     98583
+    68000 |     +0.0% |       0 |       0 |             0 |     97583
+    69000 |     +0.0% |       0 |       0 |             0 |     96583
+    70000 |     +0.0% |       0 |       0 |             0 |     95583
+    71000 |     +0.0% |       0 |       0 |             0 |     94583
+    72000 |     +0.0% |       0 |       0 |             0 |     93583
+    73000 |     +0.0% |       0 |       0 |             0 |     92583
+    74000 |     +0.0% |       0 |       0 |             0 |     91583
+    75000 |     +0.0% |       0 |       0 |             0 |     90583
+    76000 |     +0.0% |       0 |       0 |             0 |     89583
+    77000 |     +0.0% |       0 |       0 |             0 |     88583
+    78000 |     +0.0% |       0 |       0 |             0 |     87583
+    79000 |     +0.0% |       0 |       0 |             0 |     86583
+    80000 |     +0.0% |       0 |       0 |             0 |     85583
+    81000 |     +0.0% |       0 |       0 |             0 |     84583
+    82000 |     +0.0% |       0 |       0 |             0 |     83583
+    83000 |     +0.0% |       0 |       0 |             0 |     82583
+    84000 |     +0.0% |       0 |       0 |             0 |     81583
+    85000 |     +0.0% |       0 |       0 |             0 |     80583
+    86000 |     +0.0% |       0 |       0 |             0 |     79583
+    87000 |     +0.0% |       0 |       0 |             0 |     78583
+    88000 |     +0.0% |       0 |       0 |             0 |     77583
+    89000 |     +0.0% |       0 |       0 |             0 |     76583
+    90000 |     +0.0% |       0 |       0 |             0 |     75583
+    91000 |     +0.0% |       0 |       0 |             0 |     74583
+    92000 |     +0.0% |       0 |       0 |             0 |     73583
+    93000 |     +0.0% |       0 |       0 |             0 |     72583
+    94000 |     +0.0% |       0 |       0 |             0 |     71583
+    95000 |     +0.0% |       0 |       0 |             0 |     70583
+    96000 |     +0.0% |       0 |       0 |             0 |     69583
+    97000 |     +0.0% |       0 |       0 |             0 |     68583
+    98000 |     +0.0% |       0 |       0 |             0 |     67583
+    99000 |     +0.0% |       0 |       0 |             0 |     66583
+   100000 |     +0.0% |       0 |       0 |             0 |     65583
+   101000 |     +0.0% |       0 |       0 |             0 |     64583
+   102000 |     +0.0% |       0 |       0 |             0 |     63583
+   103000 |     +0.0% |       0 |       0 |             0 |     62583
+   104000 |     +0.0% |       0 |       0 |             0 |     61583
+   105000 |     +0.0% |       0 |       0 |             0 |     60583
+   106000 |     +0.0% |       0 |       0 |             0 |     59583
+   107000 |     +0.0% |       0 |       0 |             0 |     58583
+   108000 |     +0.0% |       0 |       0 |             0 |     57583
+   109000 |     +0.0% |       0 |       0 |             0 |     56583
+   110000 |     +0.0% |       0 |       0 |             0 |     55583
+   111000 |     +0.0% |       0 |       0 |             0 |     54583
+   112000 |     +0.0% |       0 |       0 |             0 |     53583
+   113000 |     +0.0% |       0 |       0 |             0 |     52583
+   114000 |     +0.0% |       0 |       0 |             0 |     51583
+   115000 |     +0.0% |       0 |       0 |             0 |     50583
+   116000 |     +0.0% |       0 |       0 |             0 |     49583
+   117000 |     +0.0% |       0 |       0 |             0 |     48583
+   118000 |     +0.0% |       0 |       0 |             0 |     47583
+   119000 |     +0.0% |       0 |       0 |             0 |     46583
+   120000 |     +0.0% |       0 |       0 |             0 |     45583
+   121000 |     +0.0% |       0 |       0 |             0 |     44583
+   122000 |     +0.0% |       0 |       0 |             0 |     43583
+   123000 |     +0.0% |       0 |       0 |             0 |     42583
+   124000 |     +0.0% |       0 |       0 |             0 |     41583
+   125000 |     +0.0% |       0 |       0 |             0 |     40583
+   126000 |     +0.0% |       0 |       0 |             0 |     39583
+   127000 |     +0.0% |       0 |       0 |             0 |     38583
+   128000 |     +0.0% |       0 |       0 |             0 |     37583
+   129000 |     +0.0% |       0 |       0 |             0 |     36583
+   130000 |     +0.0% |       0 |       0 |             0 |     35583
+   131000 |     +0.0% |       0 |       0 |             0 |     34583
+   132000 |     +0.0% |       0 |       0 |             0 |     33583
+   133000 |     +0.0% |       0 |       0 |             0 |     32583
+   134000 |     +0.0% |       0 |       0 |             0 |     31583
+   135000 |     +0.0% |       0 |       0 |             0 |     30583
+   136000 |     +0.0% |       0 |       0 |             0 |     29583
+   137000 |     +0.0% |       0 |       0 |             0 |     28583
+   138000 |     +0.0% |       0 |       0 |             0 |     27583
+   139000 |     +0.0% |       0 |       0 |             0 |     26583
+   140000 |     +0.0% |       0 |       0 |             0 |     25583
+   141000 |     +0.0% |       0 |       0 |             0 |     24583
+   142000 |     +0.0% |       0 |       0 |             0 |     23583
+   143000 |     +0.0% |       0 |       0 |             0 |     22583
+   144000 |     +0.0% |       0 |       0 |             0 |     21583
+   145000 |     +0.0% |       0 |       0 |             0 |     20583
+   146000 |     +0.0% |       0 |       0 |             0 |     19583
+   147000 |     +0.0% |       0 |       0 |             0 |     18583
+   148000 |     +0.0% |       0 |       0 |             0 |     17583
+   149000 |     +0.0% |       0 |       0 |             0 |     16583
+   150000 |     +0.0% |       0 |       0 |             0 |     15583
+   151000 |     +0.0% |       0 |       0 |             0 |     14583
+   152000 |     +0.0% |       0 |       0 |             0 |     13583
+   153000 |     +0.0% |       0 |       0 |             0 |     12583
+   154000 |     +0.0% |       0 |       0 |             0 |     11583
+   155000 |     +0.0% |       0 |       0 |             0 |     10583
+   156000 |     +0.0% |       0 |       0 |             0 |      9583
+   157000 |     +0.0% |       0 |       0 |             0 |      8583
+   158000 |     +0.0% |       0 |       0 |             0 |      7583
+   159000 |     +0.0% |       0 |       0 |             0 |      6583
+   160000 |     +0.0% |       0 |       0 |             0 |      5583
+   161000 |     +0.0% |       0 |       0 |             0 |      4583
+   162000 |     +0.0% |       0 |       0 |             0 |      3583
+   163000 |     +0.0% |       0 |       0 |             0 |      2583
+   164000 |     +0.0% |       0 |       0 |             0 |      1583
+   165000 |     +0.0% |       0 |       0 |             0 |       583
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+Took 13 seconds: repair_design -verbose
+global_route -start_incremental
+detailed_placement
+[INFO DPL-0005] Max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+Movements Summary
+---------------------------------------
+Total cells:                  165323
+Diamond Move Success:         165323 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL          352986.0 u
+legalized HPWL         352986.0 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/reports/gt2n_compat_bspdn_proxy/aes_128/base/congestion_post_repair_design.rpt
+Repair setup and hold violations...
+estimate_parasitics -global_routing
+Took 6 seconds: estimate_parasitics -global_routing
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0094] Found 17 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 17 out of 17 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   StTNS    |   EnTNS    |  Viol  |  Worst  
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            |            | Endpts | St/EnPt 
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |  -18.395 |      -18.4 |     -103.1 |     17 | ROUND\[4\].U_ROUND.U_KEY.data_out\[6\]$_DFFE_PN0P_/D
+       3* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+       4* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+       5* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+       6* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+       7* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+       8* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+       9* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+      10* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+      10* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+      11* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+      12* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+      13* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+      14* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+      15* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+      16* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+      17* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+      18* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+      19* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+      19* |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |     17 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+    final |       0 |       1 |        0 |      0 |     1 |    +0.0% |    5.999 |        0.0 |        0.0 |      0 | ROUND\[3\].U_ROUND.U_SUB.ROM\[11\].ROM.dout\[6\]$_DFFE_PN0P_/D
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0051] Resized 1 instances: 1 up, 0 up match, 0 down, 0 VT
+[INFO RSZ-0043] Swapped pins on 1 instances.
+[INFO RSZ-0046] Found 257 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% | -108.222 | -23541.473 | U0_ARK.data_out[71]$_DFFE_PN0P_/D
+       10 |       0 |     137 |            0 |    +0.0% | -102.486 | -22839.188 | U_KEYEXP.RKGEN_U0.Key_FirstStage[75]$_DFFE_PN0P_/D
+       20 |       0 |     287 |            0 |    +0.1% | -101.309 | -21994.152 | U_KEYEXP.RKGEN_U0.Key_FirstStage[111]$_DFFE_PN0P_/D
+       30 |       0 |     434 |            0 |    +0.1% | -99.772 | -21024.926 | U0_ARK.data_out[67]$_DFFE_PN0P_/D
+       40 |       0 |     585 |            0 |    +0.2% | -99.049 | -20133.754 | U0_ARK.data_out[46]$_DFFE_PN0P_/D
+       50 |       0 |     737 |            0 |    +0.2% | -98.584 | -19286.143 | U_KEYEXP.RKGEN_U0.Key_FirstStage[72]$_DFFE_PN0P_/D
+       60 |       0 |     880 |            0 |    +0.3% | -97.889 | -18187.336 | U0_ARK.data_out[38]$_DFFE_PN0P_/D
+       70 |       0 |    1032 |            0 |    +0.3% | -97.359 | -17384.344 | U0_ARK.data_out[107]$_DFFE_PN0P_/D
+       80 |       0 |    1186 |            0 |    +0.4% | -96.437 | -16492.547 | U0_ARK.data_out[35]$_DFFE_PN0P_/D
+       90 |       0 |    1335 |            0 |    +0.4% | -95.604 | -15567.007 | U0_ARK.data_out[52]$_DFFE_PN0P_/D
+      100 |       0 |    1485 |            0 |    +0.5% | -94.662 | -14734.146 | U_KEYEXP.RKGEN_U0.Key_FirstStage[95]$_DFFE_PN0P_/D
+      110 |       0 |    1631 |            0 |    +0.5% | -94.122 | -13919.162 | U0_ARK.data_out[64]$_DFFE_PN0P_/D
+      120 |       0 |    1782 |            0 |    +0.6% | -92.739 | -13073.586 | U0_ARK.data_out[58]$_DFFE_PN0P_/D
+      130 |       0 |     115 |            0 |    +0.6% | -91.910 | -12083.325 | U_KEYEXP.RKGEN_U0.Key_FirstStage[120]$_DFFE_PN0P_/D
+      140 |       0 |     262 |            0 |    +0.7% | -91.386 | -11235.978 | U_KEYEXP.RKGEN_U0.Key_FirstStage[54]$_DFFE_PN0P_/D
+      150 |       0 |     408 |            0 |    +0.7% | -90.723 | -10246.890 | U_KEYEXP.RKGEN_U0.Key_FirstStage[113]$_DFFE_PN0P_/D
+      160 |       0 |     544 |            0 |    +0.7% | -90.194 | -9224.041 | U_KEYEXP.RKGEN_U0.Key_FirstStage[6]$_DFFE_PN0P_/D
+      170 |       0 |     678 |            0 |    +0.8% | -88.626 | -8247.918 | U_KEYEXP.RKGEN_U0.Key_FirstStage[5]$_DFFE_PN0P_/D
+      180 |       0 |     805 |            0 |    +0.8% | -87.949 | -7333.920 | U0_ARK.data_out[9]$_DFFE_PN0P_/D
+      190 |       0 |     947 |            0 |    +0.9% | -87.318 | -6416.980 | U_KEYEXP.RKGEN_U0.Key_FirstStage[0]$_DFFE_PN0P_/D
+      200 |       0 |    1090 |            0 |    +0.9% | -86.337 | -5605.553 | U_KEYEXP.RKGEN_U0.Key_FirstStage[52]$_DFFE_PN0P_/D
+      210 |       0 |    1220 |            0 |    +1.0% | -85.647 | -4663.013 | U_KEYEXP.RKGEN_U0.Key_FirstStage[12]$_DFFE_PN0P_/D
+      220 |       0 |      16 |            0 |    +1.0% | -84.366 | -3729.840 | U_KEYEXP.RKGEN_U0.Key_FirstStage[9]$_DFFE_PN0P_/D
+      230 |       0 |     145 |            0 |    +1.0% | -83.516 | -2786.425 | U_KEYEXP.RKGEN_U0.Key_FirstStage[8]$_DFFE_PN0P_/D
+      240 |       0 |     274 |            0 |    +1.1% | -81.630 | -1921.201 | U_KEYEXP.RKGEN_U0.Key_FirstStage[32]$_DFFE_PN0P_/D
+      250 |       0 |     410 |            0 |    +1.1% | -78.326 | -1113.276 | U0_ARK.data_out[103]$_DFFE_PN0P_/D
+      260 |       0 |     516 |            0 |    +1.2% | -36.199 | -64.468 | U0_ARK.data_out[45]$_DFFE_PN0P_/D
+      270 |       0 |     526 |            0 |    +1.2% |   0.011 |   0.000 | U_KEYEXP.RKGEN_U0.Key_FirstStage[104]$_DFFE_PN0P_/D
+    final |       0 |     526 |            0 |    +1.2% |   0.011 |   0.000 | U_KEYEXP.RKGEN_U0.Key_FirstStage[104]$_DFFE_PN0P_/D
+--------------------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 526 hold buffers.
+Took 515 seconds: repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -verbose
+global_route -start_incremental
+detailed_placement
+[INFO DPL-0005] Max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+Movements Summary
+---------------------------------------
+Total cells:                  168997
+Diamond Move Success:         168997 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement       7675.0 u
+average displacement        0.0 u
+max displacement            5.2 u
+original HPWL          353268.6 u
+legalized HPWL         358399.4 u
+delta HPWL                    1 %
+
+global_route -end_incremental -congestion_report_file /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/reports/gt2n_compat_bspdn_proxy/aes_128/base/congestion_post_repair_timing.rpt
+Took 5 seconds: global_route -end_incremental -congestion_report_file /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/reports/gt2n_compat_bspdn_proxy/aes_128/base/congestion_post_repair_timing.rpt
+global_route -start_incremental
+global_route -end_incremental -congestion_report_file /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/reports/gt2n_compat_bspdn_proxy/aes_128/base/congestion_post_recover_power.rpt
+Repair antennas...
+[WARNING GRT-0246] No diode with LEF class CORE ANTENNACELL found.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Estimate parasitics...
+estimate_parasitics -global_routing
+Took 6 seconds: estimate_parasitics -global_routing
+Report metrics stage 5, global route...
+
+==========================================================================
+global route report_design_area
+--------------------------------------------------------------------------
+Design area 5830 um^2 34% utilization.
+[INFO FLW-0007] clock core_clock period 1000.000000
+[INFO FLW-0008] Clock core_clock period 944.301
+[INFO FLW-0009] Clock core_clock slack 5.999
+[INFO FLW-0011] Path endpoint path count 22492
+write_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_1_grt.odb
+write_sdc -no_timestamp /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_1_grt.sdc
+Elapsed time: 10:56.41[h:]min:sec. CPU time: user 4233.36 sys 255.43 (683%). Peak memory: 2799552KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+5_1_grt                          656           2733 ebf49d81cf1f0b21aef7
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 5_2_route detail_route
+Running detail_route.tcl, stage 5_2_route
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_1_grt.odb
+read_sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_1_grt.sdc
+source /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/setRC_fspdn.tcl
+detailed_route -output_drc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/reports/gt2n_compat_bspdn_proxy/aes_128/base/5_route_drc.rpt -output_maze /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/maze.log -droute_end_iter 20 -verbose 1 -drc_report_iter_step 5
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V1
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V1
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V5
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V5
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V6
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V6
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V7
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V7
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V8
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V8
+
+Units:                2000
+Number of layers:     31
+Number of macros:     144
+Number of vias:       14
+Number of viarulegen: 14
+
+[INFO DRT-0150] Reading design.
+[WARNING DRT-0120] Large net net16070 has 107 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net16056 has 106 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net16053 has 105 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15791 has 104 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15749 has 102 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15610 has 102 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15409 has 101 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15406 has 102 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15357 has 102 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15317 has 104 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15121 has 103 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15114 has 103 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net15433 has 106 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net14860 has 106 pins which may impact routing performance. Consider optimization.
+
+Design:                   aes
+Die area:                 ( 0 0 ) ( 281013 281013 )
+Number of track patterns: 30
+Number of DEF vias:       0
+Number of components:     170811
+Number of terminals:      389
+Number of snets:          2
+Number of nets:           168432
+
+[INFO DRT-0167] List of default vias:
+  Layer V1
+    default via: V1_0
+  Layer V2
+    default via: V2_0
+  Layer V3
+    default via: V3_0
+  Layer V4
+    default via: V4_0
+  Layer V5
+    default via: V5_0
+  Layer V6
+    default via: V6_0
+  Layer V7
+    default via: V7_0
+  Layer V8
+    default via: V8_0
+  Layer V9
+    default via: V9_0
+  Layer V10
+    default via: V10_0
+  Layer V11
+    default via: V11_0
+  Layer V12
+    default via: V12_0
+  Layer V13
+    default via: V13_0
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+  Complete 100000 instances.
+[INFO DRT-0164] Number of unique instances = 383.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0018]   Complete 100000 insts.
+[INFO DRT-0024]   Complete SDCON.
+[INFO DRT-0024]   Complete VBPR.
+[INFO DRT-0024]   Complete M0.
+[INFO DRT-0024]   Complete V0.
+[INFO DRT-0024]   Complete M1.
+[INFO DRT-0024]   Complete V1.
+[INFO DRT-0024]   Complete M2.
+[INFO DRT-0024]   Complete V2.
+[INFO DRT-0024]   Complete M3.
+[INFO DRT-0024]   Complete V3.
+[INFO DRT-0024]   Complete M4.
+[INFO DRT-0024]   Complete V4.
+[INFO DRT-0024]   Complete M5.
+[INFO DRT-0024]   Complete V5.
+[INFO DRT-0024]   Complete M6.
+[INFO DRT-0024]   Complete V6.
+[INFO DRT-0024]   Complete M7.
+[INFO DRT-0024]   Complete V7.
+[INFO DRT-0024]   Complete M8.
+[INFO DRT-0024]   Complete V8.
+[INFO DRT-0024]   Complete M9.
+[INFO DRT-0024]   Complete V9.
+[INFO DRT-0024]   Complete M10.
+[INFO DRT-0024]   Complete V10.
+[INFO DRT-0024]   Complete M11.
+[INFO DRT-0024]   Complete V11.
+[INFO DRT-0024]   Complete M12.
+[INFO DRT-0024]   Complete V12.
+[INFO DRT-0024]   Complete M13.
+[INFO DRT-0024]   Complete V13.
+[INFO DRT-0024]   Complete RDL.
+[INFO DRT-0033] SDCON shape region query size = 0.
+[INFO DRT-0033] VBPR shape region query size = 0.
+[INFO DRT-0033] M0 shape region query size = 1277885.
+[INFO DRT-0033] V0 shape region query size = 0.
+[INFO DRT-0033] M1 shape region query size = 852852.
+[INFO DRT-0033] V1 shape region query size = 0.
+[INFO DRT-0033] M2 shape region query size = 164.
+[INFO DRT-0033] V2 shape region query size = 0.
+[INFO DRT-0033] M3 shape region query size = 225.
+[INFO DRT-0033] V3 shape region query size = 0.
+[INFO DRT-0033] M4 shape region query size = 0.
+[INFO DRT-0033] V4 shape region query size = 0.
+[INFO DRT-0033] M5 shape region query size = 0.
+[INFO DRT-0033] V5 shape region query size = 0.
+[INFO DRT-0033] M6 shape region query size = 0.
+[INFO DRT-0033] V6 shape region query size = 0.
+[INFO DRT-0033] M7 shape region query size = 0.
+[INFO DRT-0033] V7 shape region query size = 0.
+[INFO DRT-0033] M8 shape region query size = 0.
+[INFO DRT-0033] V8 shape region query size = 0.
+[INFO DRT-0033] M9 shape region query size = 0.
+[INFO DRT-0033] V9 shape region query size = 0.
+[INFO DRT-0033] M10 shape region query size = 0.
+[INFO DRT-0033] V10 shape region query size = 0.
+[INFO DRT-0033] M11 shape region query size = 0.
+[INFO DRT-0033] V11 shape region query size = 0.
+[INFO DRT-0033] M12 shape region query size = 0.
+[INFO DRT-0033] V12 shape region query size = 0.
+[INFO DRT-0033] M13 shape region query size = 0.
+[INFO DRT-0033] V13 shape region query size = 0.
+[INFO DRT-0033] RDL shape region query size = 0.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0076]   Complete 1000 pins.
+[INFO DRT-0076]   Complete 2000 pins.
+[INFO DRT-0078]   Complete 2307 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0079]   Complete 200 unique inst patterns.
+[INFO DRT-0079]   Complete 300 unique inst patterns.
+[INFO DRT-0081]   Complete 383 unique inst patterns.
+[INFO DRT-0082]   Complete 10000 groups.
+[INFO DRT-0082]   Complete 20000 groups.
+[INFO DRT-0082]   Complete 30000 groups.
+[INFO DRT-0082]   Complete 40000 groups.
+[INFO DRT-0082]   Complete 50000 groups.
+[INFO DRT-0082]   Complete 60000 groups.
+[INFO DRT-0082]   Complete 70000 groups.
+[INFO DRT-0082]   Complete 80000 groups.
+[INFO DRT-0082]   Complete 90000 groups.
+[INFO DRT-0082]   Complete 100000 groups.
+[INFO DRT-0084]   Complete 117438 groups.
+#scanned instances     = 170811
+#unique  instances     = 383
+#stdCellGenAp          = 14803
+#stdCellValidPlanarAp  = 5992
+#stdCellValidViaAp     = 7598
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 606403
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:26:55, elapsed time = 00:00:35, memory = 1411.43 (MB), peak = 1411.43 (MB)
+[INFO DRT-0156] guideIn read 100000 guides.
+[INFO DRT-0156] guideIn read 200000 guides.
+[INFO DRT-0156] guideIn read 300000 guides.
+[INFO DRT-0156] guideIn read 400000 guides.
+[INFO DRT-0156] guideIn read 500000 guides.
+[INFO DRT-0156] guideIn read 600000 guides.
+[INFO DRT-0156] guideIn read 700000 guides.
+[INFO DRT-0156] guideIn read 800000 guides.
+[INFO DRT-0156] guideIn read 900000 guides.
+[INFO DRT-0156] guideIn read 1000000 guides.
+
+[INFO DRT-0157] Number of guides:     1123366
+
+[INFO DRT-0169] Post process guides.
+[INFO DRT-0176] GCELLGRID X 0 DO 334 STEP 840 ;
+[INFO DRT-0177] GCELLGRID Y 0 DO 334 STEP 840 ;
+[INFO DRT-0026]   Complete 100000 origin guides.
+[INFO DRT-0026]   Complete 200000 origin guides.
+[INFO DRT-0026]   Complete 300000 origin guides.
+[INFO DRT-0026]   Complete 400000 origin guides.
+[INFO DRT-0026]   Complete 500000 origin guides.
+[INFO DRT-0026]   Complete 600000 origin guides.
+[INFO DRT-0026]   Complete 700000 origin guides.
+[INFO DRT-0026]   Complete 800000 origin guides.
+[INFO DRT-0026]   Complete 900000 origin guides.
+[INFO DRT-0027]   Complete 1000000 origin guides.
+[INFO DRT-0028]   Complete SDCON.
+[INFO DRT-0028]   Complete VBPR.
+[INFO DRT-0028]   Complete M0.
+[INFO DRT-0028]   Complete V0.
+[INFO DRT-0028]   Complete M1.
+[INFO DRT-0028]   Complete V1.
+[INFO DRT-0028]   Complete M2.
+[INFO DRT-0028]   Complete V2.
+[INFO DRT-0028]   Complete M3.
+[INFO DRT-0028]   Complete V3.
+[INFO DRT-0028]   Complete M4.
+[INFO DRT-0028]   Complete V4.
+[INFO DRT-0028]   Complete M5.
+[INFO DRT-0028]   Complete V5.
+[INFO DRT-0028]   Complete M6.
+[INFO DRT-0028]   Complete V6.
+[INFO DRT-0028]   Complete M7.
+[INFO DRT-0028]   Complete V7.
+[INFO DRT-0028]   Complete M8.
+[INFO DRT-0028]   Complete V8.
+[INFO DRT-0028]   Complete M9.
+[INFO DRT-0028]   Complete V9.
+[INFO DRT-0028]   Complete M10.
+[INFO DRT-0028]   Complete V10.
+[INFO DRT-0028]   Complete M11.
+[INFO DRT-0028]   Complete V11.
+[INFO DRT-0028]   Complete M12.
+[INFO DRT-0028]   Complete V12.
+[INFO DRT-0028]   Complete M13.
+[INFO DRT-0028]   Complete V13.
+[INFO DRT-0028]   Complete RDL.
+  complete 100000 nets.
+[INFO DRT-0178] Init guide query.
+[INFO DRT-0029]   Complete 100000 nets (guide).
+[INFO DRT-0035]   Complete SDCON (guide).
+[INFO DRT-0035]   Complete VBPR (guide).
+[INFO DRT-0035]   Complete M0 (guide).
+[INFO DRT-0035]   Complete V0 (guide).
+[INFO DRT-0035]   Complete M1 (guide).
+[INFO DRT-0035]   Complete V1 (guide).
+[INFO DRT-0035]   Complete M2 (guide).
+[INFO DRT-0035]   Complete V2 (guide).
+[INFO DRT-0035]   Complete M3 (guide).
+[INFO DRT-0035]   Complete V3 (guide).
+[INFO DRT-0035]   Complete M4 (guide).
+[INFO DRT-0035]   Complete V4 (guide).
+[INFO DRT-0035]   Complete M5 (guide).
+[INFO DRT-0035]   Complete V5 (guide).
+[INFO DRT-0035]   Complete M6 (guide).
+[INFO DRT-0035]   Complete V6 (guide).
+[INFO DRT-0035]   Complete M7 (guide).
+[INFO DRT-0035]   Complete V7 (guide).
+[INFO DRT-0035]   Complete M8 (guide).
+[INFO DRT-0035]   Complete V8 (guide).
+[INFO DRT-0035]   Complete M9 (guide).
+[INFO DRT-0035]   Complete V9 (guide).
+[INFO DRT-0035]   Complete M10 (guide).
+[INFO DRT-0035]   Complete V10 (guide).
+[INFO DRT-0035]   Complete M11 (guide).
+[INFO DRT-0035]   Complete V11 (guide).
+[INFO DRT-0035]   Complete M12 (guide).
+[INFO DRT-0035]   Complete V12 (guide).
+[INFO DRT-0035]   Complete M13 (guide).
+[INFO DRT-0035]   Complete V13 (guide).
+[INFO DRT-0035]   Complete RDL (guide).
+[INFO DRT-0036] SDCON guide region query size = 0.
+[INFO DRT-0036] VBPR guide region query size = 0.
+[INFO DRT-0036] M0 guide region query size = 0.
+[INFO DRT-0036] V0 guide region query size = 0.
+[INFO DRT-0036] M1 guide region query size = 499183.
+[INFO DRT-0036] V1 guide region query size = 0.
+[INFO DRT-0036] M2 guide region query size = 281501.
+[INFO DRT-0036] V2 guide region query size = 0.
+[INFO DRT-0036] M3 guide region query size = 66292.
+[INFO DRT-0036] V3 guide region query size = 0.
+[INFO DRT-0036] M4 guide region query size = 8166.
+[INFO DRT-0036] V4 guide region query size = 0.
+[INFO DRT-0036] M5 guide region query size = 1712.
+[INFO DRT-0036] V5 guide region query size = 0.
+[INFO DRT-0036] M6 guide region query size = 156.
+[INFO DRT-0036] V6 guide region query size = 0.
+[INFO DRT-0036] M7 guide region query size = 57.
+[INFO DRT-0036] V7 guide region query size = 0.
+[INFO DRT-0036] M8 guide region query size = 29.
+[INFO DRT-0036] V8 guide region query size = 0.
+[INFO DRT-0036] M9 guide region query size = 0.
+[INFO DRT-0036] V9 guide region query size = 0.
+[INFO DRT-0036] M10 guide region query size = 0.
+[INFO DRT-0036] V10 guide region query size = 0.
+[INFO DRT-0036] M11 guide region query size = 0.
+[INFO DRT-0036] V11 guide region query size = 0.
+[INFO DRT-0036] M12 guide region query size = 0.
+[INFO DRT-0036] V12 guide region query size = 0.
+[INFO DRT-0036] M13 guide region query size = 0.
+[INFO DRT-0036] V13 guide region query size = 0.
+[INFO DRT-0036] RDL guide region query size = 0.
+[INFO DRT-0179] Init gr pin query.
+[INFO DRT-0267] cpu time = 00:00:07, elapsed time = 00:00:01, memory = 1831.58 (MB), peak = 1831.58 (MB)
+[INFO DRT-0245] skipped writing guide updates to database.
+[INFO DRT-0181] Start track assignment.
+[INFO DRT-0184] Done with 567244 vertical wires in 7 frboxes and 289852 horizontal wires in 7 frboxes.
+[INFO DRT-0186] Done with 164281 vertical wires in 7 frboxes and 116670 horizontal wires in 7 frboxes.
+[INFO DRT-0182] Complete track assignment.
+[INFO DRT-0267] cpu time = 00:01:06, elapsed time = 00:00:12, memory = 2860.28 (MB), peak = 2860.28 (MB)
+[INFO DRT-0187] Start routing data preparation.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2972.53 (MB), peak = 2972.53 (MB)
+[INFO DRT-0194] Start detail routing.
+[INFO DRT-0195] Start 0th optimization iteration.
+    Completing 10% with 0 violations.
+    elapsed time = 00:00:17, memory = 22830.75 (MB).
+    Completing 20% with 0 violations.
+    elapsed time = 00:00:32, memory = 30758.14 (MB).
+    Completing 30% with 29515 violations.
+    elapsed time = 00:00:57, memory = 33668.32 (MB).
+    Completing 40% with 29515 violations.
+    elapsed time = 00:01:16, memory = 33947.25 (MB).
+    Completing 50% with 29515 violations.
+    elapsed time = 00:01:34, memory = 24384.46 (MB).
+    Completing 60% with 50871 violations.
+    elapsed time = 00:02:07, memory = 39217.92 (MB).
+    Completing 70% with 50871 violations.
+    elapsed time = 00:02:27, memory = 42589.09 (MB).
+    Completing 80% with 81877 violations.
+    elapsed time = 00:03:00, memory = 45505.93 (MB).
+    Completing 90% with 81877 violations.
+    elapsed time = 00:03:27, memory = 46224.21 (MB).
+    Completing 100% with 103114 violations.
+    elapsed time = 00:03:58, memory = 32029.97 (MB).
+[INFO DRT-0199]   Number of violations = 121221.
+Viol/Layer          M1     V1     M2     V2     M3     V3     M4     M5     M6     M7
+Corner Spacing    3981      0  41325      0    244      0     93     46      2      3
+Cut Spacing          0    318      0     15      0      0      0      0      0      0
+Metal Spacing     6168      0   1395      0     55      0     15      0      0      0
+NS Metal           263      0      0      0      1      0      0      0      0      0
+Recheck           9993      0   6732      0   1307      0     66      8      1      0
+Rect Only        19797      0    216      0     41      0      2      0      0      0
+Short             6692   1700   1535    447    329      2     27      4      0      0
+eolKeepOut       13404      0   4238      0    694      0     59      3      0      0
+[INFO DRT-0267] cpu time = 02:24:05, elapsed time = 00:04:03, memory = 32000.38 (MB), peak = 48710.71 (MB)
+Total wire length = 478356 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 70639 um.
+Total wire length on LAYER M2 = 226623 um.
+Total wire length on LAYER M3 = 126381 um.
+Total wire length on LAYER M4 = 43882 um.
+Total wire length on LAYER M5 = 9624 um.
+Total wire length on LAYER M6 = 971 um.
+Total wire length on LAYER M7 = 96 um.
+Total wire length on LAYER M8 = 137 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1476052.
+Up-via summary (total 1476052):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1    1018582
+    M2     431878
+    M3      20642
+    M4       4436
+    M5        367
+    M6         85
+    M7         62
+    M8          0
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1476052
+
+
+[INFO DRT-0195] Start 1st optimization iteration.
+    Completing 10% with 121221 violations.
+    elapsed time = 00:00:22, memory = 50691.62 (MB).
+    Completing 20% with 121221 violations.
+    elapsed time = 00:00:43, memory = 49764.61 (MB).
+    Completing 30% with 94581 violations.
+    elapsed time = 00:01:15, memory = 51379.28 (MB).
+    Completing 40% with 94581 violations.
+    elapsed time = 00:01:37, memory = 52004.11 (MB).
+    Completing 50% with 94581 violations.
+    elapsed time = 00:01:56, memory = 34316.49 (MB).
+    Completing 60% with 69777 violations.
+    elapsed time = 00:02:30, memory = 52921.20 (MB).
+    Completing 70% with 69777 violations.
+    elapsed time = 00:02:49, memory = 51872.85 (MB).
+    Completing 80% with 46831 violations.
+    elapsed time = 00:03:21, memory = 53024.92 (MB).
+    Completing 90% with 46831 violations.
+    elapsed time = 00:03:43, memory = 53059.25 (MB).
+    Completing 100% with 23275 violations.
+    elapsed time = 00:04:13, memory = 34959.67 (MB).
+[INFO DRT-0199]   Number of violations = 23294.
+Viol/Layer          M1     V1     M2     V2     M3     V3     M4     M5     M7
+Corner Spacing    1382      0   8702      0     53      0     57     32      1
+Cut Spacing          0     24      0      0      0      0      0      0      0
+Metal Spacing     1046      0    382      0     11      0      5      0      0
+NS Metal            16      0      0      0      0      0      0      0      0
+Recheck              9      0      8      0      2      0      0      0      0
+Rect Only         3422      0      0      0      2      0      0      0      0
+Short              598    102    511     11    156      1     16      0      0
+eolKeepOut        4993      0   1395      0    324      0     33      0      0
+[INFO DRT-0267] cpu time = 02:32:56, elapsed time = 00:04:18, memory = 34408.06 (MB), peak = 53823.86 (MB)
+Total wire length = 474010 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 67683 um.
+Total wire length on LAYER M2 = 224638 um.
+Total wire length on LAYER M3 = 127226 um.
+Total wire length on LAYER M4 = 43589 um.
+Total wire length on LAYER M5 = 9629 um.
+Total wire length on LAYER M6 = 986 um.
+Total wire length on LAYER M7 = 113 um.
+Total wire length on LAYER M8 = 144 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1403968.
+Up-via summary (total 1403968):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     974852
+    M2     405117
+    M3      18838
+    M4       4515
+    M5        446
+    M6        126
+    M7         74
+    M8          0
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1403968
+
+
+[INFO DRT-0195] Start 2nd optimization iteration.
+    Completing 10% with 23294 violations.
+    elapsed time = 00:00:19, memory = 52580.77 (MB).
+    Completing 20% with 23294 violations.
+    elapsed time = 00:00:39, memory = 52738.54 (MB).
+    Completing 30% with 22730 violations.
+    elapsed time = 00:01:08, memory = 52813.37 (MB).
+    Completing 40% with 22730 violations.
+    elapsed time = 00:01:31, memory = 52863.93 (MB).
+    Completing 50% with 22730 violations.
+    elapsed time = 00:01:48, memory = 43358.46 (MB).
+    Completing 60% with 22358 violations.
+    elapsed time = 00:02:22, memory = 53446.00 (MB).
+    Completing 70% with 22358 violations.
+    elapsed time = 00:02:41, memory = 52746.82 (MB).
+    Completing 80% with 21662 violations.
+    elapsed time = 00:03:12, memory = 53607.97 (MB).
+    Completing 90% with 21662 violations.
+    elapsed time = 00:03:33, memory = 53835.34 (MB).
+    Completing 100% with 20969 violations.
+    elapsed time = 00:04:04, memory = 35210.74 (MB).
+[INFO DRT-0199]   Number of violations = 20969.
+Viol/Layer          M1     V1     M2     V2     M3     M4     V4     M5     M6     M7
+Corner Spacing    1262      0   7796      0     57     41      0     29      4      2
+Cut Spacing          0      8      0      1      0      0      0      0      0      0
+Metal Spacing      943      0    312      0     14      5      0      0      0      0
+NS Metal            12      0      0      0      0      0      0      0      0      0
+Rect Only         3122      0      0      0      0      4      0      0      0      0
+Short              541     90    389     10    110     15      2     10      0      0
+eolKeepOut        4831      0   1078      0    233     33      0     15      0      0
+[INFO DRT-0267] cpu time = 02:27:54, elapsed time = 00:04:09, memory = 34872.39 (MB), peak = 54327.27 (MB)
+Total wire length = 472911 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 67103 um.
+Total wire length on LAYER M2 = 224230 um.
+Total wire length on LAYER M3 = 127197 um.
+Total wire length on LAYER M4 = 43530 um.
+Total wire length on LAYER M5 = 9614 um.
+Total wire length on LAYER M6 = 975 um.
+Total wire length on LAYER M7 = 111 um.
+Total wire length on LAYER M8 = 147 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1393528.
+Up-via summary (total 1393528):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     969710
+    M2     400348
+    M3      18380
+    M4       4440
+    M5        436
+    M6        133
+    M7         81
+    M8          0
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1393528
+
+
+[INFO DRT-0195] Start 3rd optimization iteration.
+    Completing 10% with 20969 violations.
+    elapsed time = 00:00:11, memory = 53441.05 (MB).
+    Completing 20% with 20969 violations.
+    elapsed time = 00:00:22, memory = 52839.27 (MB).
+    Completing 30% with 16417 violations.
+    elapsed time = 00:00:44, memory = 53220.88 (MB).
+    Completing 40% with 16417 violations.
+    elapsed time = 00:00:56, memory = 53219.77 (MB).
+    Completing 50% with 16417 violations.
+    elapsed time = 00:01:15, memory = 35512.31 (MB).
+    Completing 60% with 11274 violations.
+    elapsed time = 00:01:37, memory = 53701.00 (MB).
+    Completing 70% with 11274 violations.
+    elapsed time = 00:01:48, memory = 53547.09 (MB).
+    Completing 80% with 6954 violations.
+    elapsed time = 00:02:10, memory = 54200.29 (MB).
+    Completing 90% with 6954 violations.
+    elapsed time = 00:02:21, memory = 53939.50 (MB).
+    Completing 100% with 2337 violations.
+    elapsed time = 00:02:41, memory = 35678.58 (MB).
+[INFO DRT-0199]   Number of violations = 2348.
+Viol/Layer          M1     V1     M2     V2     M3     V3     M4     M5     M6     M7     M8
+Corner Spacing      89      0    401      0     20      0     28     15      7      5      1
+Cut Spacing          0      0      0      1      0      1      0      0      0      0      0
+Metal Spacing       86      0    112      0     12      0      6      0      0      0      0
+NS Metal             9      0      0      0      0      0      0      0      0      0      0
+Recheck              3      0      6      0      2      0      0      0      0      0      0
+Rect Only          291      0      6      0      0      0      0      0      0      0      0
+Short               31     10    132      8     64      1      9      1      0      0      0
+eolKeepOut         467      0    370      0    132      0     21      1      0      0      0
+[INFO DRT-0267] cpu time = 01:20:17, elapsed time = 00:02:44, memory = 35237.04 (MB), peak = 54925.71 (MB)
+Total wire length = 471474 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58432 um.
+Total wire length on LAYER M2 = 219630 um.
+Total wire length on LAYER M3 = 136309 um.
+Total wire length on LAYER M4 = 46029 um.
+Total wire length on LAYER M5 = 9726 um.
+Total wire length on LAYER M6 = 1005 um.
+Total wire length on LAYER M7 = 153 um.
+Total wire length on LAYER M8 = 183 um.
+Total wire length on LAYER M9 = 2 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1370142.
+Up-via summary (total 1370142):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     914975
+    M2     425558
+    M3      23922
+    M4       4755
+    M5        559
+    M6        227
+    M7        142
+    M8          4
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1370142
+
+
+[INFO DRT-0195] Start 4th optimization iteration.
+    Completing 10% with 2348 violations.
+    elapsed time = 00:00:02, memory = 53568.62 (MB).
+    Completing 20% with 2348 violations.
+    elapsed time = 00:00:04, memory = 53128.80 (MB).
+    Completing 30% with 1894 violations.
+    elapsed time = 00:00:11, memory = 35286.15 (MB).
+    Completing 40% with 1894 violations.
+    elapsed time = 00:00:14, memory = 53118.34 (MB).
+    Completing 50% with 1894 violations.
+    elapsed time = 00:00:29, memory = 35204.30 (MB).
+    Completing 60% with 1421 violations.
+    elapsed time = 00:00:34, memory = 52867.43 (MB).
+    Completing 70% with 1421 violations.
+    elapsed time = 00:00:36, memory = 53506.09 (MB).
+    Completing 80% with 1113 violations.
+    elapsed time = 00:00:42, memory = 35204.30 (MB).
+    Completing 90% with 1113 violations.
+    elapsed time = 00:00:44, memory = 53046.31 (MB).
+    Completing 100% with 643 violations.
+    elapsed time = 00:01:06, memory = 35204.30 (MB).
+[INFO DRT-0199]   Number of violations = 643.
+Viol/Layer          M1     M2     V2     M3     M4     V4     M5     M6     M7     M8
+Corner Spacing      13    127      0     12     24      0     11      3      7      1
+Cut Spacing          0      0      1      0      0      0      0      0      0      0
+Metal Spacing        8     37      0      4      1      0      0      0      0      0
+Short                6     47      2     38      6      2      4      0      0      0
+eolKeepOut          63    129      0     79     11      0      7      0      0      0
+[INFO DRT-0267] cpu time = 00:18:14, elapsed time = 00:01:07, memory = 35155.22 (MB), peak = 54925.71 (MB)
+Total wire length = 471421 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58091 um.
+Total wire length on LAYER M2 = 219420 um.
+Total wire length on LAYER M3 = 136642 um.
+Total wire length on LAYER M4 = 46146 um.
+Total wire length on LAYER M5 = 9756 um.
+Total wire length on LAYER M6 = 1011 um.
+Total wire length on LAYER M7 = 160 um.
+Total wire length on LAYER M8 = 188 um.
+Total wire length on LAYER M9 = 4 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1369108.
+Up-via summary (total 1369108):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912784
+    M2     426401
+    M3      24159
+    M4       4795
+    M5        576
+    M6        243
+    M7        144
+    M8          6
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1369108
+
+
+[INFO DRT-0195] Start 5th optimization iteration.
+    Completing 10% with 643 violations.
+    elapsed time = 00:00:00, memory = 35155.22 (MB).
+    Completing 20% with 643 violations.
+    elapsed time = 00:00:00, memory = 35155.22 (MB).
+    Completing 30% with 623 violations.
+    elapsed time = 00:00:08, memory = 35155.22 (MB).
+    Completing 40% with 623 violations.
+    elapsed time = 00:00:08, memory = 35155.22 (MB).
+    Completing 50% with 623 violations.
+    elapsed time = 00:00:20, memory = 35155.22 (MB).
+    Completing 60% with 574 violations.
+    elapsed time = 00:00:20, memory = 35155.09 (MB).
+    Completing 70% with 574 violations.
+    elapsed time = 00:00:20, memory = 35155.09 (MB).
+    Completing 80% with 555 violations.
+    elapsed time = 00:00:24, memory = 35155.09 (MB).
+    Completing 90% with 555 violations.
+    elapsed time = 00:00:24, memory = 35155.09 (MB).
+    Completing 100% with 483 violations.
+    elapsed time = 00:00:45, memory = 35155.10 (MB).
+[INFO DRT-0199]   Number of violations = 483.
+Viol/Layer          M1     M2     V2     M3     M4     M5     M6     M7
+Corner Spacing       5     90      0      8     14      8      2      2
+Metal Spacing        9     29      0      4      3      0      0      0
+Short                3     47      1     24      5      1      0      0
+eolKeepOut          39    121      0     54     13      1      0      0
+[INFO DRT-0267] cpu time = 00:02:33, elapsed time = 00:00:45, memory = 35076.70 (MB), peak = 54925.71 (MB)
+Total wire length = 471423 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58071 um.
+Total wire length on LAYER M2 = 219409 um.
+Total wire length on LAYER M3 = 136665 um.
+Total wire length on LAYER M4 = 46158 um.
+Total wire length on LAYER M5 = 9757 um.
+Total wire length on LAYER M6 = 1010 um.
+Total wire length on LAYER M7 = 153 um.
+Total wire length on LAYER M8 = 190 um.
+Total wire length on LAYER M9 = 6 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1368947.
+Up-via summary (total 1368947):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912626
+    M2     426422
+    M3      24181
+    M4       4763
+    M5        576
+    M6        225
+    M7        142
+    M8         12
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1368947
+
+
+[INFO DRT-0195] Start 6th optimization iteration.
+    Completing 10% with 483 violations.
+    elapsed time = 00:00:00, memory = 35076.70 (MB).
+    Completing 20% with 483 violations.
+    elapsed time = 00:00:00, memory = 35076.70 (MB).
+    Completing 30% with 482 violations.
+    elapsed time = 00:00:08, memory = 35076.70 (MB).
+    Completing 40% with 482 violations.
+    elapsed time = 00:00:08, memory = 35076.70 (MB).
+    Completing 50% with 482 violations.
+    elapsed time = 00:00:08, memory = 35076.70 (MB).
+    Completing 60% with 474 violations.
+    elapsed time = 00:00:15, memory = 35076.70 (MB).
+    Completing 70% with 474 violations.
+    elapsed time = 00:00:15, memory = 35076.70 (MB).
+    Completing 80% with 471 violations.
+    elapsed time = 00:00:23, memory = 35076.70 (MB).
+    Completing 90% with 471 violations.
+    elapsed time = 00:00:23, memory = 35076.70 (MB).
+    Completing 100% with 420 violations.
+    elapsed time = 00:00:39, memory = 35076.70 (MB).
+[INFO DRT-0199]   Number of violations = 420.
+Viol/Layer          M1     M2     V2     M3     M4     M5     M6     M7
+Corner Spacing       8     65      0      9     12      3      2      3
+Metal Spacing        9     23      0      2      1      0      0      0
+Short                2     46      2     26      6      0      0      0
+eolKeepOut          23    114      0     52     12      0      0      0
+[INFO DRT-0267] cpu time = 00:01:21, elapsed time = 00:00:40, memory = 35076.70 (MB), peak = 54925.71 (MB)
+Total wire length = 471421 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58066 um.
+Total wire length on LAYER M2 = 219398 um.
+Total wire length on LAYER M3 = 136669 um.
+Total wire length on LAYER M4 = 46158 um.
+Total wire length on LAYER M5 = 9757 um.
+Total wire length on LAYER M6 = 1011 um.
+Total wire length on LAYER M7 = 162 um.
+Total wire length on LAYER M8 = 192 um.
+Total wire length on LAYER M9 = 4 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1368929.
+Up-via summary (total 1368929):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912603
+    M2     426396
+    M3      24200
+    M4       4763
+    M5        588
+    M6        228
+    M7        143
+    M8          8
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1368929
+
+
+[INFO DRT-0195] Start 7th optimization iteration.
+    Completing 10% with 420 violations.
+    elapsed time = 00:00:00, memory = 35076.70 (MB).
+    Completing 20% with 420 violations.
+    elapsed time = 00:00:00, memory = 35076.70 (MB).
+    Completing 30% with 416 violations.
+    elapsed time = 00:00:04, memory = 35076.70 (MB).
+    Completing 40% with 416 violations.
+    elapsed time = 00:00:04, memory = 35076.70 (MB).
+    Completing 50% with 416 violations.
+    elapsed time = 00:00:04, memory = 35076.70 (MB).
+    Completing 60% with 405 violations.
+    elapsed time = 00:00:07, memory = 35076.70 (MB).
+    Completing 70% with 405 violations.
+    elapsed time = 00:00:07, memory = 35076.70 (MB).
+    Completing 80% with 393 violations.
+    elapsed time = 00:00:18, memory = 35076.70 (MB).
+    Completing 90% with 393 violations.
+    elapsed time = 00:00:18, memory = 35076.70 (MB).
+    Completing 100% with 320 violations.
+    elapsed time = 00:00:30, memory = 35076.70 (MB).
+[INFO DRT-0199]   Number of violations = 320.
+Viol/Layer          M1     M2     V2     M3     M4     M5     M7     M8
+Corner Spacing       7     58      0      5      7      5      1      1
+Metal Spacing        6     17      0      1      0      0      0      0
+Rect Only            4      0      0      0      0      0      0      0
+Short                1     30      2     23      4      0      0      0
+eolKeepOut          17     76      0     48      7      0      0      0
+[INFO DRT-0267] cpu time = 00:00:59, elapsed time = 00:00:30, memory = 35076.70 (MB), peak = 54925.71 (MB)
+Total wire length = 471421 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58061 um.
+Total wire length on LAYER M2 = 219389 um.
+Total wire length on LAYER M3 = 136669 um.
+Total wire length on LAYER M4 = 46160 um.
+Total wire length on LAYER M5 = 9761 um.
+Total wire length on LAYER M6 = 1011 um.
+Total wire length on LAYER M7 = 163 um.
+Total wire length on LAYER M8 = 198 um.
+Total wire length on LAYER M9 = 5 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1368951.
+Up-via summary (total 1368951):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912600
+    M2     426385
+    M3      24208
+    M4       4789
+    M5        586
+    M6        225
+    M7        147
+    M8         11
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1368951
+
+
+[INFO DRT-0195] Start 8th optimization iteration.
+    Completing 10% with 320 violations.
+    elapsed time = 00:00:00, memory = 35076.70 (MB).
+    Completing 20% with 320 violations.
+    elapsed time = 00:00:00, memory = 35076.70 (MB).
+    Completing 30% with 314 violations.
+    elapsed time = 00:00:02, memory = 35076.70 (MB).
+    Completing 40% with 314 violations.
+    elapsed time = 00:00:02, memory = 35076.70 (MB).
+    Completing 50% with 314 violations.
+    elapsed time = 00:00:02, memory = 35076.70 (MB).
+    Completing 60% with 313 violations.
+    elapsed time = 00:00:04, memory = 35076.70 (MB).
+    Completing 70% with 313 violations.
+    elapsed time = 00:00:04, memory = 35076.70 (MB).
+    Completing 80% with 298 violations.
+    elapsed time = 00:00:18, memory = 35076.70 (MB).
+    Completing 90% with 298 violations.
+    elapsed time = 00:00:18, memory = 35076.70 (MB).
+    Completing 100% with 284 violations.
+    elapsed time = 00:00:27, memory = 35076.70 (MB).
+[INFO DRT-0199]   Number of violations = 284.
+Viol/Layer          M1     M2     V2     M3     M4     M5
+Corner Spacing       5     56      0      4      7      5
+Metal Spacing        4     21      0      2      0      0
+Short                0     27      2     17      5      0
+eolKeepOut          16     73      0     31      9      0
+[INFO DRT-0267] cpu time = 00:00:54, elapsed time = 00:00:27, memory = 35076.71 (MB), peak = 54925.71 (MB)
+Total wire length = 471422 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58058 um.
+Total wire length on LAYER M2 = 219380 um.
+Total wire length on LAYER M3 = 136674 um.
+Total wire length on LAYER M4 = 46167 um.
+Total wire length on LAYER M5 = 9757 um.
+Total wire length on LAYER M6 = 1007 um.
+Total wire length on LAYER M7 = 167 um.
+Total wire length on LAYER M8 = 202 um.
+Total wire length on LAYER M9 = 5 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1368974.
+Up-via summary (total 1368974):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912548
+    M2     426431
+    M3      24227
+    M4       4798
+    M5        578
+    M6        230
+    M7        151
+    M8         11
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1368974
+
+
+[INFO DRT-0195] Start 9th optimization iteration.
+    Completing 10% with 284 violations.
+    elapsed time = 00:00:00, memory = 35076.71 (MB).
+    Completing 20% with 284 violations.
+    elapsed time = 00:00:00, memory = 35076.71 (MB).
+    Completing 30% with 283 violations.
+    elapsed time = 00:00:02, memory = 34925.69 (MB).
+    Completing 40% with 283 violations.
+    elapsed time = 00:00:02, memory = 34925.69 (MB).
+    Completing 50% with 283 violations.
+    elapsed time = 00:00:02, memory = 34925.69 (MB).
+    Completing 60% with 281 violations.
+    elapsed time = 00:00:04, memory = 34925.69 (MB).
+    Completing 70% with 281 violations.
+    elapsed time = 00:00:04, memory = 34925.69 (MB).
+    Completing 80% with 237 violations.
+    elapsed time = 00:00:19, memory = 34925.69 (MB).
+    Completing 90% with 237 violations.
+    elapsed time = 00:00:19, memory = 34925.69 (MB).
+    Completing 100% with 224 violations.
+    elapsed time = 00:00:27, memory = 34925.69 (MB).
+[INFO DRT-0199]   Number of violations = 224.
+Viol/Layer          M1     M2     V2     M3     M4     M5     M7
+Corner Spacing       4     43      0      2      6      6      1
+Cut Spacing          0      0      1      0      0      0      0
+Metal Spacing        4     29      0      1      0      0      0
+Short                4     14      0     12      2      0      0
+eolKeepOut          15     55      0     22      3      0      0
+[INFO DRT-0267] cpu time = 00:00:52, elapsed time = 00:00:27, memory = 34925.69 (MB), peak = 54925.71 (MB)
+Total wire length = 471421 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58056 um.
+Total wire length on LAYER M2 = 219373 um.
+Total wire length on LAYER M3 = 136674 um.
+Total wire length on LAYER M4 = 46169 um.
+Total wire length on LAYER M5 = 9766 um.
+Total wire length on LAYER M6 = 1005 um.
+Total wire length on LAYER M7 = 167 um.
+Total wire length on LAYER M8 = 206 um.
+Total wire length on LAYER M9 = 2 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1368978.
+Up-via summary (total 1368978):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912554
+    M2     426416
+    M3      24228
+    M4       4800
+    M5        578
+    M6        238
+    M7        156
+    M8          8
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1368978
+
+
+[INFO DRT-0195] Start 10th optimization iteration.
+    Completing 10% with 224 violations.
+    elapsed time = 00:00:00, memory = 34925.69 (MB).
+    Completing 20% with 224 violations.
+    elapsed time = 00:00:00, memory = 34925.69 (MB).
+    Completing 30% with 210 violations.
+    elapsed time = 00:00:03, memory = 34925.69 (MB).
+    Completing 40% with 210 violations.
+    elapsed time = 00:00:03, memory = 34925.69 (MB).
+    Completing 50% with 210 violations.
+    elapsed time = 00:00:20, memory = 34925.69 (MB).
+    Completing 60% with 198 violations.
+    elapsed time = 00:00:20, memory = 34925.69 (MB).
+    Completing 70% with 198 violations.
+    elapsed time = 00:00:20, memory = 34925.69 (MB).
+    Completing 80% with 196 violations.
+    elapsed time = 00:00:23, memory = 34925.69 (MB).
+    Completing 90% with 196 violations.
+    elapsed time = 00:00:23, memory = 34925.69 (MB).
+    Completing 100% with 189 violations.
+    elapsed time = 00:00:33, memory = 34925.69 (MB).
+[INFO DRT-0199]   Number of violations = 189.
+Viol/Layer          M1     M2     M3     M4     M5     M7
+Corner Spacing       2     36      2      5      6      1
+Metal Spacing        4     25      0      0      0      0
+Short                4     12      9      2      0      0
+eolKeepOut          15     48     15      3      0      0
+[INFO DRT-0267] cpu time = 00:00:45, elapsed time = 00:00:33, memory = 34925.69 (MB), peak = 54925.71 (MB)
+Total wire length = 471426 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58055 um.
+Total wire length on LAYER M2 = 219369 um.
+Total wire length on LAYER M3 = 136675 um.
+Total wire length on LAYER M4 = 46170 um.
+Total wire length on LAYER M5 = 9768 um.
+Total wire length on LAYER M6 = 1010 um.
+Total wire length on LAYER M7 = 169 um.
+Total wire length on LAYER M8 = 205 um.
+Total wire length on LAYER M9 = 2 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1368991.
+Up-via summary (total 1368991):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912560
+    M2     426409
+    M3      24227
+    M4       4808
+    M5        585
+    M6        240
+    M7        154
+    M8          8
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1368991
+
+
+[INFO DRT-0195] Start 11th optimization iteration.
+    Completing 10% with 189 violations.
+    elapsed time = 00:00:00, memory = 34925.69 (MB).
+    Completing 20% with 189 violations.
+    elapsed time = 00:00:00, memory = 34925.69 (MB).
+    Completing 30% with 186 violations.
+    elapsed time = 00:00:07, memory = 34925.69 (MB).
+    Completing 40% with 186 violations.
+    elapsed time = 00:00:07, memory = 34925.69 (MB).
+    Completing 50% with 186 violations.
+    elapsed time = 00:00:18, memory = 34925.69 (MB).
+    Completing 60% with 161 violations.
+    elapsed time = 00:00:18, memory = 34925.69 (MB).
+    Completing 70% with 161 violations.
+    elapsed time = 00:00:18, memory = 34925.69 (MB).
+    Completing 80% with 159 violations.
+    elapsed time = 00:00:20, memory = 34925.69 (MB).
+    Completing 90% with 159 violations.
+    elapsed time = 00:00:20, memory = 34925.69 (MB).
+    Completing 100% with 159 violations.
+    elapsed time = 00:00:38, memory = 34925.69 (MB).
+[INFO DRT-0199]   Number of violations = 159.
+Viol/Layer          M1     M2     V2     M3     M4     M5     M6     M7
+Corner Spacing       5     25      0      2      2      1      1      1
+Metal Spacing        6     17      0      0      1      0      0      0
+Short                1     14      1      8      2      0      0      0
+eolKeepOut           9     43      0     15      5      0      0      0
+[INFO DRT-0267] cpu time = 00:00:45, elapsed time = 00:00:38, memory = 34925.69 (MB), peak = 54925.71 (MB)
+Total wire length = 471433 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58055 um.
+Total wire length on LAYER M2 = 219371 um.
+Total wire length on LAYER M3 = 136674 um.
+Total wire length on LAYER M4 = 46170 um.
+Total wire length on LAYER M5 = 9766 um.
+Total wire length on LAYER M6 = 1013 um.
+Total wire length on LAYER M7 = 173 um.
+Total wire length on LAYER M8 = 206 um.
+Total wire length on LAYER M9 = 3 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1369051.
+Up-via summary (total 1369051):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912561
+    M2     426416
+    M3      24244
+    M4       4813
+    M5        597
+    M6        250
+    M7        158
+    M8         12
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1369051
+
+
+[INFO DRT-0195] Start 12th optimization iteration.
+    Completing 10% with 159 violations.
+    elapsed time = 00:00:00, memory = 34925.69 (MB).
+    Completing 20% with 159 violations.
+    elapsed time = 00:00:00, memory = 34925.69 (MB).
+    Completing 30% with 138 violations.
+    elapsed time = 00:00:04, memory = 34925.69 (MB).
+    Completing 40% with 138 violations.
+    elapsed time = 00:00:04, memory = 34925.69 (MB).
+    Completing 50% with 138 violations.
+    elapsed time = 00:00:12, memory = 34925.69 (MB).
+    Completing 60% with 138 violations.
+    elapsed time = 00:00:12, memory = 34925.69 (MB).
+    Completing 70% with 138 violations.
+    elapsed time = 00:00:12, memory = 34925.69 (MB).
+    Completing 80% with 138 violations.
+    elapsed time = 00:00:14, memory = 34925.69 (MB).
+    Completing 90% with 138 violations.
+    elapsed time = 00:00:14, memory = 34925.69 (MB).
+    Completing 100% with 82 violations.
+    elapsed time = 00:00:27, memory = 34925.69 (MB).
+[INFO DRT-0199]   Number of violations = 82.
+Viol/Layer          M1     M2     V2     M3     M4     M5     M6     M7     M8
+Corner Spacing       1     16      0      1      3      1      1      1      1
+Metal Spacing        1      6      0      1      0      0      0      0      0
+Short                1      5      1      4      1      0      0      0      0
+eolKeepOut          11     15      0      9      2      0      0      0      0
+[INFO DRT-0267] cpu time = 00:00:30, elapsed time = 00:00:27, memory = 34925.69 (MB), peak = 54925.71 (MB)
+Total wire length = 471439 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58055 um.
+Total wire length on LAYER M2 = 219369 um.
+Total wire length on LAYER M3 = 136668 um.
+Total wire length on LAYER M4 = 46170 um.
+Total wire length on LAYER M5 = 9775 um.
+Total wire length on LAYER M6 = 1012 um.
+Total wire length on LAYER M7 = 173 um.
+Total wire length on LAYER M8 = 210 um.
+Total wire length on LAYER M9 = 3 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1369039.
+Up-via summary (total 1369039):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912544
+    M2     426395
+    M3      24248
+    M4       4818
+    M5        600
+    M6        254
+    M7        168
+    M8         12
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1369039
+
+
+[INFO DRT-0195] Start 13th guides tiles iteration.
+    Completing 30% with 82 violations.
+    elapsed time = 00:00:23, memory = 34925.69 (MB).
+    Completing 60% with 82 violations.
+    elapsed time = 00:00:56, memory = 34925.69 (MB).
+    Completing 100% with 82 violations.
+    elapsed time = 00:00:58, memory = 34925.69 (MB).
+[INFO DRT-0199]   Number of violations = 82.
+Viol/Layer          M1     M2     V2     M3     M4     M5     M6     M7     M8
+Corner Spacing       1     16      0      1      3      1      1      1      1
+Metal Spacing        1      6      0      1      0      0      0      0      0
+Short                1      5      1      4      1      0      0      0      0
+eolKeepOut          11     15      0      9      2      0      0      0      0
+[INFO DRT-0267] cpu time = 00:00:59, elapsed time = 00:00:58, memory = 34925.69 (MB), peak = 54925.71 (MB)
+Total wire length = 471439 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58055 um.
+Total wire length on LAYER M2 = 219369 um.
+Total wire length on LAYER M3 = 136668 um.
+Total wire length on LAYER M4 = 46170 um.
+Total wire length on LAYER M5 = 9775 um.
+Total wire length on LAYER M6 = 1012 um.
+Total wire length on LAYER M7 = 173 um.
+Total wire length on LAYER M8 = 210 um.
+Total wire length on LAYER M9 = 3 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1369039.
+Up-via summary (total 1369039):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912544
+    M2     426395
+    M3      24248
+    M4       4818
+    M5        600
+    M6        254
+    M7        168
+    M8         12
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1369039
+
+
+[INFO DRT-0195] Start 14th stubborn tiles iteration.
+    Completing 10% with 82 violations.
+    elapsed time = 00:00:09, memory = 36734.75 (MB).
+    Completing 20% with 45 violations.
+    elapsed time = 00:00:16, memory = 38476.68 (MB).
+    Completing 30% with 45 violations.
+    elapsed time = 00:00:22, memory = 34925.69 (MB).
+    Completing 40% with 39 violations.
+    elapsed time = 00:00:29, memory = 43874.29 (MB).
+    Completing 50% with 39 violations.
+    elapsed time = 00:00:31, memory = 39651.05 (MB).
+    Completing 60% with 39 violations.
+    elapsed time = 00:00:35, memory = 35290.08 (MB).
+    Completing 70% with 20 violations.
+    elapsed time = 00:00:39, memory = 45360.11 (MB).
+    Completing 80% with 20 violations.
+    elapsed time = 00:00:39, memory = 41963.28 (MB).
+    Completing 90% with 20 violations.
+    elapsed time = 00:00:40, memory = 38203.14 (MB).
+    Completing 100% with 19 violations.
+    elapsed time = 00:00:42, memory = 34925.69 (MB).
+[INFO DRT-0199]   Number of violations = 19.
+Viol/Layer          M1     M2     M3     M4     M5
+Corner Spacing       1      6      1      1      1
+Metal Spacing        0      1      0      0      0
+Short                2      0      0      0      0
+eolKeepOut           5      1      0      0      0
+[INFO DRT-0267] cpu time = 00:10:32, elapsed time = 00:00:42, memory = 34925.69 (MB), peak = 54925.71 (MB)
+Total wire length = 471449 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58056 um.
+Total wire length on LAYER M2 = 219371 um.
+Total wire length on LAYER M3 = 136667 um.
+Total wire length on LAYER M4 = 46168 um.
+Total wire length on LAYER M5 = 9775 um.
+Total wire length on LAYER M6 = 1011 um.
+Total wire length on LAYER M7 = 178 um.
+Total wire length on LAYER M8 = 214 um.
+Total wire length on LAYER M9 = 5 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1369060.
+Up-via summary (total 1369060):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912559
+    M2     426393
+    M3      24249
+    M4       4815
+    M5        603
+    M6        255
+    M7        172
+    M8         14
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1369060
+
+
+[INFO DRT-0195] Start 15th guides tiles iteration.
+    Completing 50% with 19 violations.
+    elapsed time = 00:00:09, memory = 34925.69 (MB).
+    Completing 100% with 19 violations.
+    elapsed time = 00:00:25, memory = 34925.69 (MB).
+[INFO DRT-0199]   Number of violations = 19.
+Viol/Layer          M1     M2     M3     M4     M5
+Corner Spacing       1      6      1      1      1
+Metal Spacing        0      1      0      0      0
+Short                2      0      0      0      0
+eolKeepOut           5      1      0      0      0
+[INFO DRT-0267] cpu time = 00:00:26, elapsed time = 00:00:25, memory = 34925.69 (MB), peak = 54925.71 (MB)
+Total wire length = 471449 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58056 um.
+Total wire length on LAYER M2 = 219371 um.
+Total wire length on LAYER M3 = 136667 um.
+Total wire length on LAYER M4 = 46168 um.
+Total wire length on LAYER M5 = 9775 um.
+Total wire length on LAYER M6 = 1011 um.
+Total wire length on LAYER M7 = 178 um.
+Total wire length on LAYER M8 = 214 um.
+Total wire length on LAYER M9 = 5 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1369060.
+Up-via summary (total 1369060):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912559
+    M2     426393
+    M3      24249
+    M4       4815
+    M5        603
+    M6        255
+    M7        172
+    M8         14
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1369060
+
+
+[INFO DRT-0195] Start 16th stubborn tiles iteration.
+    Completing 10% with 19 violations.
+    elapsed time = 00:00:07, memory = 43962.09 (MB).
+    Completing 20% with 19 violations.
+    elapsed time = 00:00:10, memory = 41308.54 (MB).
+    Completing 30% with 19 violations.
+    elapsed time = 00:00:11, memory = 38601.57 (MB).
+    Completing 40% with 19 violations.
+    elapsed time = 00:00:13, memory = 35922.39 (MB).
+    Completing 50% with 16 violations.
+    elapsed time = 00:00:19, memory = 48116.38 (MB).
+    Completing 60% with 16 violations.
+    elapsed time = 00:00:19, memory = 45438.23 (MB).
+    Completing 70% with 16 violations.
+    elapsed time = 00:00:22, memory = 42933.39 (MB).
+    Completing 80% with 16 violations.
+    elapsed time = 00:00:24, memory = 40329.41 (MB).
+    Completing 90% with 16 violations.
+    elapsed time = 00:00:27, memory = 37746.66 (MB).
+    Completing 100% with 16 violations.
+    elapsed time = 00:00:34, memory = 34925.69 (MB).
+[INFO DRT-0199]   Number of violations = 16.
+Viol/Layer          M1     M2     M5
+Corner Spacing       0      8      1
+Metal Spacing        0      1      0
+eolKeepOut           5      1      0
+[INFO DRT-0267] cpu time = 00:11:03, elapsed time = 00:00:34, memory = 34925.69 (MB), peak = 54925.71 (MB)
+Total wire length = 471454 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58055 um.
+Total wire length on LAYER M2 = 219372 um.
+Total wire length on LAYER M3 = 136667 um.
+Total wire length on LAYER M4 = 46168 um.
+Total wire length on LAYER M5 = 9775 um.
+Total wire length on LAYER M6 = 1011 um.
+Total wire length on LAYER M7 = 179 um.
+Total wire length on LAYER M8 = 215 um.
+Total wire length on LAYER M9 = 9 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1369091.
+Up-via summary (total 1369091):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912554
+    M2     426407
+    M3      24255
+    M4       4821
+    M5        603
+    M6        257
+    M7        176
+    M8         18
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1369091
+
+
+[INFO DRT-0195] Start 17th optimization iteration.
+    Completing 10% with 16 violations.
+    elapsed time = 00:00:00, memory = 34925.69 (MB).
+    Completing 20% with 16 violations.
+    elapsed time = 00:00:00, memory = 34925.69 (MB).
+    Completing 30% with 16 violations.
+    elapsed time = 00:00:12, memory = 34925.69 (MB).
+    Completing 40% with 16 violations.
+    elapsed time = 00:00:12, memory = 34925.69 (MB).
+    Completing 50% with 16 violations.
+    elapsed time = 00:00:12, memory = 34925.69 (MB).
+    Completing 60% with 16 violations.
+    elapsed time = 00:00:27, memory = 34925.69 (MB).
+    Completing 70% with 16 violations.
+    elapsed time = 00:00:27, memory = 34925.69 (MB).
+    Completing 80% with 16 violations.
+    elapsed time = 00:00:27, memory = 34925.69 (MB).
+    Completing 90% with 16 violations.
+    elapsed time = 00:00:27, memory = 34925.69 (MB).
+    Completing 100% with 16 violations.
+    elapsed time = 00:00:54, memory = 34925.69 (MB).
+[INFO DRT-0199]   Number of violations = 16.
+Viol/Layer          M1     M2     M5
+Corner Spacing       0      8      1
+Metal Spacing        0      1      0
+eolKeepOut           5      1      0
+[INFO DRT-0267] cpu time = 00:00:55, elapsed time = 00:00:54, memory = 34925.69 (MB), peak = 54925.71 (MB)
+Total wire length = 471454 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58055 um.
+Total wire length on LAYER M2 = 219372 um.
+Total wire length on LAYER M3 = 136667 um.
+Total wire length on LAYER M4 = 46168 um.
+Total wire length on LAYER M5 = 9775 um.
+Total wire length on LAYER M6 = 1011 um.
+Total wire length on LAYER M7 = 179 um.
+Total wire length on LAYER M8 = 215 um.
+Total wire length on LAYER M9 = 9 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1369091.
+Up-via summary (total 1369091):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912554
+    M2     426407
+    M3      24255
+    M4       4821
+    M5        603
+    M6        257
+    M7        176
+    M8         18
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1369091
+
+
+[INFO DRT-0195] Start 18th guides tiles iteration.
+    Completing 50% with 16 violations.
+    elapsed time = 00:00:09, memory = 34925.69 (MB).
+    Completing 100% with 9 violations.
+    elapsed time = 00:00:15, memory = 34925.69 (MB).
+[INFO DRT-0199]   Number of violations = 9.
+Viol/Layer          M1     M2
+Corner Spacing       0      4
+eolKeepOut           5      0
+[INFO DRT-0267] cpu time = 00:00:16, elapsed time = 00:00:15, memory = 34925.69 (MB), peak = 54925.71 (MB)
+Total wire length = 471457 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58055 um.
+Total wire length on LAYER M2 = 219371 um.
+Total wire length on LAYER M3 = 136668 um.
+Total wire length on LAYER M4 = 46167 um.
+Total wire length on LAYER M5 = 9778 um.
+Total wire length on LAYER M6 = 1011 um.
+Total wire length on LAYER M7 = 177 um.
+Total wire length on LAYER M8 = 217 um.
+Total wire length on LAYER M9 = 10 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1369104.
+Up-via summary (total 1369104):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912554
+    M2     426406
+    M3      24262
+    M4       4818
+    M5        611
+    M6        261
+    M7        172
+    M8         20
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1369104
+
+
+[INFO DRT-0195] Start 19th guides tiles iteration.
+    Completing 30% with 9 violations.
+    elapsed time = 00:00:02, memory = 34925.69 (MB).
+    Completing 60% with 8 violations.
+    elapsed time = 00:00:05, memory = 34925.69 (MB).
+    Completing 100% with 8 violations.
+    elapsed time = 00:00:07, memory = 34925.69 (MB).
+[INFO DRT-0199]   Number of violations = 8.
+Viol/Layer          M1     M2
+Corner Spacing       0      3
+eolKeepOut           5      0
+[INFO DRT-0267] cpu time = 00:00:08, elapsed time = 00:00:07, memory = 34925.69 (MB), peak = 54925.71 (MB)
+Total wire length = 471459 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58055 um.
+Total wire length on LAYER M2 = 219371 um.
+Total wire length on LAYER M3 = 136668 um.
+Total wire length on LAYER M4 = 46168 um.
+Total wire length on LAYER M5 = 9778 um.
+Total wire length on LAYER M6 = 1012 um.
+Total wire length on LAYER M7 = 177 um.
+Total wire length on LAYER M8 = 217 um.
+Total wire length on LAYER M9 = 10 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1369112.
+Up-via summary (total 1369112):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912554
+    M2     426408
+    M3      24264
+    M4       4820
+    M5        613
+    M6        261
+    M7        172
+    M8         20
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1369112
+
+
+[INFO DRT-0195] Start 20th guides tiles iteration.
+    Completing 30% with 8 violations.
+    elapsed time = 00:00:02, memory = 34925.69 (MB).
+    Completing 60% with 8 violations.
+    elapsed time = 00:00:05, memory = 34925.69 (MB).
+    Completing 100% with 8 violations.
+    elapsed time = 00:00:07, memory = 34925.69 (MB).
+[INFO DRT-0199]   Number of violations = 8.
+Viol/Layer          M1     M2
+Corner Spacing       0      3
+eolKeepOut           5      0
+[INFO DRT-0267] cpu time = 00:00:08, elapsed time = 00:00:07, memory = 34925.69 (MB), peak = 54925.71 (MB)
+Total wire length = 471459 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58055 um.
+Total wire length on LAYER M2 = 219371 um.
+Total wire length on LAYER M3 = 136668 um.
+Total wire length on LAYER M4 = 46168 um.
+Total wire length on LAYER M5 = 9778 um.
+Total wire length on LAYER M6 = 1012 um.
+Total wire length on LAYER M7 = 177 um.
+Total wire length on LAYER M8 = 217 um.
+Total wire length on LAYER M9 = 10 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1369112.
+Up-via summary (total 1369112):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912554
+    M2     426408
+    M3      24264
+    M4       4820
+    M5        613
+    M6        261
+    M7        172
+    M8         20
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1369112
+
+
+[INFO DRT-0198] Complete detail routing.
+Total wire length = 471459 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 58055 um.
+Total wire length on LAYER M2 = 219371 um.
+Total wire length on LAYER M3 = 136668 um.
+Total wire length on LAYER M4 = 46168 um.
+Total wire length on LAYER M5 = 9778 um.
+Total wire length on LAYER M6 = 1012 um.
+Total wire length on LAYER M7 = 177 um.
+Total wire length on LAYER M8 = 217 um.
+Total wire length on LAYER M9 = 10 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 1369112.
+Up-via summary (total 1369112):
+
+-----------------
+ SDCON          0
+    M0          0
+    M1     912554
+    M2     426408
+    M3      24264
+    M4       4820
+    M5        613
+    M6        261
+    M7        172
+    M8         20
+    M9          0
+   M10          0
+   M11          0
+   M12          0
+   M13          0
+-----------------
+      1369112
+
+
+[INFO DRT-0267] cpu time = 09:36:48, elapsed time = 00:25:05, memory = 34925.69 (MB), peak = 54925.71 (MB)
+
+[INFO DRT-0180] Post processing.
+Took 1560 seconds: detailed_route -output_drc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/reports/gt2n_compat_bspdn_proxy/aes_128/base/5_route_drc.rpt -output_maze /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/maze.log -droute_end_iter 20 -verbose 1 -drc_report_iter_step 5
+[WARNING GRT-0246] No diode with LEF class CORE ANTENNACELL found.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Design area 5830 um^2 34% utilization.
+write_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_2_route.odb
+Elapsed time: 26:19.40[h:]min:sec. CPU time: user 36053.67 sys 572.39 (2318%). Peak memory: 56243932KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+5_2_route                       1579          54925 a509c9e5d4082332226d
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 5_3_fillcell fillcell
+Running fillcell.tcl, stage 5_3_fillcell
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_2_route.odb
+read_sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_1_grt.sdc
+source /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/setRC_fspdn.tcl
+filler_placement gt2_6t_filler_w31_lvt
+[INFO DPL-0001] Placed 1846000 filler instances.
+Took 5 seconds: filler_placement gt2_6t_filler_w31_lvt
+Design area 16995 um^2 100% utilization.
+write_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_3_fillcell.odb
+Elapsed time: 0:12.47[h:]min:sec. CPU time: user 10.27 sys 1.48 (94%). Peak memory: 1972760KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+5_3_fillcell                      12           1926 819e4e52ab942a9260b9
+cp /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_3_fillcell.odb /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_route.odb
+cp /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_1_grt.sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_route.sdc
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 6_1_fill density_fill
+Running density_fill.tcl, stage 6_1_fill
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_route.odb
+read_sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_route.sdc
+source /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/setRC_fspdn.tcl
+exec cp /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_route.odb /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_1_fill.odb
+Elapsed time: 0:05.42[h:]min:sec. CPU time: user 3.26 sys 1.47 (87%). Peak memory: 1304080KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+6_1_fill                           5           1273 819e4e52ab942a9260b9
+cp /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_route.sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_1_fill.sdc
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 6_report final_report
+Running final_report.tcl, stage 6_report
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_1_fill.odb
+read_sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_1_fill.sdc
+source /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/setRC_fspdn.tcl
+source /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/pre_final_report_clear_psm.tcl
+No stale PSM marker category found
+write_db /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_final.odb
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation aes (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 2593918 rc segments
+[INFO RCX-0439] Coupling Cap extraction aes ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 8% of 1246506 wires extracted
+[INFO RCX-0442] 18% of 1246506 wires extracted
+[INFO RCX-0442] 29% of 1246506 wires extracted
+[INFO RCX-0442] 40% of 1246506 wires extracted
+[INFO RCX-0442] 56% of 1246506 wires extracted
+[INFO RCX-0442] 63% of 1246506 wires extracted
+[INFO RCX-0442] 72% of 1246506 wires extracted
+[INFO RCX-0442] 80% of 1246506 wires extracted
+[INFO RCX-0442] 87% of 1246506 wires extracted
+[INFO RCX-0442] 100% of 1246506 wires extracted
+[INFO RCX-0045] Extract 168432 nets, 2762342 rsegs, 2762342 caps, 2592563 ccs
+[INFO RCX-0042] 100000 nets finished
+[INFO RCX-0443] 168432 nets finished
+IR drop analysis for power nets is skipped because PWR_NETS_VOLTAGES is undefined
+IR drop analysis for ground nets is skipped because GND_NETS_VOLTAGES is undefined
+Cell type report:                       Count       Area
+  Other                               1847814   11175.58
+  Clock buffer                           3361     138.17
+  Timing Repair Buffer                   8756     160.56
+  Inverter                               5934      73.34
+  Clock inverter                          161       5.50
+  Sequential cell                       10769    1953.96
+  Multi-Input combinational cell       140016    3487.92
+  Total                               2016811   16995.03
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 16995 um^2 100% utilization.
+[WARNING GUI-0076] QStandardPaths: wrong permissions on runtime directory /tmp/xdg-run, 0755 instead of 0700
+[WARNING GUI-0066] Heat map "Routing Congestion" has not been populated with data.
+Elapsed time: 2:48.80[h:]min:sec. CPU time: user 196.86 sys 113.00 (183%). Peak memory: 5206704KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+6_report                         168           5084                  N/A
+cp /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/5_route.sdc /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_final.sdc
+cp /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/techlib/gt2_fspdn_tech.lef /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/objects/gt2n_compat_bspdn_proxy/aes_128/base/klayout_tech.lef
+/usr/bin/python3 /OpenROAD-flow-scripts/flow/util/generate_klayout_tech.py \
+	--template /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gt2n_compat_bspdn_proxy.lyt \
+	--output /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/objects/gt2n_compat_bspdn_proxy/aes_128/base/klayout.lyt \
+	--lef-files /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/objects/gt2n_compat_bspdn_proxy/aes_128/base/klayout_tech.lef /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lef/gt2_6t_w31_svt.lef /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/lef/gt2_6t_w31_lvt.lef   \
+	--reference-dir /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base \
+	--map-files 
+(env time -f 'Elapsed time: %E[h:]min:sec. CPU time: user %U sys %S (%P). Peak memory: %MKB.' stdbuf -o L /OpenROAD-flow-scripts/flow/scripts/klayout.sh -zz -rd design_name=aes \
+        -rd in_def=/work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_final.def \
+        -rd in_files="/work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w13_elvt.gds /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w13_hvt.gds /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w13_lvt.gds /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w13_svt.gds /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w13_ulvt.gds /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w31_elvt.gds /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w31_hvt.gds /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w31_lvt.gds /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w31_svt.gds /work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w31_ulvt.gds " \
+        -rd seal_file="" \
+        -rd out_file=/work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_1_merged.gds \
+        -rd tech_file=/work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/objects/gt2n_compat_bspdn_proxy/aes_128/base/klayout.lyt \
+        -rd layer_map=/work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/techlib/gt2_techfile.layermap \
+        -r /OpenROAD-flow-scripts/flow/util/def2stream.py) 2>&1 | tee /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/logs/gt2n_compat_bspdn_proxy/aes_128/base/6_1_merge.log
+KLayout 0.30.7
+[INFO] Reporting cells prior to loading DEF ...
+	/work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w13_elvt.gds
+	/work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w13_hvt.gds
+	/work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w13_lvt.gds
+	/work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w13_svt.gds
+	/work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w13_ulvt.gds
+	/work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w31_elvt.gds
+	/work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w31_hvt.gds
+	/work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w31_lvt.gds
+	/work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w31_svt.gds
+	/work/djang62/Openroad/handoff/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n_compat_bspdn_proxy/gds/gt2_6t_std_cells_w31_ulvt.gds
+[INFO] All LEF cells have matching GDS/OAS cells
+[INFO] No orphan cells in the final layout
+Elapsed time: 0:20.08[h:]min:sec. CPU time: user 18.58 sys 1.16 (98%). Peak memory: 2268268KB.
+cp /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_1_merged.gds /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_final.gds
+/work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/logs/gt2n_compat_bspdn_proxy/aes_128/base
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+1_1_yosys_canonicalize             0             28 10d46209233bf61871f0
+1_2_yosys                        139            524 70c0dd6212bd7857127c
+1_synth                            3            512 ae2cf73ab53db864b56f
+2_1_floorplan                     27            824 280d0356ae931e0ad677
+2_2_floorplan_macro                1            377 280d0356ae931e0ad677
+2_3_floorplan_tapcell              1            272 b5364c80391634afcf29
+2_4_floorplan_pdn                  1            379 d2dc1834c3412322ea85
+3_1_place_gp_skip_io              25            614 e5774937d861ccfc7bd9
+3_2_place_iop                      1            382 095377a3de34fcbdfcfb
+3_3_place_gp                     212           1922 9f9532917ad3437e1b77
+3_4_place_resized                 56           1012 9f9532917ad3437e1b77
+3_5_place_dp                      57           1248 40a123a29e726558717f
+4_1_cts                           90           1286 6d40cb1e1d285696d9e3
+5_1_grt                          656           2733 ebf49d81cf1f0b21aef7
+5_2_route                       1579          54925 a509c9e5d4082332226d
+5_3_fillcell                      12           1926 819e4e52ab942a9260b9
+6_1_fill                           5           1273 819e4e52ab942a9260b9
+6_1_merge                         20           2215                  N/A
+6_report                         168           5084                  N/A
+Total                           3053          54925                     

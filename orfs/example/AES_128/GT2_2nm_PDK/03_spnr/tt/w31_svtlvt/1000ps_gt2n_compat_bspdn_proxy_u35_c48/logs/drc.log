@@ -1,0 +1,886 @@
+OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD
+KLayout 0.30.7
+"input" in: gt2n_compat_bspdn_proxy.lydrc:55
+    Polygons (raw): 2016936 (flat)  104 (hierarchical)
+    Elapsed: 0.660s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:56
+    Polygons (raw): 4055410 (flat)  212 (hierarchical)
+    Elapsed: 0.440s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:57
+    Polygons (raw): 4665940 (flat)  698 (hierarchical)
+    Elapsed: 0.430s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:58
+    Polygons (raw): 4096394 (flat)  239 (hierarchical)
+    Elapsed: 0.440s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:59
+    Polygons (raw): 4044516 (flat)  208 (hierarchical)
+    Elapsed: 0.470s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:60
+    Polygons (raw): 2027705 (flat)  106 (hierarchical)
+    Elapsed: 0.440s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:61
+    Polygons (raw): 2016936 (flat)  104 (hierarchical)
+    Elapsed: 0.420s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:62
+    Polygons (raw): 4045422 (flat)  1114 (hierarchical)
+    Elapsed: 0.490s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:63
+    Polygons (raw): 632292 (flat)  446 (hierarchical)
+    Elapsed: 0.530s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:64
+    Polygons (raw): 1502517 (flat)  1050 (hierarchical)
+    Elapsed: 0.510s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:65
+    Polygons (raw): 848666 (flat)  600 (hierarchical)
+    Elapsed: 0.490s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:66
+    Polygons (raw): 665702 (flat)  481 (hierarchical)
+    Elapsed: 0.510s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:67
+    Polygons (raw): 1277885 (flat)  794 (hierarchical)
+    Elapsed: 0.500s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:68
+    Polygons (raw): 1337761 (flat)  781 (hierarchical)
+    Elapsed: 0.520s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:69
+    Polygons (raw): 2063881 (flat)  271866 (hierarchical)
+    Elapsed: 0.660s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:70
+    Polygons (raw): 912554 (flat)  1 (hierarchical)
+    Elapsed: 0.470s  Memory: 1903.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:71
+    Polygons (raw): 1991652 (flat)  652692 (hierarchical)
+    Elapsed: 0.910s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:72
+    Polygons (raw): 426408 (flat)  1 (hierarchical)
+    Elapsed: 0.490s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:73
+    Polygons (raw): 689725 (flat)  239055 (hierarchical)
+    Elapsed: 0.660s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:74
+    Polygons (raw): 24264 (flat)  1 (hierarchical)
+    Elapsed: 0.520s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:75
+    Polygons (raw): 42790 (flat)  13708 (hierarchical)
+    Elapsed: 0.520s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:76
+    Polygons (raw): 4820 (flat)  1 (hierarchical)
+    Elapsed: 0.520s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:77
+    Polygons (raw): 8151 (flat)  2720 (hierarchical)
+    Elapsed: 0.510s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:78
+    Polygons (raw): 613 (flat)  1 (hierarchical)
+    Elapsed: 0.520s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:79
+    Polygons (raw): 1317 (flat)  445 (hierarchical)
+    Elapsed: 0.520s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:80
+    Polygons (raw): 261 (flat)  1 (hierarchical)
+    Elapsed: 0.480s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:81
+    Polygons (raw): 653 (flat)  222 (hierarchical)
+    Elapsed: 0.500s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:82
+    Polygons (raw): 172 (flat)  1 (hierarchical)
+    Elapsed: 0.500s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:83
+    Polygons (raw): 290 (flat)  100 (hierarchical)
+    Elapsed: 0.500s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:84
+    Polygons (raw): 20 (flat)  1 (hierarchical)
+    Elapsed: 0.500s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:85
+    Polygons (raw): 30 (flat)  11 (hierarchical)
+    Elapsed: 0.500s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:86
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:87
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:88
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:89
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:90
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:91
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:92
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.010s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:93
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:94
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.010s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:95
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:96
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:97
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:98
+    Polygons (raw): 129360 (flat)  47 (hierarchical)
+    Elapsed: 0.500s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:99
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:100
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:101
+    Polygons (raw): 88335 (flat)  88335 (hierarchical)
+    Elapsed: 0.510s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:102
+    Polygons (raw): 195 (flat)  195 (hierarchical)
+    Elapsed: 0.490s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:103
+    Polygons (raw): 19013 (flat)  19013 (hierarchical)
+    Elapsed: 0.500s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:104
+    Polygons (raw): 195 (flat)  195 (hierarchical)
+    Elapsed: 0.480s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:105
+    Polygons (raw): 2243 (flat)  2243 (hierarchical)
+    Elapsed: 0.500s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:106
+    Polygons (raw): 23 (flat)  23 (hierarchical)
+    Elapsed: 0.490s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:107
+    Polygons (raw): 265 (flat)  265 (hierarchical)
+    Elapsed: 0.500s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:108
+    Polygons (raw): 23 (flat)  23 (hierarchical)
+    Elapsed: 0.490s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:109
+    Polygons (raw): 127 (flat)  127 (hierarchical)
+    Elapsed: 0.470s  Memory: 1914.00M
+"input" in: gt2n_compat_bspdn_proxy.lydrc:110
+    Polygons (raw): 11 (flat)  11 (hierarchical)
+    Elapsed: 0.480s  Memory: 1914.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:233
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 17.820s  Memory: 2463.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:233
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 1.320s  Memory: 2489.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:233
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.310s  Memory: 2489.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:234
+    Edge pairs: 973670 (flat)  728013 (hierarchical)
+    Elapsed: 0.940s  Memory: 2489.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:234
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 2489.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:234
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 2489.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:235
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 41.050s  Memory: 2947.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:235
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.270s  Memory: 2946.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:235
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 2946.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:236
+    Edge pairs: 674852 (flat)  574731 (hierarchical)
+    Elapsed: 69.300s  Memory: 3125.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:236
+    Edge pairs: 5 (flat)  5 (hierarchical)
+    Elapsed: 0.280s  Memory: 3125.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:236
+    Edge pairs: 5 (flat)  5 (hierarchical)
+    Elapsed: 0.290s  Memory: 3125.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:237
+    Edge pairs: 743620 (flat)  739317 (hierarchical)
+    Elapsed: 63.010s  Memory: 3238.00M
+"with_internal_angle" in: gt2n_compat_bspdn_proxy.lydrc:237
+    Edge pairs: 11 (flat)  11 (hierarchical)
+    Elapsed: 0.040s  Memory: 3238.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:237
+    Edge pairs: 11 (flat)  11 (hierarchical)
+    Elapsed: 0.290s  Memory: 3238.00M
+"non_rectangles" in: gt2n_compat_bspdn_proxy.lydrc:238
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.600s  Memory: 3238.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:238
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.870s  Memory: 3238.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:240
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 17.700s  Memory: 3461.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:240
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.260s  Memory: 3461.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:240
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3461.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:241
+    Edge pairs: 599146 (flat)  599146 (hierarchical)
+    Elapsed: 0.840s  Memory: 3461.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:241
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 3461.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:241
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 3461.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:242
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 26.580s  Memory: 4028.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:242
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.260s  Memory: 3464.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:242
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3241.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:243
+    Edge pairs: 2313467 (flat)  2313467 (hierarchical)
+    Elapsed: 62.380s  Memory: 3799.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:243
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.390s  Memory: 3799.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:243
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 3799.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:244
+    Edge pairs: 2424661 (flat)  2424661 (hierarchical)
+    Elapsed: 62.500s  Memory: 3617.00M
+"with_internal_angle" in: gt2n_compat_bspdn_proxy.lydrc:244
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.100s  Memory: 3617.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:244
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3617.00M
+"non_rectangles" in: gt2n_compat_bspdn_proxy.lydrc:245
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.660s  Memory: 3534.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:245
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.860s  Memory: 3534.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:247
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 7.030s  Memory: 3557.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:247
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.250s  Memory: 3557.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:247
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 3557.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:248
+    Edge pairs: 194200 (flat)  194200 (hierarchical)
+    Elapsed: 0.450s  Memory: 3557.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:248
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.260s  Memory: 3557.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:248
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 3557.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:249
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 10.520s  Memory: 3138.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:249
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 3137.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:249
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.310s  Memory: 3137.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:250
+    Edge pairs: 685636 (flat)  685636 (hierarchical)
+    Elapsed: 24.830s  Memory: 3368.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:250
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.330s  Memory: 3368.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:250
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3368.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:251
+    Edge pairs: 701707 (flat)  701707 (hierarchical)
+    Elapsed: 24.870s  Memory: 3348.00M
+"with_internal_angle" in: gt2n_compat_bspdn_proxy.lydrc:251
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.050s  Memory: 3348.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:251
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 3348.00M
+"non_rectangles" in: gt2n_compat_bspdn_proxy.lydrc:252
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.610s  Memory: 3348.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:252
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.860s  Memory: 3348.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:254
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 1.220s  Memory: 3348.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:254
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.250s  Memory: 3348.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:254
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3348.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:255
+    Edge pairs: 13535 (flat)  13535 (hierarchical)
+    Elapsed: 0.270s  Memory: 3348.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:255
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.230s  Memory: 3348.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:255
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.350s  Memory: 3348.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:256
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 1.150s  Memory: 3334.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:256
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 3242.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:256
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3242.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:257
+    Edge pairs: 30708 (flat)  30708 (hierarchical)
+    Elapsed: 1.620s  Memory: 3273.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:257
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.260s  Memory: 3272.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:257
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 3272.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:258
+    Edge pairs: 31079 (flat)  31079 (hierarchical)
+    Elapsed: 1.620s  Memory: 3299.00M
+"with_internal_angle" in: gt2n_compat_bspdn_proxy.lydrc:258
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 3299.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:258
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 3299.00M
+"non_rectangles" in: gt2n_compat_bspdn_proxy.lydrc:259
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.590s  Memory: 3299.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:259
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.850s  Memory: 3299.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:261
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.940s  Memory: 3299.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:261
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.250s  Memory: 3299.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:261
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.270s  Memory: 3299.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:262
+    Edge pairs: 2668 (flat)  2668 (hierarchical)
+    Elapsed: 0.240s  Memory: 3299.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:262
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.230s  Memory: 3299.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:262
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.340s  Memory: 3299.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:263
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.810s  Memory: 3303.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:263
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.260s  Memory: 3303.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:263
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3303.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:264
+    Edge pairs: 7147 (flat)  7147 (hierarchical)
+    Elapsed: 0.970s  Memory: 3306.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:264
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 3306.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:264
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3306.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:265
+    Edge pairs: 7302 (flat)  7302 (hierarchical)
+    Elapsed: 0.980s  Memory: 3307.00M
+"with_internal_angle" in: gt2n_compat_bspdn_proxy.lydrc:265
+    Edge pairs: 2 (flat)  2 (hierarchical)
+    Elapsed: 0.020s  Memory: 3307.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:265
+    Edge pairs: 2 (flat)  2 (hierarchical)
+    Elapsed: 0.300s  Memory: 3307.00M
+"non_rectangles" in: gt2n_compat_bspdn_proxy.lydrc:266
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.570s  Memory: 3307.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:266
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.880s  Memory: 3307.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:268
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.910s  Memory: 3307.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:268
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 3307.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:268
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 3307.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:269
+    Edge pairs: 436 (flat)  436 (hierarchical)
+    Elapsed: 0.240s  Memory: 3307.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:269
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.230s  Memory: 3307.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:269
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.360s  Memory: 3307.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:270
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.690s  Memory: 3307.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:270
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 3307.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:270
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3307.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:271
+    Edge pairs: 1864 (flat)  1864 (hierarchical)
+    Elapsed: 0.770s  Memory: 3308.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:271
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 3308.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:271
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 3308.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:272
+    Edge pairs: 1900 (flat)  1900 (hierarchical)
+    Elapsed: 0.820s  Memory: 3309.00M
+"with_internal_angle" in: gt2n_compat_bspdn_proxy.lydrc:272
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 3308.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:272
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 3308.00M
+"non_rectangles" in: gt2n_compat_bspdn_proxy.lydrc:273
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.580s  Memory: 3308.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:273
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.880s  Memory: 3308.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:278
+    Edge pairs: 912554 (flat)  1 (hierarchical)
+    Elapsed: 2.740s  Memory: 3308.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:278
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.250s  Memory: 3308.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:278
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3308.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:279
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.800s  Memory: 3308.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:279
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 3308.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:279
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.310s  Memory: 3308.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:280
+    Edge pairs: 1825108 (flat)  1825108 (hierarchical)
+    Elapsed: 11.310s  Memory: 3750.00M
+"edges" in: gt2n_compat_bspdn_proxy.lydrc:280
+    Edges: 3650216 (flat)  3650216 (hierarchical)
+    Elapsed: 0.140s  Memory: 3806.00M
+"not_interacting" in: gt2n_compat_bspdn_proxy.lydrc:280
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 9.070s  Memory: 3806.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:280
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.370s  Memory: 3688.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:281
+    Edge pairs: 1825108 (flat)  1825108 (hierarchical)
+    Elapsed: 10.250s  Memory: 4090.00M
+"edges" in: gt2n_compat_bspdn_proxy.lydrc:281
+    Edges: 3650216 (flat)  3650216 (hierarchical)
+    Elapsed: 0.160s  Memory: 4145.00M
+"not_interacting" in: gt2n_compat_bspdn_proxy.lydrc:281
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 9.770s  Memory: 4101.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:281
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.380s  Memory: 3982.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:282
+    Edge pairs: 10065 (flat)  10065 (hierarchical)
+    Elapsed: 4.700s  Memory: 4168.00M
+"with_internal_angle" in: gt2n_compat_bspdn_proxy.lydrc:282
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.010s  Memory: 3982.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:282
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3982.00M
+"not_overlapping" in: gt2n_compat_bspdn_proxy.lydrc:283
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 8.060s  Memory: 3674.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:283
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 3674.00M
+"not_overlapping" in: gt2n_compat_bspdn_proxy.lydrc:284
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 9.510s  Memory: 3670.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:284
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.320s  Memory: 3670.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:285
+    Edge pairs: 1825108 (flat)  1825108 (hierarchical)
+    Elapsed: 11.280s  Memory: 4103.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:285
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.330s  Memory: 4103.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:285
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 4103.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:286
+    Edge pairs: 1825108 (flat)  1825108 (hierarchical)
+    Elapsed: 10.230s  Memory: 4103.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:286
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.340s  Memory: 4103.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:286
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 4103.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:288
+    Edge pairs: 426408 (flat)  1 (hierarchical)
+    Elapsed: 2.070s  Memory: 4040.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:288
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.230s  Memory: 4040.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:288
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.270s  Memory: 4040.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:289
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.790s  Memory: 4040.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:289
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 4040.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:289
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 4040.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:290
+    Edge pairs: 852816 (flat)  852816 (hierarchical)
+    Elapsed: 5.000s  Memory: 3862.00M
+"edges" in: gt2n_compat_bspdn_proxy.lydrc:290
+    Edges: 1705632 (flat)  1705632 (hierarchical)
+    Elapsed: 0.060s  Memory: 3862.00M
+"not_interacting" in: gt2n_compat_bspdn_proxy.lydrc:290
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 4.320s  Memory: 4046.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:290
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.340s  Memory: 4046.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:291
+    Edge pairs: 852816 (flat)  852816 (hierarchical)
+    Elapsed: 4.880s  Memory: 4088.00M
+"edges" in: gt2n_compat_bspdn_proxy.lydrc:291
+    Edges: 1705632 (flat)  1705632 (hierarchical)
+    Elapsed: 0.070s  Memory: 4088.00M
+"not_interacting" in: gt2n_compat_bspdn_proxy.lydrc:291
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 4.480s  Memory: 4203.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:291
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.340s  Memory: 4088.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:292
+    Edge pairs: 8320 (flat)  8320 (hierarchical)
+    Elapsed: 2.370s  Memory: 4200.00M
+"with_internal_angle" in: gt2n_compat_bspdn_proxy.lydrc:292
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 4089.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:292
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 4089.00M
+"not_overlapping" in: gt2n_compat_bspdn_proxy.lydrc:293
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 5.600s  Memory: 4091.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:293
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 4091.00M
+"not_overlapping" in: gt2n_compat_bspdn_proxy.lydrc:294
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 3.800s  Memory: 4266.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:294
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 4090.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:295
+    Edge pairs: 852816 (flat)  852816 (hierarchical)
+    Elapsed: 4.970s  Memory: 4247.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:295
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 4247.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:295
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 4247.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:296
+    Edge pairs: 852816 (flat)  852816 (hierarchical)
+    Elapsed: 4.920s  Memory: 4175.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:296
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 4175.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:296
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 4175.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:298
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 1.460s  Memory: 4175.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:298
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 4175.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:298
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 4175.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:299
+    Edge pairs: 24264 (flat)  1 (hierarchical)
+    Elapsed: 0.230s  Memory: 4175.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:299
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.230s  Memory: 4175.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:299
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 4175.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:300
+    Edge pairs: 48528 (flat)  48528 (hierarchical)
+    Elapsed: 1.460s  Memory: 4185.00M
+"edges" in: gt2n_compat_bspdn_proxy.lydrc:300
+    Edges: 97056 (flat)  97056 (hierarchical)
+    Elapsed: 0.020s  Memory: 4184.00M
+"not_interacting" in: gt2n_compat_bspdn_proxy.lydrc:300
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.590s  Memory: 4198.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:300
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.340s  Memory: 4197.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:301
+    Edge pairs: 48528 (flat)  48528 (hierarchical)
+    Elapsed: 0.880s  Memory: 4206.00M
+"edges" in: gt2n_compat_bspdn_proxy.lydrc:301
+    Edges: 97056 (flat)  97056 (hierarchical)
+    Elapsed: 0.020s  Memory: 4205.00M
+"not_interacting" in: gt2n_compat_bspdn_proxy.lydrc:301
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.600s  Memory: 4216.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:301
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.350s  Memory: 4216.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:302
+    Edge pairs: 75 (flat)  75 (hierarchical)
+    Elapsed: 0.640s  Memory: 4223.00M
+"with_internal_angle" in: gt2n_compat_bspdn_proxy.lydrc:302
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.010s  Memory: 4223.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:302
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 4223.00M
+"not_overlapping" in: gt2n_compat_bspdn_proxy.lydrc:303
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 1.320s  Memory: 4224.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:303
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 4066.00M
+"not_overlapping" in: gt2n_compat_bspdn_proxy.lydrc:304
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.570s  Memory: 4075.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:304
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.340s  Memory: 4074.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:305
+    Edge pairs: 48528 (flat)  48528 (hierarchical)
+    Elapsed: 0.920s  Memory: 4084.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:305
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 4084.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:305
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 4084.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:306
+    Edge pairs: 48528 (flat)  48528 (hierarchical)
+    Elapsed: 0.900s  Memory: 4093.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:306
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 4093.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:306
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 4093.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:308
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 1.450s  Memory: 4093.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:308
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 4093.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:308
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 4093.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:309
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 4093.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:309
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.230s  Memory: 4093.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:309
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 4093.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:310
+    Edge pairs: 9640 (flat)  9640 (hierarchical)
+    Elapsed: 0.680s  Memory: 4095.00M
+"edges" in: gt2n_compat_bspdn_proxy.lydrc:310
+    Edges: 19280 (flat)  19280 (hierarchical)
+    Elapsed: 0.010s  Memory: 4095.00M
+"not_interacting" in: gt2n_compat_bspdn_proxy.lydrc:310
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.430s  Memory: 4075.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:310
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.330s  Memory: 3958.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:311
+    Edge pairs: 9640 (flat)  9640 (hierarchical)
+    Elapsed: 0.700s  Memory: 3959.00M
+"edges" in: gt2n_compat_bspdn_proxy.lydrc:311
+    Edges: 19280 (flat)  19280 (hierarchical)
+    Elapsed: 0.010s  Memory: 3958.00M
+"not_interacting" in: gt2n_compat_bspdn_proxy.lydrc:311
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.430s  Memory: 3961.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:311
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.350s  Memory: 3960.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:312
+    Edge pairs: 8 (flat)  8 (hierarchical)
+    Elapsed: 0.590s  Memory: 3962.00M
+"with_internal_angle" in: gt2n_compat_bspdn_proxy.lydrc:312
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.010s  Memory: 3962.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:312
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 3962.00M
+"not_overlapping" in: gt2n_compat_bspdn_proxy.lydrc:313
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.520s  Memory: 3962.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:313
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.310s  Memory: 3962.00M
+"not_overlapping" in: gt2n_compat_bspdn_proxy.lydrc:314
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.450s  Memory: 3963.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:314
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 3962.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:315
+    Edge pairs: 9640 (flat)  9640 (hierarchical)
+    Elapsed: 0.690s  Memory: 3964.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:315
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 3964.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:315
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3964.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:316
+    Edge pairs: 9640 (flat)  9640 (hierarchical)
+    Elapsed: 0.740s  Memory: 3966.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:316
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 3965.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:316
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 3965.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:318
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 1.440s  Memory: 3965.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:318
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 3965.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:318
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3965.00M
+"width" in: gt2n_compat_bspdn_proxy.lydrc:319
+    Edge pairs: 613 (flat)  1 (hierarchical)
+    Elapsed: 0.260s  Memory: 3965.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:319
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 3965.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:319
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3965.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:320
+    Edge pairs: 1226 (flat)  1226 (hierarchical)
+    Elapsed: 1.210s  Memory: 3656.00M
+"edges" in: gt2n_compat_bspdn_proxy.lydrc:320
+    Edges: 2452 (flat)  2452 (hierarchical)
+    Elapsed: 0.010s  Memory: 3656.00M
+"not_interacting" in: gt2n_compat_bspdn_proxy.lydrc:320
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.430s  Memory: 3657.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:320
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.330s  Memory: 3656.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:321
+    Edge pairs: 1226 (flat)  1226 (hierarchical)
+    Elapsed: 0.670s  Memory: 3656.00M
+"edges" in: gt2n_compat_bspdn_proxy.lydrc:321
+    Edges: 2452 (flat)  2452 (hierarchical)
+    Elapsed: 0.020s  Memory: 3471.00M
+"not_interacting" in: gt2n_compat_bspdn_proxy.lydrc:321
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.420s  Memory: 3472.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:321
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.340s  Memory: 3472.00M
+"space" in: gt2n_compat_bspdn_proxy.lydrc:322
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.570s  Memory: 3472.00M
+"with_internal_angle" in: gt2n_compat_bspdn_proxy.lydrc:322
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.020s  Memory: 3472.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:322
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.280s  Memory: 3472.00M
+"not_overlapping" in: gt2n_compat_bspdn_proxy.lydrc:323
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.440s  Memory: 3472.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:323
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 3472.00M
+"not_overlapping" in: gt2n_compat_bspdn_proxy.lydrc:324
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.440s  Memory: 3473.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:324
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3472.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:325
+    Edge pairs: 1226 (flat)  1226 (hierarchical)
+    Elapsed: 0.680s  Memory: 3473.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:325
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 3472.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:325
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.300s  Memory: 3472.00M
+"enclosing" in: gt2n_compat_bspdn_proxy.lydrc:326
+    Edge pairs: 1226 (flat)  1226 (hierarchical)
+    Elapsed: 0.780s  Memory: 3473.00M
+"with_angle" in: gt2n_compat_bspdn_proxy.lydrc:326
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.240s  Memory: 3472.00M
+"output" in: gt2n_compat_bspdn_proxy.lydrc:326
+    Edge pairs: 0 (flat)  0 (hierarchical)
+    Elapsed: 0.290s  Memory: 3472.00M
+Writing report database: /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/reports/gt2n_compat_bspdn_proxy/aes_128/base/6_drc_bspdn_physical.lyrdb ..
+Total elapsed: 755.750s  Memory: 3369.00M
+GT2N native DRC knobs: mode=route threads=48 tile_um=200.0 use_nets=false
+Wrote DRC report: /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/reports/gt2n_compat_bspdn_proxy/aes_128/base/6_drc_bspdn_physical.lyrdb
+Wrote DRC count: /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/reports/gt2n_compat_bspdn_proxy/aes_128/base/6_drc_bspdn_physical_count.rpt

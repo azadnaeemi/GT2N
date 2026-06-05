@@ -1,0 +1,720 @@
+
+==========================================================================
+finish report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+finish report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+finish report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 410.03
+
+==========================================================================
+finish report_clock_min_period
+--------------------------------------------------------------------------
+core_clock period_min = 589.97 fmax = 1695.01
+
+==========================================================================
+finish report_clock_skew
+--------------------------------------------------------------------------
+Clock core_clock
+ 232.80 source latency U_KEYEXP.ROUND_KEY_GEN[3].RKGEN_U.valid_out$_DFF_PN0_/CLK ^
+-271.84 target latency ROUND[3].U_ROUND.U_KEY.data_out[9]$_DFFE_PN0P_/CLK ^
+   0.00 CRPR
+--------------
+ -39.03 setup skew
+
+
+==========================================================================
+finish report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: U_KEYEXP.ROUND_KEY_GEN[5].RKGEN_U.Key_FirstStage[112]$_DFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: U_KEYEXP.ROUND_KEY_GEN[5].RKGEN_U.Key_SecondStage[112]$_DFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock source latency
+     1    0.00    0.00    0.00    0.00 ^ clk (in)
+                                         clk (net)
+                  1.26    1.03    1.03 ^ wire17047/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    7.46   12.40   13.43 ^ wire17047/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17046 (net)
+                  8.33    2.87   16.30 ^ wire17046/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    7.43   15.11   31.40 ^ wire17046/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17045 (net)
+                  8.37    2.95   34.36 ^ wire17045/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    8.51   16.25   50.61 ^ wire17045/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17044 (net)
+                  9.36    2.99   53.60 ^ clkbuf_0_clk/A (gt2_6t_buf_x2_w31_svt)
+     2    0.01    8.90   19.60   73.20 ^ clkbuf_0_clk/Y (gt2_6t_buf_x2_w31_svt)
+                                         clknet_0_clk (net)
+                  9.07    1.36   74.55 ^ clkbuf_1_1_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     1    0.00    3.54   15.97   90.52 ^ clkbuf_1_1_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_1_1_0_clk (net)
+                  3.55    0.63   91.15 ^ clkbuf_1_1_1_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.90   14.63  105.79 ^ clkbuf_1_1_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_1_1_1_clk (net)
+                  4.93    0.83  106.62 ^ clkbuf_2_3_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     1    0.00    3.72   13.99  120.61 ^ clkbuf_2_3_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_2_3_0_clk (net)
+                  3.74    0.72  121.33 ^ clkbuf_2_3_1_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.15   13.81  135.14 ^ clkbuf_2_3_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_2_3_1_clk (net)
+                  4.17    0.82  135.96 ^ clkbuf_3_6_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.71   14.64  150.60 ^ clkbuf_3_6_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_3_6_0_clk (net)
+                  4.83    1.32  151.93 ^ clkbuf_4_12_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.34   14.63  166.56 ^ clkbuf_4_12_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_4_12_0_clk (net)
+                  4.39    1.00  167.56 ^ clkbuf_5_25_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     4    0.00    5.75   16.01  183.57 ^ clkbuf_5_25_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_5_25_0_clk (net)
+                  5.89    1.18  184.75 ^ clkbuf_7_102_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    3.92   14.88  199.63 ^ clkbuf_7_102_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_7_102_0_clk (net)
+                  3.93    0.49  200.12 ^ clkbuf_8_205__f_clk/A (gt2_6t_buf_x2_w31_svt)
+     6    0.01   10.57   19.50  219.62 ^ clkbuf_8_205__f_clk/Y (gt2_6t_buf_x2_w31_svt)
+                                         clknet_8_205__leaf_clk (net)
+                 10.61    0.69  220.32 ^ clkbuf_leaf_945_clk/A (gt2_6t_buf_x4_w31_lvt)
+     5    0.00    5.19   16.35  236.67 ^ clkbuf_leaf_945_clk/Y (gt2_6t_buf_x4_w31_lvt)
+                                         clknet_leaf_945_clk (net)
+                  5.23    0.90  237.56 ^ U_KEYEXP.ROUND_KEY_GEN[5].RKGEN_U.Key_FirstStage[112]$_DFFE_PN0P_/CLK (gt2_6t_dffasync_x1_w31_lvt)
+     1    0.00    5.53   19.50  257.06 ^ U_KEYEXP.ROUND_KEY_GEN[5].RKGEN_U.Key_FirstStage[112]$_DFFE_PN0P_/Q (gt2_6t_dffasync_x1_w31_lvt)
+                                         U_KEYEXP.ROUND_KEY_GEN[5].RKGEN_U.Key_FirstStage[112] (net)
+                  5.53    0.11  257.16 ^ _307648_/A (gt2_6t_inv_x1_w31_svt)
+     2    0.00    3.43    7.46  264.63 v _307648_/Y (gt2_6t_inv_x1_w31_svt)
+                                         _073023_ (net)
+                  3.43    0.08  264.70 v _307650_/A2 (gt2_6t_oai21_x1_w31_svt)
+     1    0.00    2.88    7.23  271.94 ^ _307650_/Y (gt2_6t_oai21_x1_w31_svt)
+                                         _073025_ (net)
+                  2.88    0.08  272.02 ^ U_KEYEXP.ROUND_KEY_GEN[5].RKGEN_U.Key_SecondStage[112]$_DFFE_PN0P_/D (gt2_6t_dffasync_x1_w31_lvt)
+                                272.02   data arrival time
+
+                          0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock source latency
+     1    0.00    0.00    0.00    0.00 ^ clk (in)
+                                         clk (net)
+                  1.26    1.03    1.03 ^ wire17047/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    7.46   12.40   13.43 ^ wire17047/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17046 (net)
+                  8.33    2.87   16.30 ^ wire17046/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    7.43   15.11   31.40 ^ wire17046/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17045 (net)
+                  8.37    2.95   34.36 ^ wire17045/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    8.51   16.25   50.61 ^ wire17045/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17044 (net)
+                  9.36    2.99   53.60 ^ clkbuf_0_clk/A (gt2_6t_buf_x2_w31_svt)
+     2    0.01    8.90   19.60   73.20 ^ clkbuf_0_clk/Y (gt2_6t_buf_x2_w31_svt)
+                                         clknet_0_clk (net)
+                  9.07    1.36   74.55 ^ clkbuf_1_1_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     1    0.00    3.54   15.97   90.52 ^ clkbuf_1_1_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_1_1_0_clk (net)
+                  3.55    0.63   91.15 ^ clkbuf_1_1_1_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.90   14.63  105.79 ^ clkbuf_1_1_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_1_1_1_clk (net)
+                  4.93    0.83  106.62 ^ clkbuf_2_3_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     1    0.00    3.72   13.99  120.61 ^ clkbuf_2_3_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_2_3_0_clk (net)
+                  3.74    0.72  121.33 ^ clkbuf_2_3_1_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.15   13.81  135.14 ^ clkbuf_2_3_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_2_3_1_clk (net)
+                  4.17    0.82  135.96 ^ clkbuf_3_6_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.71   14.64  150.60 ^ clkbuf_3_6_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_3_6_0_clk (net)
+                  4.82    1.26  151.86 ^ clkbuf_4_13_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.01   10.46   21.22  173.08 ^ clkbuf_4_13_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_4_13_0_clk (net)
+                 11.44    3.58  176.66 ^ clkbuf_5_27_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     4    0.01    9.74   23.92  200.58 ^ clkbuf_5_27_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_5_27_0_clk (net)
+                 10.44    2.92  203.50 ^ clkbuf_7_108_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    3.91   17.05  220.55 ^ clkbuf_7_108_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_7_108_0_clk (net)
+                  3.92    0.56  221.10 ^ clkbuf_8_216__f_clk/A (gt2_6t_buf_x2_w31_svt)
+    11    0.01   12.80   21.81  242.91 ^ clkbuf_8_216__f_clk/Y (gt2_6t_buf_x2_w31_svt)
+                                         clknet_8_216__leaf_clk (net)
+                 12.95    1.63  244.54 ^ clkbuf_leaf_946_clk/A (gt2_6t_buf_x4_w31_lvt)
+     5    0.00    5.27   17.31  261.85 ^ clkbuf_leaf_946_clk/Y (gt2_6t_buf_x4_w31_lvt)
+                                         clknet_leaf_946_clk (net)
+                  5.27    0.29  262.15 ^ U_KEYEXP.ROUND_KEY_GEN[5].RKGEN_U.Key_SecondStage[112]$_DFFE_PN0P_/CLK (gt2_6t_dffasync_x1_w31_lvt)
+                          0.00  262.15   clock reconvergence pessimism
+                          5.28  267.43   library hold time
+                                267.43   data required time
+-----------------------------------------------------------------------------
+                                267.43   data required time
+                               -272.02   data arrival time
+-----------------------------------------------------------------------------
+                                  4.59   slack (MET)
+
+
+
+==========================================================================
+finish report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: ROUND[4].U_ROUND.U_KEY.valid_out$_DFF_PN0_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: ROUND[5].U_ROUND.U_SUB.ROM[7].ROM.dout[3]$_DFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock source latency
+     1    0.00    0.00    0.00    0.00 ^ clk (in)
+                                         clk (net)
+                  1.26    1.03    1.03 ^ wire17047/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    7.46   12.40   13.43 ^ wire17047/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17046 (net)
+                  8.33    2.87   16.30 ^ wire17046/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    7.43   15.11   31.40 ^ wire17046/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17045 (net)
+                  8.37    2.95   34.36 ^ wire17045/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    8.51   16.25   50.61 ^ wire17045/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17044 (net)
+                  9.36    2.99   53.60 ^ clkbuf_0_clk/A (gt2_6t_buf_x2_w31_svt)
+     2    0.01    8.90   19.60   73.20 ^ clkbuf_0_clk/Y (gt2_6t_buf_x2_w31_svt)
+                                         clknet_0_clk (net)
+                  9.07    1.36   74.55 ^ clkbuf_1_1_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     1    0.00    3.54   15.97   90.52 ^ clkbuf_1_1_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_1_1_0_clk (net)
+                  3.55    0.63   91.15 ^ clkbuf_1_1_1_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.90   14.63  105.79 ^ clkbuf_1_1_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_1_1_1_clk (net)
+                  4.93    0.83  106.62 ^ clkbuf_2_3_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     1    0.00    3.72   13.99  120.61 ^ clkbuf_2_3_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_2_3_0_clk (net)
+                  3.74    0.72  121.33 ^ clkbuf_2_3_1_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.15   13.81  135.14 ^ clkbuf_2_3_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_2_3_1_clk (net)
+                  4.17    0.82  135.96 ^ clkbuf_3_6_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.71   14.64  150.60 ^ clkbuf_3_6_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_3_6_0_clk (net)
+                  4.82    1.26  151.86 ^ clkbuf_4_13_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.01   10.46   21.22  173.08 ^ clkbuf_4_13_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_4_13_0_clk (net)
+                 11.44    3.58  176.66 ^ clkbuf_5_27_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     4    0.01    9.74   23.92  200.58 ^ clkbuf_5_27_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_5_27_0_clk (net)
+                 10.22    2.31  202.90 ^ clkbuf_7_111_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.01    7.59   21.30  224.19 ^ clkbuf_7_111_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_7_111_0_clk (net)
+                  7.89    1.68  225.88 ^ clkbuf_8_223__f_clk/A (gt2_6t_buf_x2_w31_svt)
+     9    0.01   13.71   24.37  250.25 ^ clkbuf_8_223__f_clk/Y (gt2_6t_buf_x2_w31_svt)
+                                         clknet_8_223__leaf_clk (net)
+                 13.83    1.39  251.64 ^ clkbuf_leaf_1061_clk/A (gt2_6t_buf_x4_w31_lvt)
+     5    0.00    5.50   17.90  269.54 ^ clkbuf_leaf_1061_clk/Y (gt2_6t_buf_x4_w31_lvt)
+                                         clknet_leaf_1061_clk (net)
+                  5.51    0.65  270.19 ^ ROUND[4].U_ROUND.U_KEY.valid_out$_DFF_PN0_/CLK (gt2_6t_dffasync_x1_w31_lvt)
+    21    0.02   89.91  114.14  384.33 v ROUND[4].U_ROUND.U_KEY.valid_out$_DFF_PN0_/Q (gt2_6t_dffasync_x1_w31_lvt)
+                                         ROUND[4].U_ROUND.U_KEY.valid_out (net)
+                 89.97    1.80  386.13 v _166372_/A (gt2_6t_inv_x1_w31_lvt)
+    14    0.03   83.35  132.22  518.36 ^ _166372_/Y (gt2_6t_inv_x1_w31_lvt)
+                                         _092453_ (net)
+                 85.23   13.64  532.00 ^ place15381/A (gt2_6t_buf_x3_w31_lvt)
+     7    0.01   10.25   30.05  562.04 ^ place15381/Y (gt2_6t_buf_x3_w31_lvt)
+                                         net15380 (net)
+                 12.84    6.57  568.61 ^ place15380/A (gt2_6t_buf_x1_w31_lvt)
+     7    0.01   25.18   33.25  601.86 ^ place15380/Y (gt2_6t_buf_x1_w31_lvt)
+                                         net15379 (net)
+                 26.29    6.00  607.86 ^ place15379/A (gt2_6t_buf_x1_w31_lvt)
+     8    0.02   48.10   59.09  666.94 ^ place15379/Y (gt2_6t_buf_x1_w31_lvt)
+                                         net15378 (net)
+                 50.81   13.20  680.14 ^ place15378/A (gt2_6t_buf_x1_w31_lvt)
+    26    0.02   48.97   51.52  731.66 ^ place15378/Y (gt2_6t_buf_x1_w31_lvt)
+                                         net15377 (net)
+                 67.74   35.46  767.13 ^ _224058_/A (gt2_6t_and2_x1_w31_svt)
+     2    0.00    5.07   26.36  793.49 ^ _224058_/Y (gt2_6t_and2_x1_w31_svt)
+                                         _146037_ (net)
+                  5.07    0.16  793.65 ^ _224059_/B (gt2_6t_aoi21_x1_w31_svt)
+     1    0.00    6.07    7.33  800.97 v _224059_/Y (gt2_6t_aoi21_x1_w31_svt)
+                                         _146038_ (net)
+                  6.07    0.12  801.09 v _224060_/C (gt2_6t_nand3_x1_w31_svt)
+     1    0.00    5.20    7.67  808.76 ^ _224060_/Y (gt2_6t_nand3_x1_w31_svt)
+                                         _146039_ (net)
+                  5.20    0.06  808.82 ^ _224061_/C (gt2_6t_aoi211_x1_w31_svt)
+     1    0.00   14.37    6.50  815.32 v _224061_/Y (gt2_6t_aoi211_x1_w31_svt)
+                                         _146040_ (net)
+                 14.37    0.11  815.43 v _224111_/A1 (gt2_6t_oai22_x1_w31_svt)
+     1    0.00    4.74   12.38  827.81 ^ _224111_/Y (gt2_6t_oai22_x1_w31_svt)
+                                         _146090_ (net)
+                  4.74    0.09  827.90 ^ ROUND[5].U_ROUND.U_SUB.ROM[7].ROM.dout[3]$_DFFE_PN0P_/D (gt2_6t_dffasync_x1_w31_lvt)
+                                827.90   data arrival time
+
+                       1000.00 1000.00   clock core_clock (rise edge)
+                          0.00 1000.00   clock source latency
+     1    0.00    0.00    0.00 1000.00 ^ clk (in)
+                                         clk (net)
+                  1.26    1.03 1001.03 ^ wire17047/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    7.46   12.40 1013.43 ^ wire17047/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17046 (net)
+                  8.33    2.87 1016.30 ^ wire17046/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    7.43   15.11 1031.40 ^ wire17046/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17045 (net)
+                  8.37    2.95 1034.36 ^ wire17045/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    8.51   16.25 1050.61 ^ wire17045/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17044 (net)
+                  9.36    2.99 1053.60 ^ clkbuf_0_clk/A (gt2_6t_buf_x2_w31_svt)
+     2    0.01    8.90   19.60 1073.20 ^ clkbuf_0_clk/Y (gt2_6t_buf_x2_w31_svt)
+                                         clknet_0_clk (net)
+                  9.10    1.50 1074.69 ^ clkbuf_1_0_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     1    0.00    3.93   16.40 1091.09 ^ clkbuf_1_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_1_0_0_clk (net)
+                  3.96    0.87 1091.96 ^ clkbuf_1_0_1_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.45   14.37 1106.33 ^ clkbuf_1_0_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_1_0_1_clk (net)
+                  4.45    0.44 1106.77 ^ clkbuf_2_0_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     1    0.00    3.65   13.64 1120.40 ^ clkbuf_2_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_2_0_0_clk (net)
+                  3.66    0.67 1121.07 ^ clkbuf_2_0_1_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.09   13.69 1134.76 ^ clkbuf_2_0_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_2_0_1_clk (net)
+                  4.11    0.83 1135.59 ^ clkbuf_3_0_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.91   14.85 1150.44 ^ clkbuf_3_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_3_0_0_clk (net)
+                  5.03    1.26 1151.70 ^ clkbuf_4_0_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.33   14.72 1166.41 ^ clkbuf_4_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_4_0_0_clk (net)
+                  4.39    1.03 1167.44 ^ clkbuf_5_0_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     4    0.01    5.99   16.25 1183.70 ^ clkbuf_5_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_5_0_0_clk (net)
+                  6.26    1.60 1185.29 ^ clkbuf_7_1_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    3.54   14.56 1199.85 ^ clkbuf_7_1_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_7_1_0_clk (net)
+                  3.55    0.55 1200.40 ^ clkbuf_8_2__f_clk/A (gt2_6t_buf_x2_w31_svt)
+     8    0.01   11.19   19.40 1219.80 ^ clkbuf_8_2__f_clk/Y (gt2_6t_buf_x2_w31_svt)
+                                         clknet_8_2__leaf_clk (net)
+                 11.28    1.06 1220.85 ^ clkbuf_leaf_2312_clk/A (gt2_6t_buf_x4_w31_lvt)
+     4    0.00    5.28   16.67 1237.52 ^ clkbuf_leaf_2312_clk/Y (gt2_6t_buf_x4_w31_lvt)
+                                         clknet_leaf_2312_clk (net)
+                  5.28    0.41 1237.93 ^ ROUND[5].U_ROUND.U_SUB.ROM[7].ROM.dout[3]$_DFFE_PN0P_/CLK (gt2_6t_dffasync_x1_w31_lvt)
+                          0.00 1237.93   clock reconvergence pessimism
+                          0.00 1237.93   library setup time
+                               1237.93   data required time
+-----------------------------------------------------------------------------
+                               1237.93   data required time
+                               -827.90   data arrival time
+-----------------------------------------------------------------------------
+                                410.03   slack (MET)
+
+
+
+==========================================================================
+finish report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: ROUND[4].U_ROUND.U_KEY.valid_out$_DFF_PN0_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: ROUND[5].U_ROUND.U_SUB.ROM[7].ROM.dout[3]$_DFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock source latency
+     1    0.00    0.00    0.00    0.00 ^ clk (in)
+                                         clk (net)
+                  1.26    1.03    1.03 ^ wire17047/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    7.46   12.40   13.43 ^ wire17047/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17046 (net)
+                  8.33    2.87   16.30 ^ wire17046/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    7.43   15.11   31.40 ^ wire17046/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17045 (net)
+                  8.37    2.95   34.36 ^ wire17045/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    8.51   16.25   50.61 ^ wire17045/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17044 (net)
+                  9.36    2.99   53.60 ^ clkbuf_0_clk/A (gt2_6t_buf_x2_w31_svt)
+     2    0.01    8.90   19.60   73.20 ^ clkbuf_0_clk/Y (gt2_6t_buf_x2_w31_svt)
+                                         clknet_0_clk (net)
+                  9.07    1.36   74.55 ^ clkbuf_1_1_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     1    0.00    3.54   15.97   90.52 ^ clkbuf_1_1_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_1_1_0_clk (net)
+                  3.55    0.63   91.15 ^ clkbuf_1_1_1_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.90   14.63  105.79 ^ clkbuf_1_1_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_1_1_1_clk (net)
+                  4.93    0.83  106.62 ^ clkbuf_2_3_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     1    0.00    3.72   13.99  120.61 ^ clkbuf_2_3_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_2_3_0_clk (net)
+                  3.74    0.72  121.33 ^ clkbuf_2_3_1_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.15   13.81  135.14 ^ clkbuf_2_3_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_2_3_1_clk (net)
+                  4.17    0.82  135.96 ^ clkbuf_3_6_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.71   14.64  150.60 ^ clkbuf_3_6_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_3_6_0_clk (net)
+                  4.82    1.26  151.86 ^ clkbuf_4_13_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.01   10.46   21.22  173.08 ^ clkbuf_4_13_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_4_13_0_clk (net)
+                 11.44    3.58  176.66 ^ clkbuf_5_27_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     4    0.01    9.74   23.92  200.58 ^ clkbuf_5_27_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_5_27_0_clk (net)
+                 10.22    2.31  202.90 ^ clkbuf_7_111_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.01    7.59   21.30  224.19 ^ clkbuf_7_111_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_7_111_0_clk (net)
+                  7.89    1.68  225.88 ^ clkbuf_8_223__f_clk/A (gt2_6t_buf_x2_w31_svt)
+     9    0.01   13.71   24.37  250.25 ^ clkbuf_8_223__f_clk/Y (gt2_6t_buf_x2_w31_svt)
+                                         clknet_8_223__leaf_clk (net)
+                 13.83    1.39  251.64 ^ clkbuf_leaf_1061_clk/A (gt2_6t_buf_x4_w31_lvt)
+     5    0.00    5.50   17.90  269.54 ^ clkbuf_leaf_1061_clk/Y (gt2_6t_buf_x4_w31_lvt)
+                                         clknet_leaf_1061_clk (net)
+                  5.51    0.65  270.19 ^ ROUND[4].U_ROUND.U_KEY.valid_out$_DFF_PN0_/CLK (gt2_6t_dffasync_x1_w31_lvt)
+    21    0.02   89.91  114.14  384.33 v ROUND[4].U_ROUND.U_KEY.valid_out$_DFF_PN0_/Q (gt2_6t_dffasync_x1_w31_lvt)
+                                         ROUND[4].U_ROUND.U_KEY.valid_out (net)
+                 89.97    1.80  386.13 v _166372_/A (gt2_6t_inv_x1_w31_lvt)
+    14    0.03   83.35  132.22  518.36 ^ _166372_/Y (gt2_6t_inv_x1_w31_lvt)
+                                         _092453_ (net)
+                 85.23   13.64  532.00 ^ place15381/A (gt2_6t_buf_x3_w31_lvt)
+     7    0.01   10.25   30.05  562.04 ^ place15381/Y (gt2_6t_buf_x3_w31_lvt)
+                                         net15380 (net)
+                 12.84    6.57  568.61 ^ place15380/A (gt2_6t_buf_x1_w31_lvt)
+     7    0.01   25.18   33.25  601.86 ^ place15380/Y (gt2_6t_buf_x1_w31_lvt)
+                                         net15379 (net)
+                 26.29    6.00  607.86 ^ place15379/A (gt2_6t_buf_x1_w31_lvt)
+     8    0.02   48.10   59.09  666.94 ^ place15379/Y (gt2_6t_buf_x1_w31_lvt)
+                                         net15378 (net)
+                 50.81   13.20  680.14 ^ place15378/A (gt2_6t_buf_x1_w31_lvt)
+    26    0.02   48.97   51.52  731.66 ^ place15378/Y (gt2_6t_buf_x1_w31_lvt)
+                                         net15377 (net)
+                 67.74   35.46  767.13 ^ _224058_/A (gt2_6t_and2_x1_w31_svt)
+     2    0.00    5.07   26.36  793.49 ^ _224058_/Y (gt2_6t_and2_x1_w31_svt)
+                                         _146037_ (net)
+                  5.07    0.16  793.65 ^ _224059_/B (gt2_6t_aoi21_x1_w31_svt)
+     1    0.00    6.07    7.33  800.97 v _224059_/Y (gt2_6t_aoi21_x1_w31_svt)
+                                         _146038_ (net)
+                  6.07    0.12  801.09 v _224060_/C (gt2_6t_nand3_x1_w31_svt)
+     1    0.00    5.20    7.67  808.76 ^ _224060_/Y (gt2_6t_nand3_x1_w31_svt)
+                                         _146039_ (net)
+                  5.20    0.06  808.82 ^ _224061_/C (gt2_6t_aoi211_x1_w31_svt)
+     1    0.00   14.37    6.50  815.32 v _224061_/Y (gt2_6t_aoi211_x1_w31_svt)
+                                         _146040_ (net)
+                 14.37    0.11  815.43 v _224111_/A1 (gt2_6t_oai22_x1_w31_svt)
+     1    0.00    4.74   12.38  827.81 ^ _224111_/Y (gt2_6t_oai22_x1_w31_svt)
+                                         _146090_ (net)
+                  4.74    0.09  827.90 ^ ROUND[5].U_ROUND.U_SUB.ROM[7].ROM.dout[3]$_DFFE_PN0P_/D (gt2_6t_dffasync_x1_w31_lvt)
+                                827.90   data arrival time
+
+                       1000.00 1000.00   clock core_clock (rise edge)
+                          0.00 1000.00   clock source latency
+     1    0.00    0.00    0.00 1000.00 ^ clk (in)
+                                         clk (net)
+                  1.26    1.03 1001.03 ^ wire17047/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    7.46   12.40 1013.43 ^ wire17047/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17046 (net)
+                  8.33    2.87 1016.30 ^ wire17046/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    7.43   15.11 1031.40 ^ wire17046/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17045 (net)
+                  8.37    2.95 1034.36 ^ wire17045/A (gt2_6t_buf_x2_w31_lvt)
+     1    0.01    8.51   16.25 1050.61 ^ wire17045/Y (gt2_6t_buf_x2_w31_lvt)
+                                         net17044 (net)
+                  9.36    2.99 1053.60 ^ clkbuf_0_clk/A (gt2_6t_buf_x2_w31_svt)
+     2    0.01    8.90   19.60 1073.20 ^ clkbuf_0_clk/Y (gt2_6t_buf_x2_w31_svt)
+                                         clknet_0_clk (net)
+                  9.10    1.50 1074.69 ^ clkbuf_1_0_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     1    0.00    3.93   16.40 1091.09 ^ clkbuf_1_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_1_0_0_clk (net)
+                  3.96    0.87 1091.96 ^ clkbuf_1_0_1_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.45   14.37 1106.33 ^ clkbuf_1_0_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_1_0_1_clk (net)
+                  4.45    0.44 1106.77 ^ clkbuf_2_0_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     1    0.00    3.65   13.64 1120.40 ^ clkbuf_2_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_2_0_0_clk (net)
+                  3.66    0.67 1121.07 ^ clkbuf_2_0_1_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.09   13.69 1134.76 ^ clkbuf_2_0_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_2_0_1_clk (net)
+                  4.11    0.83 1135.59 ^ clkbuf_3_0_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.91   14.85 1150.44 ^ clkbuf_3_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_3_0_0_clk (net)
+                  5.03    1.26 1151.70 ^ clkbuf_4_0_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    4.33   14.72 1166.41 ^ clkbuf_4_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_4_0_0_clk (net)
+                  4.39    1.03 1167.44 ^ clkbuf_5_0_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     4    0.01    5.99   16.25 1183.70 ^ clkbuf_5_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_5_0_0_clk (net)
+                  6.26    1.60 1185.29 ^ clkbuf_7_1_0_clk/A (gt2_6t_buf_x4_w31_svt)
+     2    0.00    3.54   14.56 1199.85 ^ clkbuf_7_1_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+                                         clknet_7_1_0_clk (net)
+                  3.55    0.55 1200.40 ^ clkbuf_8_2__f_clk/A (gt2_6t_buf_x2_w31_svt)
+     8    0.01   11.19   19.40 1219.80 ^ clkbuf_8_2__f_clk/Y (gt2_6t_buf_x2_w31_svt)
+                                         clknet_8_2__leaf_clk (net)
+                 11.28    1.06 1220.85 ^ clkbuf_leaf_2312_clk/A (gt2_6t_buf_x4_w31_lvt)
+     4    0.00    5.28   16.67 1237.52 ^ clkbuf_leaf_2312_clk/Y (gt2_6t_buf_x4_w31_lvt)
+                                         clknet_leaf_2312_clk (net)
+                  5.28    0.41 1237.93 ^ ROUND[5].U_ROUND.U_SUB.ROM[7].ROM.dout[3]$_DFFE_PN0P_/CLK (gt2_6t_dffasync_x1_w31_lvt)
+                          0.00 1237.93   clock reconvergence pessimism
+                          0.00 1237.93   library setup time
+                               1237.93   data required time
+-----------------------------------------------------------------------------
+                               1237.93   data required time
+                               -827.90   data arrival time
+-----------------------------------------------------------------------------
+                                410.03   slack (MET)
+
+
+
+==========================================================================
+finish report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+
+==========================================================================
+finish max_slew_check_slack
+--------------------------------------------------------------------------
+790.748291015625
+
+==========================================================================
+finish max_slew_check_limit
+--------------------------------------------------------------------------
+1000.0
+
+==========================================================================
+finish max_slew_check_slack_limit
+--------------------------------------------------------------------------
+0.7907
+
+==========================================================================
+finish max_fanout_check_slack
+--------------------------------------------------------------------------
+20.0
+
+==========================================================================
+finish max_fanout_check_limit
+--------------------------------------------------------------------------
+20.0
+
+==========================================================================
+finish max_fanout_check_slack_limit
+--------------------------------------------------------------------------
+1.0000
+
+==========================================================================
+finish max_capacitance_check_slack
+--------------------------------------------------------------------------
+0.150320902466774
+
+==========================================================================
+finish max_capacitance_check_limit
+--------------------------------------------------------------------------
+0.1923000067472458
+
+==========================================================================
+finish max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+0.7817
+
+==========================================================================
+finish max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 0
+
+==========================================================================
+finish max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+finish max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 0
+
+==========================================================================
+finish setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 0
+
+==========================================================================
+finish hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+finish report_checks -path_delay max reg to reg
+--------------------------------------------------------------------------
+Startpoint: ROUND[4].U_ROUND.U_KEY.valid_out$_DFF_PN0_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: ROUND[5].U_ROUND.U_SUB.ROM[7].ROM.dout[3]$_DFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk (in)
+  13.43   13.43 ^ wire17047/Y (gt2_6t_buf_x2_w31_lvt)
+  17.98   31.40 ^ wire17046/Y (gt2_6t_buf_x2_w31_lvt)
+  19.20   50.61 ^ wire17045/Y (gt2_6t_buf_x2_w31_lvt)
+  22.59   73.20 ^ clkbuf_0_clk/Y (gt2_6t_buf_x2_w31_svt)
+  17.33   90.52 ^ clkbuf_1_1_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  15.26  105.79 ^ clkbuf_1_1_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+  14.82  120.61 ^ clkbuf_2_3_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  14.53  135.14 ^ clkbuf_2_3_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+  15.46  150.60 ^ clkbuf_3_6_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  22.47  173.08 ^ clkbuf_4_13_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  27.51  200.58 ^ clkbuf_5_27_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  23.61  224.19 ^ clkbuf_7_111_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  26.06  250.25 ^ clkbuf_8_223__f_clk/Y (gt2_6t_buf_x2_w31_svt)
+  19.29  269.54 ^ clkbuf_leaf_1061_clk/Y (gt2_6t_buf_x4_w31_lvt)
+   0.65  270.19 ^ ROUND[4].U_ROUND.U_KEY.valid_out$_DFF_PN0_/CLK (gt2_6t_dffasync_x1_w31_lvt)
+ 114.14  384.33 v ROUND[4].U_ROUND.U_KEY.valid_out$_DFF_PN0_/Q (gt2_6t_dffasync_x1_w31_lvt)
+ 134.03  518.36 ^ _166372_/Y (gt2_6t_inv_x1_w31_lvt)
+  43.68  562.04 ^ place15381/Y (gt2_6t_buf_x3_w31_lvt)
+  39.82  601.86 ^ place15380/Y (gt2_6t_buf_x1_w31_lvt)
+  65.08  666.94 ^ place15379/Y (gt2_6t_buf_x1_w31_lvt)
+  64.72  731.66 ^ place15378/Y (gt2_6t_buf_x1_w31_lvt)
+  61.83  793.49 ^ _224058_/Y (gt2_6t_and2_x1_w31_svt)
+   7.48  800.97 v _224059_/Y (gt2_6t_aoi21_x1_w31_svt)
+   7.79  808.76 ^ _224060_/Y (gt2_6t_nand3_x1_w31_svt)
+   6.56  815.32 v _224061_/Y (gt2_6t_aoi211_x1_w31_svt)
+  12.48  827.81 ^ _224111_/Y (gt2_6t_oai22_x1_w31_svt)
+   0.09  827.90 ^ ROUND[5].U_ROUND.U_SUB.ROM[7].ROM.dout[3]$_DFFE_PN0P_/D (gt2_6t_dffasync_x1_w31_lvt)
+         827.90   data arrival time
+
+1000.00 1000.00   clock core_clock (rise edge)
+   0.00 1000.00   clock source latency
+   0.00 1000.00 ^ clk (in)
+  13.43 1013.43 ^ wire17047/Y (gt2_6t_buf_x2_w31_lvt)
+  17.98 1031.40 ^ wire17046/Y (gt2_6t_buf_x2_w31_lvt)
+  19.20 1050.61 ^ wire17045/Y (gt2_6t_buf_x2_w31_lvt)
+  22.59 1073.20 ^ clkbuf_0_clk/Y (gt2_6t_buf_x2_w31_svt)
+  17.90 1091.09 ^ clkbuf_1_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  15.24 1106.33 ^ clkbuf_1_0_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+  14.07 1120.40 ^ clkbuf_2_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  14.36 1134.76 ^ clkbuf_2_0_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+  15.68 1150.44 ^ clkbuf_3_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  15.97 1166.41 ^ clkbuf_4_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  17.29 1183.70 ^ clkbuf_5_0_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  16.15 1199.85 ^ clkbuf_7_1_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  19.95 1219.80 ^ clkbuf_8_2__f_clk/Y (gt2_6t_buf_x2_w31_svt)
+  17.72 1237.52 ^ clkbuf_leaf_2312_clk/Y (gt2_6t_buf_x4_w31_lvt)
+   0.41 1237.93 ^ ROUND[5].U_ROUND.U_SUB.ROM[7].ROM.dout[3]$_DFFE_PN0P_/CLK (gt2_6t_dffasync_x1_w31_lvt)
+   0.00 1237.93   clock reconvergence pessimism
+   0.00 1237.93   library setup time
+        1237.93   data required time
+---------------------------------------------------------
+        1237.93   data required time
+        -827.90   data arrival time
+---------------------------------------------------------
+         410.03   slack (MET)
+
+
+
+==========================================================================
+finish report_checks -path_delay min reg to reg
+--------------------------------------------------------------------------
+Startpoint: U_KEYEXP.ROUND_KEY_GEN[5].RKGEN_U.Key_FirstStage[112]$_DFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: U_KEYEXP.ROUND_KEY_GEN[5].RKGEN_U.Key_SecondStage[112]$_DFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk (in)
+  13.43   13.43 ^ wire17047/Y (gt2_6t_buf_x2_w31_lvt)
+  17.98   31.40 ^ wire17046/Y (gt2_6t_buf_x2_w31_lvt)
+  19.20   50.61 ^ wire17045/Y (gt2_6t_buf_x2_w31_lvt)
+  22.59   73.20 ^ clkbuf_0_clk/Y (gt2_6t_buf_x2_w31_svt)
+  17.33   90.52 ^ clkbuf_1_1_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  15.26  105.79 ^ clkbuf_1_1_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+  14.82  120.61 ^ clkbuf_2_3_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  14.53  135.14 ^ clkbuf_2_3_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+  15.46  150.60 ^ clkbuf_3_6_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  15.96  166.56 ^ clkbuf_4_12_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  17.01  183.57 ^ clkbuf_5_25_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  16.06  199.63 ^ clkbuf_7_102_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  19.99  219.62 ^ clkbuf_8_205__f_clk/Y (gt2_6t_buf_x2_w31_svt)
+  17.04  236.67 ^ clkbuf_leaf_945_clk/Y (gt2_6t_buf_x4_w31_lvt)
+   0.90  237.56 ^ U_KEYEXP.ROUND_KEY_GEN[5].RKGEN_U.Key_FirstStage[112]$_DFFE_PN0P_/CLK (gt2_6t_dffasync_x1_w31_lvt)
+  19.50  257.06 ^ U_KEYEXP.ROUND_KEY_GEN[5].RKGEN_U.Key_FirstStage[112]$_DFFE_PN0P_/Q (gt2_6t_dffasync_x1_w31_lvt)
+   7.57  264.63 v _307648_/Y (gt2_6t_inv_x1_w31_svt)
+   7.31  271.94 ^ _307650_/Y (gt2_6t_oai21_x1_w31_svt)
+   0.08  272.02 ^ U_KEYEXP.ROUND_KEY_GEN[5].RKGEN_U.Key_SecondStage[112]$_DFFE_PN0P_/D (gt2_6t_dffasync_x1_w31_lvt)
+         272.02   data arrival time
+
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk (in)
+  13.43   13.43 ^ wire17047/Y (gt2_6t_buf_x2_w31_lvt)
+  17.98   31.40 ^ wire17046/Y (gt2_6t_buf_x2_w31_lvt)
+  19.20   50.61 ^ wire17045/Y (gt2_6t_buf_x2_w31_lvt)
+  22.59   73.20 ^ clkbuf_0_clk/Y (gt2_6t_buf_x2_w31_svt)
+  17.33   90.52 ^ clkbuf_1_1_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  15.26  105.79 ^ clkbuf_1_1_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+  14.82  120.61 ^ clkbuf_2_3_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  14.53  135.14 ^ clkbuf_2_3_1_clk/Y (gt2_6t_buf_x4_w31_svt)
+  15.46  150.60 ^ clkbuf_3_6_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  22.47  173.08 ^ clkbuf_4_13_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  27.51  200.58 ^ clkbuf_5_27_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  19.96  220.55 ^ clkbuf_7_108_0_clk/Y (gt2_6t_buf_x4_w31_svt)
+  22.36  242.91 ^ clkbuf_8_216__f_clk/Y (gt2_6t_buf_x2_w31_svt)
+  18.94  261.85 ^ clkbuf_leaf_946_clk/Y (gt2_6t_buf_x4_w31_lvt)
+   0.29  262.15 ^ U_KEYEXP.ROUND_KEY_GEN[5].RKGEN_U.Key_SecondStage[112]$_DFFE_PN0P_/CLK (gt2_6t_dffasync_x1_w31_lvt)
+   0.00  262.15   clock reconvergence pessimism
+   5.28  267.43   library hold time
+         267.43   data required time
+---------------------------------------------------------
+         267.43   data required time
+        -272.02   data arrival time
+---------------------------------------------------------
+           4.59   slack (MET)
+
+
+
+==========================================================================
+finish critical path target clock latency max path
+--------------------------------------------------------------------------
+246.2260
+
+==========================================================================
+finish critical path target clock latency min path
+--------------------------------------------------------------------------
+244.2314
+
+==========================================================================
+finish critical path source clock latency min path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+finish critical path delay
+--------------------------------------------------------------------------
+827.9002
+
+==========================================================================
+finish critical path slack
+--------------------------------------------------------------------------
+410.0338
+
+==========================================================================
+finish slack div critical path delay
+--------------------------------------------------------------------------
+49.526960
+
+==========================================================================
+finish report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             1.22e-02   0.00e+00   1.07e-04   1.23e-02 -12.2%
+Combinational         -4.81e-02   0.00e+00   1.25e-04  -4.80e-02  47.4%
+Clock                 -6.57e-02   0.00e+00   5.77e-05  -6.56e-02  64.8%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00  -0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00  -0.0%
+----------------------------------------------------------------
+Total                 -1.02e-01   0.00e+00   2.89e-04  -1.01e-01 100.0%
+                         100.3%      -0.0%      -0.3%

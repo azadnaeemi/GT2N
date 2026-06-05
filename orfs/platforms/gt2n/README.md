@@ -1,5 +1,7 @@
 # GT2N PDK
 
+> **Source:** copied from [azadnaeemi/GT2N](https://github.com/azadnaeemi/GT2N) at commit [`291fae73d6`](https://github.com/azadnaeemi/GT2N/commit/291fae73d609ae2308f080879a2002af707ccec2) (2026-04-29, *Update GT2.ict*). The only local modification is the tap-cell BPR `OBS` → `PORT` fix on `gt2_6t_tap_w31_lvt` (proposed upstream as [azadnaeemi/GT2N#12](https://github.com/azadnaeemi/GT2N/issues/12)).
+
 <img src="./VirtualFabricationDemo.gif" alt="VirtualFabricationDemo" width="400">
 
 This is the initial release for the GT2N PDK with 71 standard cells. It is based on 2nm GAAFET with BSPDN.
@@ -54,13 +56,3 @@ The GAAFET (3-stack nanosheet) model card is (depending on the process corner an
 GT2N/device/tt/gt2_w31_lvt_tt.sp
 
 BSPDN support for Cadence Innovus implementation flow is under development.
-
-# OpenROAD flow (bazel-orfs)
-
-This repo is the source of truth for the GT2N OpenROAD platform. The platform lives in orfs/platforms/gt2n; its tech LEF, cell LEF/LIB and GDS are symlinks to the collateral above (techlib/gt2_tech.lef, lef/tt, lib/tt, gds), so there is a single copy of every file. OpenROAD-flow-scripts can vendor these files as needed, and the same files are wired up for [bazel-orfs](https://github.com/The-OpenROAD-Project/bazel-orfs) as an out-of-repo PDK.
-
-A gcd demo is included. Install [Bazelisk](https://bazel.build/install/bazelisk), then from the repo root open the routed design in the OpenROAD GUI:
-
-    bazelisk run //orfs:gcd_route gui_route
-
-The first run builds OpenROAD and Yosys from source; no Docker or system EDA tools are needed. GT2N routes RTL-to-GDS through detailed route (0 violations), using OpenROAD's recent `LEF58_BACKSIDE` support that this repo pins; static IR analysis is skipped pending a real backside power grid. See orfs/README.md for how the flow works (stage targets, where metrics live, wiring a PDK), an A/B comparison of gcd on GT2N vs ASAP7, and the bazelisk run //:update-a-b command that regenerates it.

@@ -1,0 +1,9 @@
+# Bazel
+/bazel-*
+tmp/
+user.bazelrc
+MODULE.bazel.lock
+
+# Python bytecode
+__pycache__/
+*.pyc

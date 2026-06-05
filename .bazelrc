@@ -1,0 +1,33 @@
+# Mirrors bazel-orfs's own .bazelrc. These settings are root-module-only
+# (registries, C++ std, glob/lockfile/extension flags), so a downstream
+# workspace that builds the ORFS tools from source must repeat them here.
+
+build --incompatible_strict_action_env
+
+# scip 9.2.3 (pulled transitively by OpenROAD) needs a not-yet-on-BCR fix
+# (scip 9.2.3.bcr.1), hosted in a fork registry. BCR is consulted first; the
+# fork only for versions BCR doesn't carry yet. The commit hash pins it.
+common --registry=https://bcr.bazel.build/
+common --registry=https://raw.githubusercontent.com/oharboe/bazel-central-registry/c220c8fc735c0e05c0354330b8885ca36275bd02/
+
+# Required by OpenROAD (STA uses std::format_string from C++20).
+build --cxxopt "-std=c++20" --host_cxxopt "-std=c++20"
+
+common --incompatible_disallow_empty_glob
+common --lockfile_mode=off
+
+# Required by OpenROAD's MODULE.bazel (uses isolate = True in use_extension).
+common --experimental_isolated_extension_usages
+
+# Garbage-collect the disk cache to avoid exhausting disk.
+build --experimental_disk_cache_gc_max_size=2G
+
+# Keep the bazel-orfs results convention: tmp/... under the workspace root.
+build --symlink_prefix=bazel-
+
+# Note: OpenROAD/OpenSTA/yosys/abc build in Bazel's exec configuration, which
+# defaults to -c opt (-O2) — verified via `bazel aquery`. No extra copt flags
+# are needed to get an optimized OpenROAD; routing time is dominated by the
+# design, not the build.
+
+try-import %workspace%/user.bazelrc

@@ -1,0 +1,36 @@
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
+
+# A/B table generator. Library form so the unit test can import it without
+# pulling in the (expensive) flow data deps.
+py_library(
+    name = "update_ab",
+    srcs = ["update_ab.py"],
+    imports = ["."],
+    visibility = ["//visibility:public"],
+)
+
+# `bazelisk run //:update-a-b` (aliased from the root) builds both AES flows
+# (GT2N + ASAP7) through finish, then rewrites the A/B table and regenerates
+# the matplotlib plot (ab_clock_period.png) in orfs/README.md's directory.
+py_binary(
+    name = "update-a-b",
+    srcs = ["update_ab.py"],
+    data = [
+        "//orfs:aes_asap7_final",
+        "//orfs:aes_final",
+    ],
+    main = "update_ab.py",
+    visibility = ["//visibility:public"],
+    # The plot uses matplotlib via a host python3 (see tools/update_ab.py
+    # write_plot) — kept out of the hermetic deps to avoid a heavy/fragile pip
+    # closure for a dev-only convenience. The table itself is pure stdlib.
+    deps = [":update_ab"],
+)
+
+# Hermetic unit tests for the pure logic (no flow build, no tools).
+py_test(
+    name = "update_ab_test",
+    srcs = ["update_ab_test.py"],
+    main = "update_ab_test.py",
+    deps = [":update_ab"],
+)

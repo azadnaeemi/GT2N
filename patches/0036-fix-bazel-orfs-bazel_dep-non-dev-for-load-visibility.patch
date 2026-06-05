@@ -1,0 +1,28 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=C3=98yvind=20Harboe?= <oyvind.harboe@zylin.com>
+Date: Tue, 12 May 2026 09:00:00 +0200
+Subject: [PATCH] fix: keep bazel_dep(bazel-orfs) non-dev for load() visibility
+
+flow/BUILD has `load("@bazel-orfs//:openroad.bzl", "orfs_pdk")`, which
+needs @bazel-orfs visible from @@orfs+ even when ORFS is consumed as
+a non-root module.  Marking the bazel_dep dev-only suppresses that
+visibility — only the git_override (which is implicitly root-only)
+should be dev-conditional.
+
+Signed-off-by: =?UTF-8?q?=C3=98yvind=20Harboe?= <oyvind.harboe@zylin.com>
+---
+ MODULE.bazel | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/MODULE.bazel b/MODULE.bazel
+--- a/MODULE.bazel
++++ b/MODULE.bazel
+@@ -34,5 +34,5 @@
+ )
+ 
+-bazel_dep(name = "bazel-orfs", dev_dependency = True)
++bazel_dep(name = "bazel-orfs")
+ bazel_dep(name = "bazel-orfs-verilog", dev_dependency = True)
+ 
+--
+2.51.0

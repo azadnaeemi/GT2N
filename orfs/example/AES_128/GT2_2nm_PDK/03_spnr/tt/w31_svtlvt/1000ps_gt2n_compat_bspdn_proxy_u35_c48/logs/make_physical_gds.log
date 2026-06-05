@@ -1,0 +1,21 @@
+OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD
+GT2N BSPDN proxy physical/signoff grid insertion
+input_gds: /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_final.gds
+output_gds: /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_final_bspdn_physical.gds
+topcell: aes
+dbu_um: 0.0005
+bbox_dbu: (0,0;281013,281013)
+core_window_dbu: (10080, 10080) (270933, 270933)
+bpr_rails: 906
+bm1_stripes: 195
+bm2_stripes: 195
+bm3_stripes: 23
+bm4_stripes: 23
+brdl_stripes: 11
+bv0_cuts: 88335
+bv1_cuts: 19013
+bv2_cuts: 2243
+bv3_cuts: 265
+bv4_cuts: 127
+Wrote physical BSPDN GDS: /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/results/gt2n_compat_bspdn_proxy/aes_128/base/6_final_bspdn_physical.gds
+Wrote generation report: /work/djang62/Openroad/handoff/gt2n_openroad_run/AES_128/GT2_2nm_PDK/03_spnr/tt/w31_svtlvt/1000ps_gt2n_compat_bspdn_proxy_u35_c48/work/reports/gt2n_compat_bspdn_proxy/aes_128/base/6_bspdn_physical_grid.rpt
