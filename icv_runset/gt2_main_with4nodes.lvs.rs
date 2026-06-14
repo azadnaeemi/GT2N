@@ -36,7 +36,7 @@
 #include "override_file.rs"
 #endif
 
-// gt2 lvs rulesets
+// gt2 lvs rulesets for 4-terminal devices
 // Written by Piyush Kumar, updated by Dongwon Jang
 // v0.6
 // Last updated : 6/14/2026
