@@ -43,8 +43,8 @@ rSDCON_3 @= { @ "SDCON.3 : SDCON may not bend";
         not_rectangles( aSDCON);
 }
 
-rSDCON_4 @= { @ "SDCON.ACT.1 : Vertical extension of SDCON past ACT >= 10 nm";
-        enclose( aACT, aSDCON, < 0.010, extension = NONE, direction = VERTICAL);
+rSDCON_4 @= { @ "SDCON.ACT.1 : Vertical extension of SDCON past ACT >= 5 nm";
+        enclose( aACT, aSDCON, < 0.005, extension = NONE, direction = VERTICAL);
 }
 
 // checking only for < 6nm
