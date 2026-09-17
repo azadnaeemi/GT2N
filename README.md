@@ -54,8 +54,6 @@ ITF: GT2N/nxtgrd/GT2.itf
 
 NXTGRD: GT2N/nxtgrd/GT2.nxtgrd
 
-The GAAFET (3-stack nanosheet) model card is (depending on the process corner and W/VT flavor):
+The thermal-calibrated GAAFET (3-stack nanosheet) model card is (depending on the process corner and W/VT flavor):
 
 GT2N/device/tt/gt2_w31_lvt_tt.sp
-
-BSPDN support for Cadence Innovus implementation flow is under development.
