@@ -77,3 +77,10 @@ rVG_10 @= { @ "VG.M0.2 : VG enclosure by M0 on two opposite sides in the horizon
 rVG_12 @= { @ "VG.ACT.1 : VG and ACT vertical spacing >= 6 nm";
         external2( aVG, aACT, distance < 0.006, extension = RADIAL, direction = VERTICAL);
 }
+
+// external2 only measures between outward-facing edges, so a VG that overlaps
+// or touches ACT produces no edge pair and is never reported by rVG_12.
+// Flag that case explicitly so VG.ACT.1 covers the whole range below 6 nm.
+rVG_13 @= { @ "VG.ACT.1a : VG must not overlap or touch ACT (overlap case of VG.ACT.1)";
+        interacting( aVG, aACT, include_touch = ALL);
+}
