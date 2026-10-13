@@ -1,0 +1,23 @@
+.SUBCKT gt2_6t_ao222_w13_lvt A1 A2 B1 B2 C1 C2 Y vdd vss
+MNA0 Z A1 NA1 vss nmos_lvt W=0.013u L=0.014u M=1
+MNA1 NA1 A2 vss vss nmos_lvt W=0.013u L=0.014u M=1
+MPA0 Z A1 P1 vdd pmos_lvt W=0.013u L=0.014u M=1
+MPA1 Z A2 P1 vdd pmos_lvt W=0.013u L=0.014u M=1
+MNB0 Z B1 NB1 vss nmos_lvt W=0.013u L=0.014u M=1
+MNB1 NB1 B2 vss vss nmos_lvt W=0.013u L=0.014u M=1
+MPB0 P1 B1 P2 vdd pmos_lvt W=0.013u L=0.014u M=1
+MPB1 P1 B2 P2 vdd pmos_lvt W=0.013u L=0.014u M=1
+MNC0 Z C1 NC1 vss nmos_lvt W=0.013u L=0.014u M=1
+MNC1 NC1 C2 vss vss nmos_lvt W=0.013u L=0.014u M=1
+MPC0 P2 C1 vdd vdd pmos_lvt W=0.013u L=0.014u M=1
+MPC1 P2 C2 vdd vdd pmos_lvt W=0.013u L=0.014u M=1
+MINV_N Y Z vss vss nmos_lvt W=0.013u L=0.014u M=1
+MINV_P Y Z vdd vdd pmos_lvt W=0.013u L=0.014u M=1
+.ENDS gt2_6t_ao222_w13_lvt
+
+.SUBCKT gt2_6t_ao222_w13_lvt_abut A1_0_0 A2_0_0 B1_0_0 B2_0_0 C1_0_0 C2_0_0 Y_0_0 A1_1_0 A2_1_0 B1_1_0 B2_1_0 C1_1_0 C2_1_0 Y_1_0 A1_0_1 A2_0_1 B1_0_1 B2_0_1 C1_0_1 C2_0_1 Y_0_1 A1_1_1 A2_1_1 B1_1_1 B2_1_1 C1_1_1 C2_1_1 Y_1_1 vdd vss
+X00 A1_0_0 A2_0_0 B1_0_0 B2_0_0 C1_0_0 C2_0_0 Y_0_0 vdd vss gt2_6t_ao222_w13_lvt
+X10 A1_1_0 A2_1_0 B1_1_0 B2_1_0 C1_1_0 C2_1_0 Y_1_0 vdd vss gt2_6t_ao222_w13_lvt
+X01 A1_0_1 A2_0_1 B1_0_1 B2_0_1 C1_0_1 C2_0_1 Y_0_1 vdd vss gt2_6t_ao222_w13_lvt
+X11 A1_1_1 A2_1_1 B1_1_1 B2_1_1 C1_1_1 C2_1_1 Y_1_1 vdd vss gt2_6t_ao222_w13_lvt
+.ENDS gt2_6t_ao222_w13_lvt_abut

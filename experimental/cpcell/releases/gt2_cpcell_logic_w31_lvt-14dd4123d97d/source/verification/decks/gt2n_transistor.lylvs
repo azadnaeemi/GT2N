@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description>GT2N transistor-level LVS for hand-drawn cells (SRAM bitcells).</description>
+ <version/>
+ <category>lvs</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>false</autorun>
+ <autorun-early>false</autorun-early>
+ <shortcut/>
+ <show-in-menu>false</show-in-menu>
+ <group-name>lvs_scripts</group-name>
+ <menu-path>tools_menu.lvs.end</menu-path>
+ <interpreter>dsl</interpreter>
+ <dsl-interpreter-name>lvs-dsl-xml</dsl-interpreter-name>
+ <text><![CDATA[
+################################################################################
+# GT2N transistor LVS
+#
+# Device recognition follows the ORFS platform deck (platforms/gt2n/gt2n.lylvs,
+# itself a port of icv_runset/gt2_main.lvs.rs): a live gate is
+# GATE - GCUT - DUMMY over ACT, split into VT classes by marker layer.  Two
+# things differ, because the platform deck's transistor mode does not match
+# even the released gt2_6t_inv_x1:
+#
+#   * device W/L are reported in microns (the platform deck scales by 1e6);
+#   * device bulks join the vss/vdd nets instead of a separate global net.
+#
+# Rails with the same label (a cell with a vss rail on each edge) are joined.
+#
+#   klayout -b -r gt2n_transistor.lylvs -rd in_gds=cell.gds -rd cdl_file=cell.cdl \
+#     [-rd topcell=NAME] [-rd report_file=cell.lvsdb] [-rd target_netlist=cell.cir]
+#     [-rd flatten=<circuit glob>]
+################################################################################
+
+raise "Missing -rd in_gds=<layout.gds>" unless $in_gds
+raise "Missing -rd cdl_file=<reference.cdl>" unless $cdl_file
+
+$topcell ? source($in_gds, $topcell) : source($in_gds)
+report_lvs($report_file || ($in_gds.to_s.sub(/\.gds$/, "") + ".lvsdb"))
+schematic($cdl_file)
+target_netlist($target_netlist, write_spice(true, false), "GT2N extracted") if $target_netlist
+
+deep
+
+nwell  = polygons(1, 0)
+act    = polygons(2, 0)
+gate   = polygons(3, 0)
+dummy  = polygons(4, 0)
+gcut   = polygons(5, 0)
+nsel   = polygons(6, 0)
+psel   = polygons(7, 0)
+bpr    = polygons(8, 0)
+vbpr   = polygons(9, 0)
+sdcon  = polygons(10, 0)
+vsd    = polygons(11, 0)
+vg     = polygons(12, 0)
+m0     = polygons(20, 0)
+v0     = polygons(22, 0)
+m1     = polygons(25, 0)
+v1     = polygons(27, 0)
+m2     = polygons(30, 0)
+v2     = polygons(32, 0)
+m3     = polygons(35, 0)
+elvt   = polygons(94, 0)
+ulvt   = polygons(95, 0)
+svt    = polygons(96, 0)
+hvt    = polygons(97, 0)
+sramvt = polygons(98, 0)
+
+bpr_t = labels(8, 251)
+m0_t  = labels(20, 251)
+m1_t  = labels(25, 251)
+m2_t  = labels(30, 251)
+m3_t  = labels(35, 251)
+
+poly = gate - gcut - dummy
+
+nact = (act - nwell) & nsel
+ngate = nact & poly
+nsd = nact - ngate - dummy
+pact = (act & nwell) & psel
+pgate = pact & poly
+psd = pact - pgate - dummy
+
+# Bulk terminals: the implant regions around each channel.  They are tied to
+# the supply rails below, which is what the backside tap cells do in a row.
+pbulk = nsel - nwell
+nbulk = nwell
+
+connect(poly, vg)
+connect(vg, m0)
+connect(sdcon, nsd)
+connect(sdcon, psd)
+connect(sdcon, vsd)
+connect(vsd, m0)
+connect(sdcon, vbpr)
+connect(vbpr, bpr)
+connect(m0, v0)
+connect(v0, m1)
+connect(m1, v1)
+connect(v1, m2)
+connect(m2, v2)
+connect(v2, m3)
+
+connect(bpr, bpr_t)
+connect(m0, m0_t)
+connect(m1, m1_t)
+connect(m2, m2_t)
+connect(m3, m3_t)
+
+connect_global(pbulk, "vss")
+connect_global(nbulk, "vdd")
+connect_implicit("vss")
+connect_implicit("vdd")
+
+device_scaling(1.0)
+
+vt_markers = [[elvt, "elvt"], [ulvt, "ulvt"], [svt, "svt"], [hvt, "hvt"], [sramvt, "sramvt"]]
+n_lvt = ngate
+p_lvt = pgate
+vt_markers.each do |marker, name|
+  extract_devices(mos4("nmos_#{name}"), { "SD" => nsd, "G" => ngate & marker, "tS" => nsd, "tD" => nsd, "tG" => poly, "W" => pbulk })
+  extract_devices(mos4("pmos_#{name}"), { "SD" => psd, "G" => pgate & marker, "tS" => psd, "tD" => psd, "tG" => poly, "W" => nbulk })
+  n_lvt -= marker
+  p_lvt -= marker
+end
+extract_devices(mos4("nmos_lvt"), { "SD" => nsd, "G" => n_lvt, "tS" => nsd, "tD" => nsd, "tG" => poly, "W" => pbulk })
+extract_devices(mos4("pmos_lvt"), { "SD" => psd, "G" => p_lvt, "tS" => psd, "tD" => psd, "tG" => poly, "W" => nbulk })
+
+netlist.make_top_level_pins
+netlist.purge
+netlist.combine_devices
+schematic.combine_devices
+schematic.purge
+
+# -rd flatten=<circuit glob>: compare that circuit flattened into its parents.
+# Needed for cells whose diffusions run through shared edge contacts into
+# their neighbours (the thin SRAM cell): KLayout extracts such devices in the
+# parent, so the layout side is flat there already.
+if $flatten
+  [$flatten, $flatten.upcase, $flatten.downcase].uniq.each do |pattern|
+    netlist.flatten_circuit(pattern)
+    schematic.flatten_circuit(pattern)
+  end
+end
+
+tolerance("nmos_*", "W", :absolute => 0.0005)
+tolerance("pmos_*", "W", :absolute => 0.0005)
+tolerance("nmos_*", "L", :absolute => 0.0005)
+tolerance("pmos_*", "L", :absolute => 0.0005)
+
+compare
+]]></text>
+</klayout-macro>

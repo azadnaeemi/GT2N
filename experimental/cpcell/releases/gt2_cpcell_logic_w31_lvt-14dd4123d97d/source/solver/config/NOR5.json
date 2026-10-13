@@ -1,0 +1,216 @@
+{
+  "layout_profile": {
+    "value": "gt2n_logic",
+    "info": "Physical export profile: default, gt2n_sram or gt2n_logic"
+  },
+  "routing_layers": {
+    "value": [
+      "M0",
+      "M1",
+      "M2"
+    ],
+    "info": "Metals available to the router"
+  },
+  "contact_rows": {
+    "value": {
+      "gate": [
+        2
+      ],
+      "diffusion": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    "info": "Optional gate/diffusion contact row-index lists"
+  },
+  "boundary_ports": {
+    "value": [],
+    "info": "Named signal ports: name, net, side, layer, optional zero-based track; see docs/constraints.md"
+  },
+  "placement_constraints": {
+    "value": [
+      {
+        "type": "align",
+        "transistors": [
+          "MN0S0",
+          "MP0S0"
+        ]
+      },
+      {
+        "type": "align",
+        "transistors": [
+          "MN1S0",
+          "MP1S0"
+        ]
+      },
+      {
+        "type": "align",
+        "transistors": [
+          "MN2S0",
+          "MP2S0"
+        ]
+      },
+      {
+        "type": "align",
+        "transistors": [
+          "MN3S0",
+          "MP3S0"
+        ]
+      },
+      {
+        "type": "align",
+        "transistors": [
+          "MN4S0",
+          "MP4S0"
+        ]
+      }
+    ],
+    "info": "Hard fixed/order/align/mirror rules; placement columns use odd PC indices; see docs/constraints.md"
+  },
+  "allow_unequal_rows": {
+    "value": false,
+    "info": "[PLACEMENT] Allow unequal PMOS/NMOS finger counts and size the canvas from the larger row"
+  },
+  "enforce_diffusion_alignment": {
+    "value": false,
+    "info": "[PLACEMENT] Require matching PMOS/NMOS diffusion breaks; set false for independent row placement"
+  },
+  "minimum_gate_cut_length": {
+    "value": 1,
+    "info": "[TECH] Minimum gate cut length in CPP"
+  },
+  "lisd_routing": {
+    "value": false,
+    "info": "[TECH] Use LISD as a routing resource"
+  },
+  "lig_routing": {
+    "value": false,
+    "info": "[TECH] Use LIG as a routing resource"
+  },
+  "supervia": {
+    "value": [
+      "M0"
+    ],
+    "info": "[TECH] List of layers that allow to use supervia"
+  },
+  "via_c2c_rule": {
+    "value": {
+      "M0, M1": 45,
+      "M1, M2": 45
+    },
+    "info": "[TECH] Center-to-center via distance between layers"
+  },
+  "mar_c2c_rule": {
+    "value": {
+      "M0": 20,
+      "M1": 60,
+      "M2": 90
+    },
+    "info": "[TECH] Center-to-center minimum area rule for metals"
+  },
+  "eol_c2c_rule": {
+    "value": {
+      "M0": 82,
+      "M1": 96,
+      "M2": 82
+    },
+    "info": "[TECH] Center-to-center end of line rule for metals"
+  },
+  "insert_num_db": {
+    "value": 1,
+    "info": "[TECH] Maximum number of diffusion breaks allowed to use"
+  },
+  "polygon_cell": {
+    "value": false,
+    "info": "[TECH] Encourage DH to make polygon cells"
+  },
+  "MPO": {
+    "value": 1,
+    "info": "[TECH] Minimum Pin Opening at M1"
+  },
+  "seed": {
+    "value": 32,
+    "info": "[SOLVER] Random seed"
+  },
+  "use_objective_set": {
+    "values": [],
+    "info": "[SOLVER] Set of objectives to use. If not set, a default set will be used."
+  },
+  "model_preset": {
+    "value": 2,
+    "info": "[SOLVER] Model preset ID used for solving"
+  },
+  "num_search_workers": {
+    "value": 4,
+    "info": "[SOLVER] Number of cores to use for solving"
+  },
+  "use_strategy": {
+    "value": "PLACE",
+    "info": "[SOLVER] Use decision strategy to speedup feasibility discovery"
+  },
+  "use_relative_gap": {
+    "value": false,
+    "perc": 0.01,
+    "info": "[SOLVER] Allow percentage optimality gap"
+  },
+  "max_time": {
+    "value": true,
+    "time": 180.0
+  },
+  "routing_tolerance": {
+    "value": false,
+    "tol": 0,
+    "info": "[SPEEDUP] Allowable routing distance to go beyond window in CPP"
+  },
+  "use_break_symmetry_for_placement": {
+    "value": true,
+    "info": "[SPEEDUP] Break symmetry during placement"
+  },
+  "close_in_low_degree_net": {
+    "value": false,
+    "info": "[SPEEDUP] Enforce 2-pin nets to be diffusion shared"
+  },
+  "use_placement_order_for_identical_transistors": {
+    "value": false,
+    "info": "[SPEEDUP] Enforce identical transistors to be placed in a certain order"
+  },
+  "inject_edge": {
+    "value": {},
+    "info": "[INJECT] Inject edge(s) to be used (u_layer, u_row, u_col, v_layer, v_row, v_col) : 0 or 1"
+  },
+  "inject_arc": {
+    "value": {},
+    "info": "[INJECT] Inject arc(s) to be used (net_name, u_layer, u_row, u_col, v_layer, v_row, v_col) : 0 or 1"
+  },
+  "inject_flow": {
+    "value": {},
+    "info": "[INJECT] Inject flow(s) to be used (net_name, k_idx, u_layer, u_row, u_col, v_layer, v_row, v_col) : 0 or 1"
+  },
+  "inject_placement": {
+    "value": [],
+    "info": "[INJECT] Inject placement(s) to be used (tran_name, x, y, flip)"
+  },
+  "inject_track": {
+    "value": {},
+    "info": "[INJECT] Inject a track to be used on a layer (layer, row/col_idx)"
+  },
+  "m0_pin_separation": {
+    "value": false,
+    "info": "[PIN] Enforce M0 pin separation across different rows"
+  },
+  "m0_pin_extension": {
+    "value": false,
+    "vacancy_edges": 2,
+    "info": "[PIN] Extend M0 pin to vacancy edges"
+  },
+  "inject_cluster": {
+    "value": false,
+    "remove_2d_nets": true,
+    "min_cluster_size": 2,
+    "max_cluster_size": 4,
+    "method": "kkhdb",
+    "info": "[INJECT] Inject clusters automatically"
+  }
+}
