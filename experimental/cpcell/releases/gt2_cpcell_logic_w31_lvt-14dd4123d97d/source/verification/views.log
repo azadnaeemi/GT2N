@@ -1,0 +1,36 @@
+-- Running command `openroad -exit /home/jeff/iv4/repos/GT2N/experimental/cpcell/w31_lvt/verification/views.tcl` --
+
+OpenROAD 26Q3 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0227] LEF file: /home/jeff/iv4/repos/GT2N/techlib/gt2_tech.lef, created 51 layers, 19 vias
+[INFO ODB-0227] LEF file: /home/jeff/iv4/repos/GT2N/lef/tt/gt2_6t_w31_lvt.lef, created 72 library cells
+[INFO ODB-0227] LEF file: cells.lef, created 18 library cells
+Startpoint: E (input port clocked by virtual)
+Endpoint: yand5 (output port clocked by virtual)
+Path Group: virtual
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock virtual (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ input external delay
+   0.00    0.00 ^ E (in)
+   5.00    5.00 ^ nand5/Y (gt2_6t_and5_w31_lvt)
+   0.00    5.00 ^ yand5 (out)
+           5.00   data arrival time
+
+1000.00 1000.00   clock virtual (rise edge)
+   0.00 1000.00   clock network delay (ideal)
+   0.00 1000.00   clock reconvergence pessimism
+   0.00 1000.00   output external delay
+        1000.00   data required time
+---------------------------------------------------------
+        1000.00   data required time
+          -5.00   data arrival time
+---------------------------------------------------------
+         995.00   slack (MET)
+
+

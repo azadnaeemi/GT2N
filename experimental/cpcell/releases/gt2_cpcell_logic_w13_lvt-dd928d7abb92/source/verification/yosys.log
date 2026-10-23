@@ -1,0 +1,412 @@
+-- Running command `yosys -p read_liberty cells_tt.lib; read_verilog verification/smoke.v; hierarchy -check -top logic_combined_smoke; stat` --
+
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
+
+-- Running command `read_liberty cells_tt.lib; read_verilog verification/smoke.v; hierarchy -check -top logic_combined_smoke; stat' --
+
+1. Executing Liberty frontend: cells_tt.lib
+Imported 18 cell types from liberty file.
+
+2. Executing Verilog-2005 frontend: verification/smoke.v
+Parsing Verilog input from `verification/smoke.v' to AST representation.
+Generating RTLIL representation for module `\logic_combined_smoke'.
+Successfully finished Verilog frontend.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \logic_combined_smoke
+Used module:     \gt2_6t_or5_w13_lvt
+Used module:     \gt2_6t_or4_w13_lvt
+Used module:     \gt2_6t_oai222_w13_lvt
+Used module:     \gt2_6t_oai221_w13_lvt
+Used module:     \gt2_6t_oa222_w13_lvt
+Used module:     \gt2_6t_oa221_w13_lvt
+Used module:     \gt2_6t_nor5_w13_lvt
+Used module:     \gt2_6t_nor4_w13_lvt
+Used module:     \gt2_6t_nand5_w13_lvt
+Used module:     \gt2_6t_nand4_w13_lvt
+Used module:     \gt2_6t_maji3_w13_lvt
+Used module:     \gt2_6t_maj3_w13_lvt
+Used module:     \gt2_6t_aoi222_w13_lvt
+Used module:     \gt2_6t_aoi221_w13_lvt
+Used module:     \gt2_6t_ao222_w13_lvt
+Used module:     \gt2_6t_ao221_w13_lvt
+Used module:     \gt2_6t_and5_w13_lvt
+Used module:     \gt2_6t_and4_w13_lvt
+
+3.2. Analyzing design hierarchy..
+Top module:  \logic_combined_smoke
+Used module:     \gt2_6t_or5_w13_lvt
+Used module:     \gt2_6t_or4_w13_lvt
+Used module:     \gt2_6t_oai222_w13_lvt
+Used module:     \gt2_6t_oai221_w13_lvt
+Used module:     \gt2_6t_oa222_w13_lvt
+Used module:     \gt2_6t_oa221_w13_lvt
+Used module:     \gt2_6t_nor5_w13_lvt
+Used module:     \gt2_6t_nor4_w13_lvt
+Used module:     \gt2_6t_nand5_w13_lvt
+Used module:     \gt2_6t_nand4_w13_lvt
+Used module:     \gt2_6t_maji3_w13_lvt
+Used module:     \gt2_6t_maj3_w13_lvt
+Used module:     \gt2_6t_aoi222_w13_lvt
+Used module:     \gt2_6t_aoi221_w13_lvt
+Used module:     \gt2_6t_ao222_w13_lvt
+Used module:     \gt2_6t_ao221_w13_lvt
+Used module:     \gt2_6t_and5_w13_lvt
+Used module:     \gt2_6t_and4_w13_lvt
+Removed 0 unused modules.
+
+4. Printing statistics.
+
+=== logic_combined_smoke ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       29 wires
+       29 wire bits
+       29 public wires
+       29 public wire bits
+       29 ports
+       29 port bits
+       18 submodules
+        1   gt2_6t_and4_w13_lvt
+        1   gt2_6t_and5_w13_lvt
+        1   gt2_6t_ao221_w13_lvt
+        1   gt2_6t_ao222_w13_lvt
+        1   gt2_6t_aoi221_w13_lvt
+        1   gt2_6t_aoi222_w13_lvt
+        1   gt2_6t_maj3_w13_lvt
+        1   gt2_6t_maji3_w13_lvt
+        1   gt2_6t_nand4_w13_lvt
+        1   gt2_6t_nand5_w13_lvt
+        1   gt2_6t_nor4_w13_lvt
+        1   gt2_6t_nor5_w13_lvt
+        1   gt2_6t_oa221_w13_lvt
+        1   gt2_6t_oa222_w13_lvt
+        1   gt2_6t_oai221_w13_lvt
+        1   gt2_6t_oai222_w13_lvt
+        1   gt2_6t_or4_w13_lvt
+        1   gt2_6t_or5_w13_lvt
+
+=== gt2_6t_or5_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       10 wire bits
+        6 public wires
+        6 public wire bits
+        6 ports
+        6 port bits
+        4 cells
+        4   $_OR_
+
+=== gt2_6t_or4_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        8 wires
+        8 wire bits
+        5 public wires
+        5 public wire bits
+        5 ports
+        5 port bits
+        3 cells
+        3   $_OR_
+
+=== gt2_6t_oai222_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       13 wires
+       13 wire bits
+        7 public wires
+        7 public wire bits
+        7 ports
+        7 port bits
+        6 cells
+        2   $_AND_
+        1   $_NOT_
+        3   $_OR_
+
+=== gt2_6t_oai221_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+       11 wire bits
+        6 public wires
+        6 public wire bits
+        6 ports
+        6 port bits
+        5 cells
+        2   $_AND_
+        1   $_NOT_
+        2   $_OR_
+
+=== gt2_6t_oa222_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       12 wires
+       12 wire bits
+        7 public wires
+        7 public wire bits
+        7 ports
+        7 port bits
+        5 cells
+        2   $_AND_
+        3   $_OR_
+
+=== gt2_6t_oa221_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       10 wire bits
+        6 public wires
+        6 public wire bits
+        6 ports
+        6 port bits
+        4 cells
+        2   $_AND_
+        2   $_OR_
+
+=== gt2_6t_nor5_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+       11 wire bits
+        6 public wires
+        6 public wire bits
+        6 ports
+        6 port bits
+        5 cells
+        1   $_NOT_
+        4   $_OR_
+
+=== gt2_6t_nor4_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        9 wires
+        9 wire bits
+        5 public wires
+        5 public wire bits
+        5 ports
+        5 port bits
+        4 cells
+        1   $_NOT_
+        3   $_OR_
+
+=== gt2_6t_nand5_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+       11 wire bits
+        6 public wires
+        6 public wire bits
+        6 ports
+        6 port bits
+        5 cells
+        4   $_AND_
+        1   $_NOT_
+
+=== gt2_6t_nand4_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        9 wires
+        9 wire bits
+        5 public wires
+        5 public wire bits
+        5 ports
+        5 port bits
+        4 cells
+        3   $_AND_
+        1   $_NOT_
+
+=== gt2_6t_maji3_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       10 wire bits
+        4 public wires
+        4 public wire bits
+        4 ports
+        4 port bits
+        6 cells
+        3   $_AND_
+        1   $_NOT_
+        2   $_OR_
+
+=== gt2_6t_maj3_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        9 wires
+        9 wire bits
+        4 public wires
+        4 public wire bits
+        4 ports
+        4 port bits
+        5 cells
+        3   $_AND_
+        2   $_OR_
+
+=== gt2_6t_aoi222_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       13 wires
+       13 wire bits
+        7 public wires
+        7 public wire bits
+        7 ports
+        7 port bits
+        6 cells
+        3   $_AND_
+        1   $_NOT_
+        2   $_OR_
+
+=== gt2_6t_aoi221_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+       11 wire bits
+        6 public wires
+        6 public wire bits
+        6 ports
+        6 port bits
+        5 cells
+        2   $_AND_
+        1   $_NOT_
+        2   $_OR_
+
+=== gt2_6t_ao222_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       12 wires
+       12 wire bits
+        7 public wires
+        7 public wire bits
+        7 ports
+        7 port bits
+        5 cells
+        3   $_AND_
+        2   $_OR_
+
+=== gt2_6t_ao221_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       10 wire bits
+        6 public wires
+        6 public wire bits
+        6 ports
+        6 port bits
+        4 cells
+        2   $_AND_
+        2   $_OR_
+
+=== gt2_6t_and5_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       10 wire bits
+        6 public wires
+        6 public wire bits
+        6 ports
+        6 port bits
+        4 cells
+        4   $_AND_
+
+=== gt2_6t_and4_w13_lvt ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        8 wires
+        8 wire bits
+        5 public wires
+        5 public wire bits
+        5 ports
+        5 port bits
+        3 cells
+        3   $_AND_
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+       83 logic_combined_smoke
+        3 gt2_6t_and4_w13_lvt
+        4 gt2_6t_and5_w13_lvt
+        4 gt2_6t_ao221_w13_lvt
+        5 gt2_6t_ao222_w13_lvt
+        5 gt2_6t_aoi221_w13_lvt
+        6 gt2_6t_aoi222_w13_lvt
+        5 gt2_6t_maj3_w13_lvt
+        6 gt2_6t_maji3_w13_lvt
+        4 gt2_6t_nand4_w13_lvt
+        5 gt2_6t_nand5_w13_lvt
+        4 gt2_6t_nor4_w13_lvt
+        5 gt2_6t_nor5_w13_lvt
+        4 gt2_6t_oa221_w13_lvt
+        5 gt2_6t_oa222_w13_lvt
+        5 gt2_6t_oai221_w13_lvt
+        6 gt2_6t_oai222_w13_lvt
+        3 gt2_6t_or4_w13_lvt
+        4 gt2_6t_or5_w13_lvt
+
+        +----------Count including submodules.
+        | 
+      216 wires
+      216 wire bits
+      133 public wires
+      133 public wire bits
+      133 ports
+      133 port bits
+        - memories
+        - memory bits
+        - processes
+       83 cells
+       38   $_AND_
+        9   $_NOT_
+       36   $_OR_
+       18 submodules
+        1   gt2_6t_and4_w13_lvt
+        1   gt2_6t_and5_w13_lvt
+        1   gt2_6t_ao221_w13_lvt
+        1   gt2_6t_ao222_w13_lvt
+        1   gt2_6t_aoi221_w13_lvt
+        1   gt2_6t_aoi222_w13_lvt
+        1   gt2_6t_maj3_w13_lvt
+        1   gt2_6t_maji3_w13_lvt
+        1   gt2_6t_nand4_w13_lvt
+        1   gt2_6t_nand5_w13_lvt
+        1   gt2_6t_nor4_w13_lvt
+        1   gt2_6t_nor5_w13_lvt
+        1   gt2_6t_oa221_w13_lvt
+        1   gt2_6t_oa222_w13_lvt
+        1   gt2_6t_oai221_w13_lvt
+        1   gt2_6t_oai222_w13_lvt
+        1   gt2_6t_or4_w13_lvt
+        1   gt2_6t_or5_w13_lvt
+
+End of script. Logfile hash: 1de0b48b6e, time: 0.00s, user: 0.00s, system: 0.00s, MEM: 24.50 MB peak
+Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
+Time spent: 39% 2x read_verilog (0 sec), 37% 2x read_liberty (0 sec), ...

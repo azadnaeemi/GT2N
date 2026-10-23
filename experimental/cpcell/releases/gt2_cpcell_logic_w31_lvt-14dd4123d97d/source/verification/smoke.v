@@ -1,0 +1,22 @@
+module logic_combined_smoke(A,A1,A2,B,B1,B2,C,C1,C2,D,E,yand4,yand5,yao221,yao222,yaoi221,yaoi222,ymaj3,ymaji3,ynand4,ynand5,ynor4,ynor5,yoa221,yoa222,yoai221,yoai222,yor4,yor5);
+  input A,A1,A2,B,B1,B2,C,C1,C2,D,E;
+  output yand4,yand5,yao221,yao222,yaoi221,yaoi222,ymaj3,ymaji3,ynand4,ynand5,ynor4,ynor5,yoa221,yoa222,yoai221,yoai222,yor4,yor5;
+ gt2_6t_and4_w31_lvt nand4(.A(A),.B(B),.C(C),.D(D),.Y(yand4));
+ gt2_6t_and5_w31_lvt nand5(.A(A),.B(B),.C(C),.D(D),.E(E),.Y(yand5));
+ gt2_6t_ao221_w31_lvt nao221(.A1(A1),.A2(A2),.B1(B1),.B2(B2),.C(C),.Y(yao221));
+ gt2_6t_ao222_w31_lvt nao222(.A1(A1),.A2(A2),.B1(B1),.B2(B2),.C1(C1),.C2(C2),.Y(yao222));
+ gt2_6t_aoi221_w31_lvt naoi221(.A1(A1),.A2(A2),.B1(B1),.B2(B2),.C(C),.Y(yaoi221));
+ gt2_6t_aoi222_w31_lvt naoi222(.A1(A1),.A2(A2),.B1(B1),.B2(B2),.C1(C1),.C2(C2),.Y(yaoi222));
+ gt2_6t_maj3_w31_lvt nmaj3(.A(A),.B(B),.C(C),.Y(ymaj3));
+ gt2_6t_maji3_w31_lvt nmaji3(.A(A),.B(B),.C(C),.Y(ymaji3));
+ gt2_6t_nand4_w31_lvt nnand4(.A(A),.B(B),.C(C),.D(D),.Y(ynand4));
+ gt2_6t_nand5_w31_lvt nnand5(.A(A),.B(B),.C(C),.D(D),.E(E),.Y(ynand5));
+ gt2_6t_nor4_w31_lvt nnor4(.A(A),.B(B),.C(C),.D(D),.Y(ynor4));
+ gt2_6t_nor5_w31_lvt nnor5(.A(A),.B(B),.C(C),.D(D),.E(E),.Y(ynor5));
+ gt2_6t_oa221_w31_lvt noa221(.A1(A1),.A2(A2),.B1(B1),.B2(B2),.C(C),.Y(yoa221));
+ gt2_6t_oa222_w31_lvt noa222(.A1(A1),.A2(A2),.B1(B1),.B2(B2),.C1(C1),.C2(C2),.Y(yoa222));
+ gt2_6t_oai221_w31_lvt noai221(.A1(A1),.A2(A2),.B1(B1),.B2(B2),.C(C),.Y(yoai221));
+ gt2_6t_oai222_w31_lvt noai222(.A1(A1),.A2(A2),.B1(B1),.B2(B2),.C1(C1),.C2(C2),.Y(yoai222));
+ gt2_6t_or4_w31_lvt nor4(.A(A),.B(B),.C(C),.D(D),.Y(yor4));
+ gt2_6t_or5_w31_lvt nor5(.A(A),.B(B),.C(C),.D(D),.E(E),.Y(yor5));
+endmodule

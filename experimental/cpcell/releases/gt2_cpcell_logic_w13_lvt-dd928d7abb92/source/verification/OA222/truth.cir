@@ -1,0 +1,368 @@
+CPCell GT2N logic characterization
+.MODEL nmos_lvt NMOS l=1.4e-08
++delvtrand=0.0941939
++ids0mult=1.0
++DEVTYPE=1
++EASUB=4.0727
++NI0SUB=1.1055e+16
++BG0SUB=1.1242
++NC0SUB=2.9951e+25
++eot=7e-10
++phig=4.35089
++RDSW=0
++RDSWMIN=0
++cdscd=0.0182693
++vsat=278640
++VSAT1=26297.8352
++u0=0.00655832
++ua=0.47704
++PDIBL2=4.76650442e-11
++pclm=0.0785116
++pclmg=1.48901e-05
++level=110
++VERSION=111
++BULKMOD=0
++CAPMOD=1
++IGCMOD=0
++IGBMOD=0
++GIDLMOD=0
++COREMOD=0
++GEOMOD=2
++CGEOMOD=0
++IIMOD=0
++RDSMOD=0
++tnom=25
++XL=0
++LINT=0
++LL=0
++LLC=0
++LLN=1
++dlc=-7.20077e-09
++tfin=5e-09
++hfin=1.3e-08
++FPITCH=3e-08
++FECH=1
++NF=1
++NFIN=3
++NBODY=2e+20
++NSD=2e+26
++NGATE=0
++LPHIG=0
++LRDSW=0
++ARDSW=0
++BRDSW=1e-08
++PRWG=0
++CIT=0
++cdsc=0.0824961
++LCDSC=0
++LCDSCD=0
++DVT0=0
++LDVT0=0
++DVT1=0.7
++LDVT1=0
++PHIN=0
++LPHIN=0
++eta0=0
++LETA0=0
++DSUB=1.06
++LDSUB=0
++K1RSCE=0
++LK1RSCE=0
++LPE0=0
++LLPE0=0
++QMFACTOR=1
++qm0=3.2146
++LVSAT=0
++AVSAT=0
++BVSAT=6e-08
++AVSAT1=0
++BVSAT1=6e-08
++ksativ=1.45222
++LKSATIV=0
++DELTAVSAT=1
++MEXP=2.57453964
++LMEXP=0
++AMEXP=0
++BMEXP=1
++PTWG=2.01398393
++LPTWG=0
++APTWG=0
++BPTWG=6e-08
++LU0=0
++etamob=1.7466
++UP=0
++LUP=0
++LPA=1
++LUA=0
++AUA=0
++BUA=6e-08
++eu=1.43089
++LEU=0
++ud=0
++LUD=0
++AUD=0
++BUD=5e-08
++UCS=1
++LUCS=0
++PDIBL1=0
++LPDIBL1=0
++LPDIBL2=0
++DROUT=1.06
++LDROUT=0
++pvag=0.399363
++LPVAG=0
++LPCLM=0
++cfs=1.23498e-14
++PRWGS=1
++at=0.00106028
++cfd=1.23498e-14
++cgdl=1.27652e-10
++cgdo=0
++cgsl=1.27652e-10
++cgso=0
++ckappad=0.44752
++ckappas=0.44752
++dvtp0=-0.00405049
++dvtp1=1
++iit=0
++kt1=-0.0929644
++lsp=6e-09
++pqm=0.421985
++prt=0
++ptwgt=0
++qmtcencv=1.54323
++tss=-0.000166334
++ua1=-0.00047238
++uc1=0
++ucste=0
++ute=-1.08377
++utl=0
+
+
+
+.MODEL pmos_lvt PMOS l=1.4e-08
++delvtrand=-0.0162038
++ids0mult=1.0
++DEVTYPE=0
++EASUB=4.0727
++NI0SUB=1.1055e+16
++BG0SUB=1.1242
++NC0SUB=2.9951e+25
++phig=4.9565
++eot=7e-10
++RDSW=0
++RDSWMIN=0
++cdscd=0.00736551
++vsat=62793.4
++VSAT1=18420.44
++u0=0.00861088
++ua=0.614716
++PDIBL2=0.0187387234
++pclm=0.0452374
++pclmg=0.112293
++CHARGEWF=0
++level=110
++VERSION=111
++BULKMOD=0
++CAPMOD=1
++IGCMOD=0
++IGBMOD=0
++GIDLMOD=0
++COREMOD=0
++GEOMOD=2
++CGEOMOD=0
++IIMOD=0
++RDSMOD=0
++tnom=25
++XL=0
++LINT=0
++LL=0
++LLC=0
++LLN=1
++dlc=-3.96294e-09
++tfin=5e-09
++hfin=1.3e-08
++FPITCH=3e-08
++FECH=1
++NF=1
++NFIN=3
++NBODY=2e+20
++NSD=2e+26
++NGATE=0
++LPHIG=0
++LRDSW=0
++ARDSW=0
++BRDSW=1e-08
++PRWG=0
++CIT=0
++cdsc=0.204214
++LCDSC=0
++LCDSCD=0
++DVT0=0
++LDVT0=0
++DVT1=0.7
++LDVT1=0
++PHIN=0
++LPHIN=0
++eta0=0
++LETA0=0
++DSUB=1.06
++LDSUB=0
++K1RSCE=0
++LK1RSCE=0
++LPE0=0
++LLPE0=0
++QMFACTOR=1
++qm0=3.48063
++LVSAT=0
++AVSAT=0
++BVSAT=6e-08
++AVSAT1=0
++BVSAT1=6e-08
++ksativ=2.02852
++LKSATIV=0
++DELTAVSAT=1
++MEXP=3.16898086
++LMEXP=0
++AMEXP=0
++BMEXP=1
++PTWG=1.00115196e-05
++LPTWG=0
++APTWG=0
++BPTWG=6e-08
++LU0=0
++etamob=2.12953
++UP=0
++LUP=0
++LPA=1
++LUA=0
++AUA=0
++BUA=6e-08
++eu=0.77307
++LEU=0
++ud=0
++LUD=0
++AUD=0
++BUD=5e-08
++UCS=1
++LUCS=0
++PDIBL1=0
++LPDIBL1=0
++LPDIBL2=0
++DROUT=1.06
++LDROUT=0
++pvag=22.72
++LPVAG=0
++LPCLM=0
++cfs=9.10016e-11
++PRWGS=1
++at=-0.000202066
++cfd=9.10016e-11
++cgdl=8.13182e-11
++cgdo=0
++cgsl=8.13182e-11
++cgso=0
++ckappad=0.277205
++ckappas=0.277205
++dvtp0=-0.0119321
++dvtp1=1
++iit=0
++kt1=0.0175865
++lsp=6e-09
++pqm=1.44515
++prt=0
++ptwgt=0
++qmtcencv=1.2799
++tss=-0.000168939
++ua1=-0.00129039
++uc1=0
++ucste=0
++ute=-0.537203
++utl=-1.39354e-05
+
+.SUBCKT gt2_6t_oa222_w13_lvt A1 A2 B1 B2 C1 C2 Y vdd vss
+MNA0 Z A1 N1 vss nmos_lvt L=0.014u
+MNA1 Z A2 N1 vss nmos_lvt L=0.014u
+MPA0 Z A1 PA1 vdd pmos_lvt L=0.014u
+MPA1 PA1 A2 vdd vdd pmos_lvt L=0.014u
+MNB0 N1 B1 N2 vss nmos_lvt L=0.014u
+MNB1 N1 B2 N2 vss nmos_lvt L=0.014u
+MPB0 Z B1 PB1 vdd pmos_lvt L=0.014u
+MPB1 PB1 B2 vdd vdd pmos_lvt L=0.014u
+MNC0 N2 C1 vss vss nmos_lvt L=0.014u
+MNC1 N2 C2 vss vss nmos_lvt L=0.014u
+MPC0 Z C1 PC1 vdd pmos_lvt L=0.014u
+MPC1 PC1 C2 vdd vdd pmos_lvt L=0.014u
+MINV_N Y Z vss vss nmos_lvt L=0.014u
+MINV_P Y Z vdd vdd pmos_lvt L=0.014u
+.ENDS gt2_6t_oa222_w13_lvt
+
+.TEMP 25
+VDD vdd 0 0.7
+X0 0 0 0 0 0 0 y0 vdd 0 gt2_6t_oa222_w13_lvt
+X1 0 0 0 0 0 vdd y1 vdd 0 gt2_6t_oa222_w13_lvt
+X2 0 0 0 0 vdd 0 y2 vdd 0 gt2_6t_oa222_w13_lvt
+X3 0 0 0 0 vdd vdd y3 vdd 0 gt2_6t_oa222_w13_lvt
+X4 0 0 0 vdd 0 0 y4 vdd 0 gt2_6t_oa222_w13_lvt
+X5 0 0 0 vdd 0 vdd y5 vdd 0 gt2_6t_oa222_w13_lvt
+X6 0 0 0 vdd vdd 0 y6 vdd 0 gt2_6t_oa222_w13_lvt
+X7 0 0 0 vdd vdd vdd y7 vdd 0 gt2_6t_oa222_w13_lvt
+X8 0 0 vdd 0 0 0 y8 vdd 0 gt2_6t_oa222_w13_lvt
+X9 0 0 vdd 0 0 vdd y9 vdd 0 gt2_6t_oa222_w13_lvt
+X10 0 0 vdd 0 vdd 0 y10 vdd 0 gt2_6t_oa222_w13_lvt
+X11 0 0 vdd 0 vdd vdd y11 vdd 0 gt2_6t_oa222_w13_lvt
+X12 0 0 vdd vdd 0 0 y12 vdd 0 gt2_6t_oa222_w13_lvt
+X13 0 0 vdd vdd 0 vdd y13 vdd 0 gt2_6t_oa222_w13_lvt
+X14 0 0 vdd vdd vdd 0 y14 vdd 0 gt2_6t_oa222_w13_lvt
+X15 0 0 vdd vdd vdd vdd y15 vdd 0 gt2_6t_oa222_w13_lvt
+X16 0 vdd 0 0 0 0 y16 vdd 0 gt2_6t_oa222_w13_lvt
+X17 0 vdd 0 0 0 vdd y17 vdd 0 gt2_6t_oa222_w13_lvt
+X18 0 vdd 0 0 vdd 0 y18 vdd 0 gt2_6t_oa222_w13_lvt
+X19 0 vdd 0 0 vdd vdd y19 vdd 0 gt2_6t_oa222_w13_lvt
+X20 0 vdd 0 vdd 0 0 y20 vdd 0 gt2_6t_oa222_w13_lvt
+X21 0 vdd 0 vdd 0 vdd y21 vdd 0 gt2_6t_oa222_w13_lvt
+X22 0 vdd 0 vdd vdd 0 y22 vdd 0 gt2_6t_oa222_w13_lvt
+X23 0 vdd 0 vdd vdd vdd y23 vdd 0 gt2_6t_oa222_w13_lvt
+X24 0 vdd vdd 0 0 0 y24 vdd 0 gt2_6t_oa222_w13_lvt
+X25 0 vdd vdd 0 0 vdd y25 vdd 0 gt2_6t_oa222_w13_lvt
+X26 0 vdd vdd 0 vdd 0 y26 vdd 0 gt2_6t_oa222_w13_lvt
+X27 0 vdd vdd 0 vdd vdd y27 vdd 0 gt2_6t_oa222_w13_lvt
+X28 0 vdd vdd vdd 0 0 y28 vdd 0 gt2_6t_oa222_w13_lvt
+X29 0 vdd vdd vdd 0 vdd y29 vdd 0 gt2_6t_oa222_w13_lvt
+X30 0 vdd vdd vdd vdd 0 y30 vdd 0 gt2_6t_oa222_w13_lvt
+X31 0 vdd vdd vdd vdd vdd y31 vdd 0 gt2_6t_oa222_w13_lvt
+X32 vdd 0 0 0 0 0 y32 vdd 0 gt2_6t_oa222_w13_lvt
+X33 vdd 0 0 0 0 vdd y33 vdd 0 gt2_6t_oa222_w13_lvt
+X34 vdd 0 0 0 vdd 0 y34 vdd 0 gt2_6t_oa222_w13_lvt
+X35 vdd 0 0 0 vdd vdd y35 vdd 0 gt2_6t_oa222_w13_lvt
+X36 vdd 0 0 vdd 0 0 y36 vdd 0 gt2_6t_oa222_w13_lvt
+X37 vdd 0 0 vdd 0 vdd y37 vdd 0 gt2_6t_oa222_w13_lvt
+X38 vdd 0 0 vdd vdd 0 y38 vdd 0 gt2_6t_oa222_w13_lvt
+X39 vdd 0 0 vdd vdd vdd y39 vdd 0 gt2_6t_oa222_w13_lvt
+X40 vdd 0 vdd 0 0 0 y40 vdd 0 gt2_6t_oa222_w13_lvt
+X41 vdd 0 vdd 0 0 vdd y41 vdd 0 gt2_6t_oa222_w13_lvt
+X42 vdd 0 vdd 0 vdd 0 y42 vdd 0 gt2_6t_oa222_w13_lvt
+X43 vdd 0 vdd 0 vdd vdd y43 vdd 0 gt2_6t_oa222_w13_lvt
+X44 vdd 0 vdd vdd 0 0 y44 vdd 0 gt2_6t_oa222_w13_lvt
+X45 vdd 0 vdd vdd 0 vdd y45 vdd 0 gt2_6t_oa222_w13_lvt
+X46 vdd 0 vdd vdd vdd 0 y46 vdd 0 gt2_6t_oa222_w13_lvt
+X47 vdd 0 vdd vdd vdd vdd y47 vdd 0 gt2_6t_oa222_w13_lvt
+X48 vdd vdd 0 0 0 0 y48 vdd 0 gt2_6t_oa222_w13_lvt
+X49 vdd vdd 0 0 0 vdd y49 vdd 0 gt2_6t_oa222_w13_lvt
+X50 vdd vdd 0 0 vdd 0 y50 vdd 0 gt2_6t_oa222_w13_lvt
+X51 vdd vdd 0 0 vdd vdd y51 vdd 0 gt2_6t_oa222_w13_lvt
+X52 vdd vdd 0 vdd 0 0 y52 vdd 0 gt2_6t_oa222_w13_lvt
+X53 vdd vdd 0 vdd 0 vdd y53 vdd 0 gt2_6t_oa222_w13_lvt
+X54 vdd vdd 0 vdd vdd 0 y54 vdd 0 gt2_6t_oa222_w13_lvt
+X55 vdd vdd 0 vdd vdd vdd y55 vdd 0 gt2_6t_oa222_w13_lvt
+X56 vdd vdd vdd 0 0 0 y56 vdd 0 gt2_6t_oa222_w13_lvt
+X57 vdd vdd vdd 0 0 vdd y57 vdd 0 gt2_6t_oa222_w13_lvt
+X58 vdd vdd vdd 0 vdd 0 y58 vdd 0 gt2_6t_oa222_w13_lvt
+X59 vdd vdd vdd 0 vdd vdd y59 vdd 0 gt2_6t_oa222_w13_lvt
+X60 vdd vdd vdd vdd 0 0 y60 vdd 0 gt2_6t_oa222_w13_lvt
+X61 vdd vdd vdd vdd 0 vdd y61 vdd 0 gt2_6t_oa222_w13_lvt
+X62 vdd vdd vdd vdd vdd 0 y62 vdd 0 gt2_6t_oa222_w13_lvt
+X63 vdd vdd vdd vdd vdd vdd y63 vdd 0 gt2_6t_oa222_w13_lvt
+.TRAN 1p 10p
+.PRINT TRAN FORMAT=CSV V(y0) V(y1) V(y2) V(y3) V(y4) V(y5) V(y6) V(y7) V(y8) V(y9) V(y10) V(y11) V(y12) V(y13) V(y14) V(y15) V(y16) V(y17) V(y18) V(y19) V(y20) V(y21) V(y22) V(y23) V(y24) V(y25) V(y26) V(y27) V(y28) V(y29) V(y30) V(y31) V(y32) V(y33) V(y34) V(y35) V(y36) V(y37) V(y38) V(y39) V(y40) V(y41) V(y42) V(y43) V(y44) V(y45) V(y46) V(y47) V(y48) V(y49) V(y50) V(y51) V(y52) V(y53) V(y54) V(y55) V(y56) V(y57) V(y58) V(y59) V(y60) V(y61) V(y62) V(y63)
+.END

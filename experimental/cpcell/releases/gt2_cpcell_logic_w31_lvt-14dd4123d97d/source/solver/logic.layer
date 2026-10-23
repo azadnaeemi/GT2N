@@ -1,0 +1,86 @@
+{
+  "PC": {
+    "layer_type": "metal",
+    "layer_number": 3,
+    "layer_name": "PC",
+    "direction": "V",
+    "offset": 0.0,
+    "pitch": 42.0,
+    "width": 14.0,
+    "info": "GT2N GATE; abstract FinFET placement grid"
+  },
+  "CA": {
+    "layer_type": "via",
+    "layer_number": 12,
+    "layer_name": "CA",
+    "upper_layer": "M0",
+    "lower_layer": "PC",
+    "vertical_enclosure": 0.0,
+    "horizontal_enclosure": 0.0,
+    "info": "Exporter selects GT2N VG or VSD according to terminal type"
+  },
+  "M0": {
+    "layer_type": "metal",
+    "layer_number": 20,
+    "layer_name": "M0",
+    "direction": "H",
+    "offset": 0.0,
+    "pitch": 24.0,
+    "width": 12.0,
+    "info": "GT2N logic: five physical routing rows in a 144 nm cell",
+    "tracks": [
+      16,
+      42,
+      72,
+      102,
+      128
+    ]
+  },
+  "V0": {
+    "layer_type": "via",
+    "layer_number": 22,
+    "layer_name": "V0",
+    "upper_layer": "M1",
+    "lower_layer": "M0",
+    "vertical_enclosure": 0.0,
+    "horizontal_enclosure": 0.0,
+    "info": "GT2N V0"
+  },
+  "M1": {
+    "layer_type": "metal",
+    "layer_number": 25,
+    "layer_name": "M1",
+    "direction": "V",
+    "offset": 42,
+    "pitch": 42.0,
+    "width": 14.0,
+    "info": "GT2N M1; 1:1 gear ratio"
+  },
+  "V1": {
+    "layer_type": "via",
+    "layer_number": 27,
+    "layer_name": "V1",
+    "upper_layer": "M2",
+    "lower_layer": "M1",
+    "vertical_enclosure": 0.0,
+    "horizontal_enclosure": 0.0,
+    "info": "GT2N V1"
+  },
+  "M2": {
+    "layer_type": "metal",
+    "layer_number": 30,
+    "layer_name": "M2",
+    "direction": "H",
+    "offset": 0.0,
+    "pitch": 24.0,
+    "width": 12.0,
+    "info": "GT2N M2",
+    "tracks": [
+      16,
+      42,
+      72,
+      102,
+      128
+    ]
+  }
+}

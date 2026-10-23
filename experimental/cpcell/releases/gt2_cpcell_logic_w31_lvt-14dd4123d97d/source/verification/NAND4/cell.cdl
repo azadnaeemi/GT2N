@@ -1,0 +1,10 @@
+.SUBCKT gt2_6t_nand4_w31_lvt A B C D Y vdd vss
+MN0 Y A N1 vss nmos_lvt W=0.031u L=0.014u M=1
+MN1 N1 B N2 vss nmos_lvt W=0.031u L=0.014u M=1
+MN2 N2 C N3 vss nmos_lvt W=0.031u L=0.014u M=1
+MN3 N3 D vss vss nmos_lvt W=0.031u L=0.014u M=1
+MP0 Y A vdd vdd pmos_lvt W=0.031u L=0.014u M=1
+MP1 Y B vdd vdd pmos_lvt W=0.031u L=0.014u M=1
+MP2 Y C vdd vdd pmos_lvt W=0.031u L=0.014u M=1
+MP3 Y D vdd vdd pmos_lvt W=0.031u L=0.014u M=1
+.ENDS gt2_6t_nand4_w31_lvt

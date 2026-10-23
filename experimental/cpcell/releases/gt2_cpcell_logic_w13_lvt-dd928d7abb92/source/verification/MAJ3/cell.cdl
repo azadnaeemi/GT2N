@@ -1,0 +1,14 @@
+.SUBCKT gt2_6t_maj3_w13_lvt A B C Y vdd vss
+MNAB0 Z A NAB1 vss nmos_lvt W=0.013u L=0.014u M=1
+MNAB1 NAB1 B vss vss nmos_lvt W=0.013u L=0.014u M=1
+MNC Z C N1 vss nmos_lvt W=0.013u L=0.014u M=1
+MNP0 N1 A vss vss nmos_lvt W=0.013u L=0.014u M=1
+MNP1 N1 B vss vss nmos_lvt W=0.013u L=0.014u M=1
+MPP0 Z A P1 vdd pmos_lvt W=0.013u L=0.014u M=1
+MPP1 Z B P1 vdd pmos_lvt W=0.013u L=0.014u M=1
+MPC P1 C vdd vdd pmos_lvt W=0.013u L=0.014u M=1
+MPAB0 P1 A PAB1 vdd pmos_lvt W=0.013u L=0.014u M=1
+MPAB1 PAB1 B vdd vdd pmos_lvt W=0.013u L=0.014u M=1
+MINV_N Y Z vss vss nmos_lvt W=0.013u L=0.014u M=1
+MINV_P Y Z vdd vdd pmos_lvt W=0.013u L=0.014u M=1
+.ENDS gt2_6t_maj3_w13_lvt

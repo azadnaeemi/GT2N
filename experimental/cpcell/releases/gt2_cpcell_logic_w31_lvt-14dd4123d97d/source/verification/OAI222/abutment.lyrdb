@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description>GT2N native KLayout DRC</description>
+ <original-file/>
+ <generator>drc: script='/home/jeff/iv4/repos/GT2N/Openroad_example/gt2n_openroad_run/OpenROAD-flow-scripts/flow/platforms/gt2n/gt2n.lydrc'</generator>
+ <top-cell>gt2_6t_oai222_w31_lvt_abut</top-cell>
+ <tags>
+ </tags>
+ <categories>
+  <category>
+   <name>BPR.1</name>
+   <description>BPR.1 : BPR vertical width = 32 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>BPR.2</name>
+   <description>BPR.2 : Minimum vertical spacing between BPR layers &gt;= 112 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>BPR.3</name>
+   <description>BPR.3 : BPR must be continuous</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>BPR.4</name>
+   <description>BPR.4 : BPR may not bend</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VBPR.1</name>
+   <description>VBPR.1 : Vertical width of VBPR = 11 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VBPR.2</name>
+   <description>VBPR.2 : Horizontal width of VBPR = 16 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VBPR.3</name>
+   <description>VBPR.3 : VBPR must not overlap GCUT</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VBPR.4</name>
+   <description>VBPR.4 : VBPR may not lie outside SDCON</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>GATE.1</name>
+   <description>GATE.1 : Exact horizontal width of GATE = 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>GATE.2</name>
+   <description>GATE.2 : Exact horizontal spacing of GATE = 28 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>GATE.4</name>
+   <description>GATE.4 : GATE must not bend</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DUMMY.1</name>
+   <description>DUMMY.1 : Exact horizontal width of DUMMY = 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DUMMY.2</name>
+   <description>DUMMY.2 : DUMMY may not exist without GATE</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DUMMY.3</name>
+   <description>DUMMY.3 : DUMMY may not bend</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DUMMY.4</name>
+   <description>DUMMY.4 : DUMMY should exactly overlap GATE in the horizontal direction</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>GCUT.1</name>
+   <description>GCUT.1 : GCUT vertical width &gt;= 10 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>GCUT.2</name>
+   <description>GCUT.2 : GCUT horizontal length &gt;= 42 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>GCUT.5</name>
+   <description>GCUT.5 : GCUT may not bend</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>GCUT.6</name>
+   <description>GCUT.6 : GCUT may not exist without GATE</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>GCUT.7</name>
+   <description>GCUT.7 : GCUT vertical edge may not lie inside or coincide with GATE vertical edge</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>GCUT.8</name>
+   <description>GCUT.8 : GCUT may not interact with ACT</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>GCUT.ACT.1</name>
+   <description>GCUT.ACT.1 : Vertical spacing between GCUT and ACT &gt;= 10 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ACT.1</name>
+   <description>ACT.1 : Minimum vertical width of ACT &gt;= 8 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ACT.2</name>
+   <description>ACT.2 : Minimum horizontal width of ACT &gt;= 84 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ACT.3</name>
+   <description>ACT.3 : Vertical spacing between ACT &gt;= 30 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ACT.6</name>
+   <description>ACT.6 : ACT must end inside a DUMMY layer</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ACT.BPR.1</name>
+   <description>ACT.BPR.1 : Vertical spacing between ACT and BPR &gt;= 10 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>NSEL.1</name>
+   <description>NSEL.1 : Minimum vertical width of NSEL &gt;= 72 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>NSEL.2</name>
+   <description>NSEL.2 : Minimum horizontal width of NSEL &gt;= 84 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>NSEL.3</name>
+   <description>NSEL.3 : Minimum enclosure of ACT by NSEL in the vertical direction &gt;= 15 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>PSEL.1</name>
+   <description>PSEL.1 : Minimum vertical width of PSEL &gt;= 72 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>PSEL.2</name>
+   <description>PSEL.2 : Minimum horizontal width of PSEL &gt;= 84 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>PSEL.3</name>
+   <description>PSEL.3 : Minimum enclosure of ACT by PSEL in the vertical direction &gt;= 15 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>NSEL.PSEL.1</name>
+   <description>NSEL.PSEL.1 : NSEL and PSEL should not overlap</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ELVT.1</name>
+   <description>ELVT.1 : Minimum vertical width of ELVT &gt;= 72 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ELVT.2</name>
+   <description>ELVT.2 : Minimum horizontal width of ELVT &gt;= 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ELVT.3</name>
+   <description>ELVT.3 : Minimum enclosure of ACT by ELVT in the vertical direction &gt;= 15 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ULVT.1</name>
+   <description>ULVT.1 : Minimum vertical width of ULVT &gt;= 72 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ULVT.2</name>
+   <description>ULVT.2 : Minimum horizontal width of ULVT &gt;= 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ULVT.3</name>
+   <description>ULVT.3 : Minimum enclosure of ACT by ULVT in the vertical direction &gt;= 15 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>SVT.1</name>
+   <description>SVT.1 : Minimum vertical width of SVT &gt;= 72 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>SVT.2</name>
+   <description>SVT.2 : Minimum horizontal width of SVT &gt;= 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>SVT.3</name>
+   <description>SVT.3 : Minimum enclosure of ACT by SVT in the vertical direction &gt;= 15 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>HVT.1</name>
+   <description>HVT.1 : Minimum vertical width of HVT &gt;= 72 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>HVT.2</name>
+   <description>HVT.2 : Minimum horizontal width of HVT &gt;= 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>HVT.3</name>
+   <description>HVT.3 : Minimum enclosure of ACT by HVT in the vertical direction &gt;= 15 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>SRAMVT.1</name>
+   <description>SRAMVT.1 : Minimum vertical width of SRAMVT &gt;= 72 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>SRAMVT.2</name>
+   <description>SRAMVT.2 : Minimum horizontal width of SRAMVT &gt;= 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>SRAMVT.3</name>
+   <description>SRAMVT.3 : Minimum enclosure of ACT by SRAMVT in the vertical direction &gt;= 15 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VT_OVERLAP.1</name>
+   <description>VT_OVERLAP.1 : VT layers should not overlap</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>SDCON.1</name>
+   <description>SDCON.1 : Horizontal width of SDCON = 16 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>SDCON.2</name>
+   <description>SDCON.2 : Vertical spacing between SDCON &gt;= 20 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>SDCON.3</name>
+   <description>SDCON.3 : SDCON may not bend</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>SDCON.ACT.1</name>
+   <description>SDCON.ACT.1 : Vertical extension of SDCON past ACT &gt;= 5 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>SDCON.GATE.1</name>
+   <description>SDCON.GATE.1 : Horizontal spacing between SDCON and GATE &gt;= 6 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VSD.1</name>
+   <description>VSD.1 : Horizontal width of VSD = 13 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VSD.2</name>
+   <description>VSD.2 : Vertical width of VSD = 12 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VSD.3</name>
+   <description>VSD.3 : VSD must be rectangular</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VSD.4</name>
+   <description>VSD.4 : VSD must not be outside of SDCON</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VSD.5</name>
+   <description>VSD.5 : VSD must not be outside of M0</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VSD.SDCON.1</name>
+   <description>VSD.SDCON.1 : VSD enclosure by SDCON in horizontal direction &gt;= 1 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VSD.M0.1</name>
+   <description>VSD.M0.1 : VSD enclosure by M0 in horizontal direction &gt;= 4 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VG.1</name>
+   <description>VG.1 : Exact horizontal width of VG = 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VG.2</name>
+   <description>VG.2 : Exact vertical width of VG = 12 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VG.3</name>
+   <description>VG.3 : VG must not interact with GCUT or DUMMY</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VG.4</name>
+   <description>VG.4 : VG may not exist without GATE</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VG.5</name>
+   <description>VG.5 : VG must completely lie inside GATE</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VG.7</name>
+   <description>VG.7 : VG must be rectangle</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VG.M0.1</name>
+   <description>VG.M0.1 : VG must completely lie inside M0</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VG.M0.2</name>
+   <description>VG.M0.2 : VG enclosure by M0 in horizontal direction &gt;= 4 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VG.ACT.1</name>
+   <description>VG.ACT.1 : VG and ACT vertical spacing &gt;= 6 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M0.1</name>
+   <description>M0.1 : Exact vertical width of M0 = 12 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M0.2</name>
+   <description>M0.2 : Minimum horizontal width of M0 &gt;= 24 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M0.3</name>
+   <description>M0.3 : Minimum vertical spacing of M0 &gt;= 12 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M0.4</name>
+   <description>M0.4 : Minimum horizontal same-track spacing of M0 &gt;= 17 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M0.5</name>
+   <description>M0.5 : M0 corner-to-corner spacing &gt;= 15 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M0.6</name>
+   <description>M0.6 : M0 must not bend</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V0.1</name>
+   <description>V0.1 : Exact horizontal width of V0 = 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V0.2</name>
+   <description>V0.2 : Exact vertical width of V0 = 12 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V0.3</name>
+   <description>V0.3 : V0 must be rectangle</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V0.4</name>
+   <description>V0.4 : V0 must not be outside M0</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V0.5</name>
+   <description>V0.5 : V0 must not be outside M1</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V0.6</name>
+   <description>V0.6 : V0 corner-to-corner spacing &gt;= 18 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V0.7</name>
+   <description>V0.7 : Vertical edges of V0 should align with M1</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V0.8</name>
+   <description>V0.8 : Horizontal edges of V0 should align with M0</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V0.M0.1</name>
+   <description>V0.M0.1 : V0 enclosure by M0 in horizontal direction &gt;= 4 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V0.M1.1</name>
+   <description>V0.M1.1 : V0 enclosure by M1 in vertical direction &gt;= 4 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M1.1</name>
+   <description>M1.1 : Horizontal width of M1 &gt;= 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M1.2</name>
+   <description>M1.2 : Vertical length of M1 &gt;= 28 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M1.3</name>
+   <description>M1.3 : Horizontal spacing between M1 layers &gt;= 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M1.4</name>
+   <description>M1.4 : Vertical same-track spacing between M1 layers &gt;= 20 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M1.5</name>
+   <description>M1.5 : M1 corner-to-corner spacing &gt;= 16 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M1.6</name>
+   <description>M1.6 : M1 must not bend</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M2.1</name>
+   <description>M2.1 : Vertical width of M2 &gt;= 12 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M2.2</name>
+   <description>M2.2 : Horizontal length of M2 &gt;= 24 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M2.3</name>
+   <description>M2.3 : Vertical spacing between M2 layers &gt;= 12 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M2.4</name>
+   <description>M2.4 : Horizontal same-track spacing between M2 layers &gt;= 17 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M2.5</name>
+   <description>M2.5 : M2 corner-to-corner spacing &gt;= 15 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M2.6</name>
+   <description>M2.6 : M2 must not bend</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M3.1</name>
+   <description>M3.1 : Horizontal width of M3 &gt;= 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M3.2</name>
+   <description>M3.2 : Vertical length of M3 &gt;= 28 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M3.3</name>
+   <description>M3.3 : Horizontal spacing between M3 layers &gt;= 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M3.4</name>
+   <description>M3.4 : Vertical same-track spacing between M3 layers &gt;= 20 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M3.5</name>
+   <description>M3.5 : M3 corner-to-corner spacing &gt;= 16 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M3.6</name>
+   <description>M3.6 : M3 must not bend</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M4.1</name>
+   <description>M4.1 : Vertical width of M4 &gt;= 21 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M4.2</name>
+   <description>M4.2 : Horizontal length of M4 &gt;= 42 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M4.3</name>
+   <description>M4.3 : Vertical spacing between M4 layers &gt;= 21 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M4.4</name>
+   <description>M4.4 : Horizontal same-track spacing between M4 layers &gt;= 30 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M4.5</name>
+   <description>M4.5 : M4 corner-to-corner spacing &gt;= 24 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M4.6</name>
+   <description>M4.6 : M4 must not bend</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M5.1</name>
+   <description>M5.1 : Horizontal width of M5 &gt;= 21 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M5.2</name>
+   <description>M5.2 : Vertical length of M5 &gt;= 42 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M5.3</name>
+   <description>M5.3 : Horizontal spacing between M5 layers &gt;= 21 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M5.4</name>
+   <description>M5.4 : Vertical same-track spacing between M5 layers &gt;= 30 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M5.5</name>
+   <description>M5.5 : M5 corner-to-corner spacing &gt;= 24 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M5.6</name>
+   <description>M5.6 : M5 must not bend</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M6.1</name>
+   <description>M6.1 : Vertical width of M6 &gt;= 38 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M6.2</name>
+   <description>M6.2 : Horizontal length of M6 &gt;= 55 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M6.3</name>
+   <description>M6.3 : Vertical spacing between M6 layers &gt;= 38 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M6.4</name>
+   <description>M6.4 : Horizontal same-track spacing between M6 layers &gt;= 55 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M6.5</name>
+   <description>M6.5 : M6 corner-to-corner spacing &gt;= 45 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M6.6</name>
+   <description>M6.6 : M6 must not bend</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.1</name>
+   <description>V1.1 : Horizontal width of V1 &gt;= 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.2</name>
+   <description>V1.2 : Vertical height of V1 &gt;= 12 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.3</name>
+   <description>V1.3 : Vertical edges of V1 should align with M1</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.4</name>
+   <description>V1.4 : Horizontal edges of V1 should align with M2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.6</name>
+   <description>V1.6 : V1 corner-to-corner spacing &gt;= 18 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.7</name>
+   <description>V1.7 : V1 must interact with M1</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.8</name>
+   <description>V1.8 : V1 must interact with M2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.M1.EN</name>
+   <description>V1.M1.EN : V1 enclosure by M1 in vertical direction &gt;= 4 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.M2.EN</name>
+   <description>V1.M2.EN : V1 enclosure by M2 in horizontal direction &gt;= 4 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.1</name>
+   <description>V2.1 : Horizontal width of V2 &gt;= 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.2</name>
+   <description>V2.2 : Vertical height of V2 &gt;= 12 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.3</name>
+   <description>V2.3 : Vertical edges of V2 should align with M3</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.4</name>
+   <description>V2.4 : Horizontal edges of V2 should align with M2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.6</name>
+   <description>V2.6 : V2 corner-to-corner spacing &gt;= 18 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.7</name>
+   <description>V2.7 : V2 must interact with M2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.8</name>
+   <description>V2.8 : V2 must interact with M3</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.M2.EN</name>
+   <description>V2.M2.EN : V2 enclosure by M2 in horizontal direction &gt;= 4 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.M3.EN</name>
+   <description>V2.M3.EN : V2 enclosure by M3 in vertical direction &gt;= 4 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.1</name>
+   <description>V3.1 : Horizontal width of V3 &gt;= 14 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.2</name>
+   <description>V3.2 : Vertical height of V3 &gt;= 21 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.3</name>
+   <description>V3.3 : Vertical edges of V3 should align with M3</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.4</name>
+   <description>V3.4 : Horizontal edges of V3 should align with M4</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.6</name>
+   <description>V3.6 : V3 corner-to-corner spacing &gt;= 18 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.7</name>
+   <description>V3.7 : V3 must interact with M3</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.8</name>
+   <description>V3.8 : V3 must interact with M4</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.M3.EN</name>
+   <description>V3.M3.EN : V3 enclosure by M3 in vertical direction &gt;= 4 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.M4.EN</name>
+   <description>V3.M4.EN : V3 enclosure by M4 in horizontal direction &gt;= 4 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.1</name>
+   <description>V4.1 : Horizontal width of V4 &gt;= 21 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.2</name>
+   <description>V4.2 : Vertical height of V4 &gt;= 21 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.3</name>
+   <description>V4.3 : Vertical edges of V4 should align with M5</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.4</name>
+   <description>V4.4 : Horizontal edges of V4 should align with M4</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.6</name>
+   <description>V4.6 : V4 corner-to-corner spacing &gt;= 27 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.7</name>
+   <description>V4.7 : V4 must interact with M4</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.8</name>
+   <description>V4.8 : V4 must interact with M5</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.M4.EN</name>
+   <description>V4.M4.EN : V4 enclosure by M4 in horizontal direction &gt;= 5 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.M5.EN</name>
+   <description>V4.M5.EN : V4 enclosure by M5 in vertical direction &gt;= 5 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V5.1</name>
+   <description>V5.1 : Horizontal width of V5 &gt;= 21 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V5.2</name>
+   <description>V5.2 : Vertical height of V5 &gt;= 38 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V5.3</name>
+   <description>V5.3 : Vertical edges of V5 should align with M5</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V5.4</name>
+   <description>V5.4 : Horizontal edges of V5 should align with M6</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V5.6</name>
+   <description>V5.6 : V5 corner-to-corner spacing &gt;= 27 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V5.7</name>
+   <description>V5.7 : V5 must interact with M5</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V5.8</name>
+   <description>V5.8 : V5 must interact with M6</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V5.M5.EN</name>
+   <description>V5.M5.EN : V5 enclosure by M5 in vertical direction &gt;= 6 nm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V5.M6.EN</name>
+   <description>V5.M6.EN : V5 enclosure by M6 in horizontal direction &gt;= 6 nm</description>
+   <categories>
+   </categories>
+  </category>
+ </categories>
+ <cells>
+  <cell>
+   <name>gt2_6t_oai222_w31_lvt_abut</name>
+   <variant/>
+   <layout-name/>
+   <references>
+   </references>
+  </cell>
+ </cells>
+ <items>
+  <item>
+   <tags/>
+   <category>'GATE.2'</category>
+   <cell>gt2_6t_oai222_w31_lvt_abut</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (-0.007,0;-0.007,0.288)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'GATE.2'</category>
+   <cell>gt2_6t_oai222_w31_lvt_abut</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (0.679,0.288;0.679,0)</value>
+   </values>
+  </item>
+ </items>
+</report-database>
